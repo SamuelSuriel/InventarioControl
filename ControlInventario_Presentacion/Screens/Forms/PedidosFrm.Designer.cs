@@ -36,7 +36,7 @@
             lblTitlePedidos.AutoSize = true;
             lblTitlePedidos.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitlePedidos.ForeColor = Color.Gainsboro;
-            lblTitlePedidos.Location = new Point(290, 33);
+            lblTitlePedidos.Location = new Point(557, 50);
             lblTitlePedidos.Name = "lblTitlePedidos";
             lblTitlePedidos.Size = new Size(106, 31);
             lblTitlePedidos.TabIndex = 2;
@@ -47,7 +47,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1329, 653);
             Controls.Add(lblTitlePedidos);
             Name = "PedidosFrm";
             Text = "PedidosFrm";

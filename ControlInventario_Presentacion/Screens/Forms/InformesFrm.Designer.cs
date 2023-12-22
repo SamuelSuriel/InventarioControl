@@ -36,7 +36,7 @@
             lblTitleInformes.AutoSize = true;
             lblTitleInformes.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleInformes.ForeColor = Color.Gainsboro;
-            lblTitleInformes.Location = new Point(314, 26);
+            lblTitleInformes.Location = new Point(552, 51);
             lblTitleInformes.Name = "lblTitleInformes";
             lblTitleInformes.Size = new Size(123, 31);
             lblTitleInformes.TabIndex = 1;
@@ -47,7 +47,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1329, 653);
             Controls.Add(lblTitleInformes);
             Name = "InformesFrm";
             Text = "InformesFrm";

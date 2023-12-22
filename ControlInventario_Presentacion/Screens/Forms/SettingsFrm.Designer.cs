@@ -36,7 +36,7 @@
             lblTitleSettings.AutoSize = true;
             lblTitleSettings.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleSettings.ForeColor = Color.Gainsboro;
-            lblTitleSettings.Location = new Point(286, 40);
+            lblTitleSettings.Location = new Point(538, 41);
             lblTitleSettings.Name = "lblTitleSettings";
             lblTitleSettings.Size = new Size(114, 31);
             lblTitleSettings.TabIndex = 2;
@@ -47,7 +47,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1329, 653);
             Controls.Add(lblTitleSettings);
             Name = "SettingsFrm";
             Text = "SettingsFrm";

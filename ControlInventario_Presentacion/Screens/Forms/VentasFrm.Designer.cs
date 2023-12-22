@@ -36,7 +36,7 @@
             lblTitleVentas.AutoSize = true;
             lblTitleVentas.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleVentas.ForeColor = Color.Gainsboro;
-            lblTitleVentas.Location = new Point(299, 25);
+            lblTitleVentas.Location = new Point(541, 39);
             lblTitleVentas.Name = "lblTitleVentas";
             lblTitleVentas.Size = new Size(94, 31);
             lblTitleVentas.TabIndex = 2;
@@ -47,7 +47,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1329, 653);
             Controls.Add(lblTitleVentas);
             Name = "VentasFrm";
             Text = "VentasFrm";

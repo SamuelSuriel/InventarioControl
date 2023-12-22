@@ -37,16 +37,16 @@
             // 
             lblTitleDashboard.AutoSize = true;
             lblTitleDashboard.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitleDashboard.Location = new Point(298, 22);
+            lblTitleDashboard.Location = new Point(545, 69);
             lblTitleDashboard.Name = "lblTitleDashboard";
-            lblTitleDashboard.Size = new Size(193, 31);
+            lblTitleDashboard.Size = new Size(147, 31);
             lblTitleDashboard.TabIndex = 0;
-            lblTitleDashboard.Text = "BIENVENIDOS/AS";
+            lblTitleDashboard.Text = "DASHBOARD";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Logo_SRS;
-            pictureBox1.Location = new Point(140, 86);
+            pictureBox1.Location = new Point(386, 157);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(504, 288);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -58,7 +58,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1329, 653);
             Controls.Add(pictureBox1);
             Controls.Add(lblTitleDashboard);
             Font = new Font("Segoe UI Variable Display", 9F, FontStyle.Regular, GraphicsUnit.Point);

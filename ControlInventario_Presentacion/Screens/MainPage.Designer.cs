@@ -41,16 +41,24 @@
             btnHome = new PictureBox();
             iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
             panelTitle = new Panel();
+            iconMaxim = new FontAwesome.Sharp.IconPictureBox();
+            lblMinimizeApp = new Label();
+            lblCerrarApp = new Label();
             lblTitleChild = new Label();
             iconCurrentChildFrm = new FontAwesome.Sharp.IconPictureBox();
             panelShadow = new Panel();
             panelDesktop = new Panel();
+            pictureBox1 = new PictureBox();
+            lblTitleDashboard = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChild).BeginInit();
             panelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconMaxim).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildFrm).BeginInit();
+            panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -237,9 +245,9 @@
             // btnHome
             // 
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
-            btnHome.Location = new Point(51, 9);
+            btnHome.Location = new Point(66, 17);
             btnHome.Name = "btnHome";
-            btnHome.Size = new Size(129, 122);
+            btnHome.Size = new Size(101, 103);
             btnHome.SizeMode = PictureBoxSizeMode.Zoom;
             btnHome.TabIndex = 0;
             btnHome.TabStop = false;
@@ -264,6 +272,9 @@
             // panelTitle
             // 
             panelTitle.BackColor = Color.FromArgb(37, 36, 81);
+            panelTitle.Controls.Add(iconMaxim);
+            panelTitle.Controls.Add(lblMinimizeApp);
+            panelTitle.Controls.Add(lblCerrarApp);
             panelTitle.Controls.Add(lblTitleChild);
             panelTitle.Controls.Add(iconCurrentChildFrm);
             panelTitle.Dock = DockStyle.Top;
@@ -272,6 +283,48 @@
             panelTitle.Size = new Size(1347, 77);
             panelTitle.TabIndex = 1;
             panelTitle.MouseDown += panelTitle_MouseDown;
+            // 
+            // iconMaxim
+            // 
+            iconMaxim.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            iconMaxim.BackColor = Color.FromArgb(37, 36, 81);
+            iconMaxim.ForeColor = Color.Gainsboro;
+            iconMaxim.IconChar = FontAwesome.Sharp.IconChar.Square;
+            iconMaxim.IconColor = Color.Gainsboro;
+            iconMaxim.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMaxim.IconSize = 25;
+            iconMaxim.Location = new Point(1266, 32);
+            iconMaxim.Name = "iconMaxim";
+            iconMaxim.Size = new Size(25, 25);
+            iconMaxim.TabIndex = 4;
+            iconMaxim.TabStop = false;
+            iconMaxim.Click += iconMaxim_Click;
+            // 
+            // lblMinimizeApp
+            // 
+            lblMinimizeApp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblMinimizeApp.AutoSize = true;
+            lblMinimizeApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMinimizeApp.ForeColor = Color.Gainsboro;
+            lblMinimizeApp.Location = new Point(1231, 28);
+            lblMinimizeApp.Name = "lblMinimizeApp";
+            lblMinimizeApp.Size = new Size(28, 27);
+            lblMinimizeApp.TabIndex = 4;
+            lblMinimizeApp.Text = "__";
+            lblMinimizeApp.Click += lblMinimizeApp_Click;
+            // 
+            // lblCerrarApp
+            // 
+            lblCerrarApp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblCerrarApp.AutoSize = true;
+            lblCerrarApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCerrarApp.ForeColor = Color.Gainsboro;
+            lblCerrarApp.Location = new Point(1301, 28);
+            lblCerrarApp.Name = "lblCerrarApp";
+            lblCerrarApp.Size = new Size(25, 27);
+            lblCerrarApp.TabIndex = 2;
+            lblCerrarApp.Text = "X";
+            lblCerrarApp.Click += lblCerrarApp_Click;
             // 
             // lblTitleChild
             // 
@@ -310,11 +363,35 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.DarkSlateBlue;
+            panelDesktop.Controls.Add(pictureBox1);
+            panelDesktop.Controls.Add(lblTitleDashboard);
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(250, 86);
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1347, 700);
             panelDesktop.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Image = Properties.Resources.Logo_SRS;
+            pictureBox1.Location = new Point(383, 105);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(518, 490);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // lblTitleDashboard
+            // 
+            lblTitleDashboard.AutoSize = true;
+            lblTitleDashboard.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleDashboard.ForeColor = Color.Gainsboro;
+            lblTitleDashboard.Location = new Point(555, 41);
+            lblTitleDashboard.Name = "lblTitleDashboard";
+            lblTitleDashboard.Size = new Size(193, 31);
+            lblTitleDashboard.TabIndex = 2;
+            lblTitleDashboard.Text = "BIENVENIDOS/AS";
             // 
             // MainPage
             // 
@@ -327,6 +404,7 @@
             Controls.Add(iconCurrentChild);
             Controls.Add(panelMenu);
             Name = "MainPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "MainPage";
             panelMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
@@ -334,7 +412,11 @@
             ((System.ComponentModel.ISupportInitialize)iconCurrentChild).EndInit();
             panelTitle.ResumeLayout(false);
             panelTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconMaxim).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildFrm).EndInit();
+            panelDesktop.ResumeLayout(false);
+            panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -356,5 +438,10 @@
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildFrm;
         private Panel panelShadow;
         private Panel panelDesktop;
+        private PictureBox pictureBox1;
+        private Label lblTitleDashboard;
+        private Label lblMinimizeApp;
+        private Label lblCerrarApp;
+        private FontAwesome.Sharp.IconPictureBox iconMaxim;
     }
 }

@@ -36,7 +36,7 @@
             lblTitleProveedores.AutoSize = true;
             lblTitleProveedores.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleProveedores.ForeColor = Color.Gainsboro;
-            lblTitleProveedores.Location = new Point(287, 34);
+            lblTitleProveedores.Location = new Point(523, 43);
             lblTitleProveedores.Name = "lblTitleProveedores";
             lblTitleProveedores.Size = new Size(164, 31);
             lblTitleProveedores.TabIndex = 2;
@@ -47,7 +47,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1329, 653);
             Controls.Add(lblTitleProveedores);
             Name = "ProveedoresFrm";
             Text = "ProveedoresFrm";
