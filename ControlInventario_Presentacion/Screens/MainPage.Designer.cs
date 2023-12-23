@@ -42,6 +42,8 @@
             btnHome = new PictureBox();
             iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
             panelTitle = new Panel();
+            iconMenu = new FontAwesome.Sharp.IconPictureBox();
+            IconNotificacion = new FontAwesome.Sharp.IconPictureBox();
             iconMaxim = new FontAwesome.Sharp.IconPictureBox();
             lblMinimizeApp = new Label();
             lblCerrarApp = new Label();
@@ -54,15 +56,19 @@
             pictureBox1 = new PictureBox();
             lblTitleDashboard = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            iconUser = new FontAwesome.Sharp.IconPictureBox();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChild).BeginInit();
             panelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconMenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)IconNotificacion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconMaxim).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildFrm).BeginInit();
             panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconUser).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -276,6 +282,9 @@
             // panelTitle
             // 
             panelTitle.BackColor = Color.FromArgb(37, 36, 81);
+            panelTitle.Controls.Add(iconMenu);
+            panelTitle.Controls.Add(iconUser);
+            panelTitle.Controls.Add(IconNotificacion);
             panelTitle.Controls.Add(iconMaxim);
             panelTitle.Controls.Add(lblMinimizeApp);
             panelTitle.Controls.Add(lblCerrarApp);
@@ -287,6 +296,32 @@
             panelTitle.Size = new Size(1347, 77);
             panelTitle.TabIndex = 1;
             panelTitle.MouseDown += panelTitle_MouseDown;
+            // 
+            // iconMenu
+            // 
+            iconMenu.BackColor = Color.FromArgb(37, 36, 81);
+            iconMenu.ForeColor = Color.Gainsboro;
+            iconMenu.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+            iconMenu.IconColor = Color.Gainsboro;
+            iconMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenu.Location = new Point(1266, 42);
+            iconMenu.Name = "iconMenu";
+            iconMenu.Size = new Size(33, 32);
+            iconMenu.TabIndex = 5;
+            iconMenu.TabStop = false;
+            // 
+            // IconNotificacion
+            // 
+            IconNotificacion.BackColor = Color.FromArgb(37, 36, 81);
+            IconNotificacion.ForeColor = Color.Gainsboro;
+            IconNotificacion.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            IconNotificacion.IconColor = Color.Gainsboro;
+            IconNotificacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            IconNotificacion.Location = new Point(1305, 42);
+            IconNotificacion.Name = "IconNotificacion";
+            IconNotificacion.Size = new Size(33, 32);
+            IconNotificacion.TabIndex = 5;
+            IconNotificacion.TabStop = false;
             // 
             // iconMaxim
             // 
@@ -429,6 +464,19 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
+            // iconUser
+            // 
+            iconUser.BackColor = Color.FromArgb(37, 36, 81);
+            iconUser.ForeColor = Color.Gainsboro;
+            iconUser.IconChar = FontAwesome.Sharp.IconChar.User;
+            iconUser.IconColor = Color.Gainsboro;
+            iconUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconUser.Location = new Point(1227, 42);
+            iconUser.Name = "iconUser";
+            iconUser.Size = new Size(33, 32);
+            iconUser.TabIndex = 5;
+            iconUser.TabStop = false;
+            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -449,11 +497,14 @@
             ((System.ComponentModel.ISupportInitialize)iconCurrentChild).EndInit();
             panelTitle.ResumeLayout(false);
             panelTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconMenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)IconNotificacion).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconMaxim).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildFrm).EndInit();
             panelDesktop.ResumeLayout(false);
             panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconUser).EndInit();
             ResumeLayout(false);
         }
 
@@ -483,5 +534,8 @@
         private Label lblHoraActual;
         private Label lblFechaActual;
         private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconPictureBox IconNotificacion;
+        private FontAwesome.Sharp.IconPictureBox iconMenu;
+        private FontAwesome.Sharp.IconPictureBox iconUser;
     }
 }
