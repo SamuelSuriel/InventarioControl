@@ -46,7 +46,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateBlue;
+            BackColor = Color.Black;
             ClientSize = new Size(1329, 653);
             Controls.Add(lblTitleProducto);
             Name = "ProductosFrm";

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             lblTitleDashboard = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblTitleDashboard
@@ -43,29 +41,17 @@
             lblTitleDashboard.TabIndex = 0;
             lblTitleDashboard.Text = "DASHBOARD";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Logo_SRS;
-            pictureBox1.Location = new Point(386, 157);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(504, 288);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
             // DashboardFrm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateBlue;
+            BackColor = Color.Black;
             ClientSize = new Size(1329, 653);
-            Controls.Add(pictureBox1);
             Controls.Add(lblTitleDashboard);
             Font = new Font("Segoe UI Variable Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.Gainsboro;
             Name = "DashboardFrm";
             Text = "DashboardFrm";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -73,6 +59,5 @@
         #endregion
 
         private Label lblTitleDashboard;
-        private PictureBox pictureBox1;
     }
 }

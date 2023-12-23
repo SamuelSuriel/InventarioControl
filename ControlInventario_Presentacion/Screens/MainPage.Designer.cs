@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             panelMenu = new Panel();
             btnSettings = new FontAwesome.Sharp.IconButton();
@@ -48,8 +49,11 @@
             iconCurrentChildFrm = new FontAwesome.Sharp.IconPictureBox();
             panelShadow = new Panel();
             panelDesktop = new Panel();
+            lblFechaActual = new Label();
+            lblHoraActual = new Label();
             pictureBox1 = new PictureBox();
             lblTitleDashboard = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
@@ -292,10 +296,10 @@
             iconMaxim.IconChar = FontAwesome.Sharp.IconChar.Square;
             iconMaxim.IconColor = Color.Gainsboro;
             iconMaxim.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMaxim.IconSize = 25;
-            iconMaxim.Location = new Point(1266, 32);
+            iconMaxim.IconSize = 20;
+            iconMaxim.Location = new Point(1273, 35);
             iconMaxim.Name = "iconMaxim";
-            iconMaxim.Size = new Size(25, 25);
+            iconMaxim.Size = new Size(20, 20);
             iconMaxim.TabIndex = 4;
             iconMaxim.TabStop = false;
             iconMaxim.Click += iconMaxim_Click;
@@ -306,7 +310,7 @@
             lblMinimizeApp.AutoSize = true;
             lblMinimizeApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblMinimizeApp.ForeColor = Color.Gainsboro;
-            lblMinimizeApp.Location = new Point(1231, 28);
+            lblMinimizeApp.Location = new Point(1237, 25);
             lblMinimizeApp.Name = "lblMinimizeApp";
             lblMinimizeApp.Size = new Size(28, 27);
             lblMinimizeApp.TabIndex = 4;
@@ -319,7 +323,7 @@
             lblCerrarApp.AutoSize = true;
             lblCerrarApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCerrarApp.ForeColor = Color.Gainsboro;
-            lblCerrarApp.Location = new Point(1301, 28);
+            lblCerrarApp.Location = new Point(1302, 29);
             lblCerrarApp.Name = "lblCerrarApp";
             lblCerrarApp.Size = new Size(25, 27);
             lblCerrarApp.TabIndex = 2;
@@ -329,11 +333,11 @@
             // lblTitleChild
             // 
             lblTitleChild.AutoSize = true;
-            lblTitleChild.Font = new Font("Segoe UI Variable Display Semib", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitleChild.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitleChild.ForeColor = Color.Gainsboro;
-            lblTitleChild.Location = new Point(79, 28);
+            lblTitleChild.Location = new Point(58, 24);
             lblTitleChild.Name = "lblTitleChild";
-            lblTitleChild.Size = new Size(68, 27);
+            lblTitleChild.Size = new Size(77, 31);
             lblTitleChild.TabIndex = 1;
             lblTitleChild.Text = "Home";
             // 
@@ -362,20 +366,46 @@
             // 
             // panelDesktop
             // 
-            panelDesktop.BackColor = Color.DarkSlateBlue;
+            panelDesktop.BackColor = Color.Black;
+            panelDesktop.Controls.Add(lblFechaActual);
+            panelDesktop.Controls.Add(lblHoraActual);
             panelDesktop.Controls.Add(pictureBox1);
             panelDesktop.Controls.Add(lblTitleDashboard);
             panelDesktop.Dock = DockStyle.Fill;
+            panelDesktop.ForeColor = SystemColors.Desktop;
             panelDesktop.Location = new Point(250, 86);
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(1347, 700);
             panelDesktop.TabIndex = 3;
             // 
+            // lblFechaActual
+            // 
+            lblFechaActual.AutoSize = true;
+            lblFechaActual.Font = new Font("Segoe UI Variable Display Semib", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFechaActual.ForeColor = Color.Gainsboro;
+            lblFechaActual.Location = new Point(417, 627);
+            lblFechaActual.Name = "lblFechaActual";
+            lblFechaActual.Size = new Size(185, 40);
+            lblFechaActual.TabIndex = 5;
+            lblFechaActual.Text = "Fecha actual";
+            // 
+            // lblHoraActual
+            // 
+            lblHoraActual.AutoSize = true;
+            lblHoraActual.BackColor = Color.Transparent;
+            lblHoraActual.Font = new Font("Segoe UI Variable Display", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            lblHoraActual.ForeColor = Color.White;
+            lblHoraActual.Location = new Point(452, 547);
+            lblHoraActual.Name = "lblHoraActual";
+            lblHoraActual.Size = new Size(359, 80);
+            lblHoraActual.TabIndex = 4;
+            lblHoraActual.Text = "Hora actual";
+            // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.Logo_SRS;
-            pictureBox1.Location = new Point(383, 105);
+            pictureBox1.Location = new Point(390, 54);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(518, 490);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -387,11 +417,16 @@
             lblTitleDashboard.AutoSize = true;
             lblTitleDashboard.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleDashboard.ForeColor = Color.Gainsboro;
-            lblTitleDashboard.Location = new Point(555, 41);
+            lblTitleDashboard.Location = new Point(547, 3);
             lblTitleDashboard.Name = "lblTitleDashboard";
             lblTitleDashboard.Size = new Size(193, 31);
             lblTitleDashboard.TabIndex = 2;
             lblTitleDashboard.Text = "BIENVENIDOS/AS";
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
             // 
             // MainPage
             // 
@@ -443,5 +478,8 @@
         private Label lblMinimizeApp;
         private Label lblCerrarApp;
         private FontAwesome.Sharp.IconPictureBox iconMaxim;
+        private Label lblHoraActual;
+        private Label lblFechaActual;
+        private System.Windows.Forms.Timer timer1;
     }
 }
