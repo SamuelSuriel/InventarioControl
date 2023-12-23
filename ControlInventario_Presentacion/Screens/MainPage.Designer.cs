@@ -357,7 +357,7 @@
             // 
             // panelShadow
             // 
-            panelShadow.BackColor = Color.FromArgb(37, 36, 81);
+            panelShadow.BackColor = Color.Black;
             panelShadow.Dock = DockStyle.Top;
             panelShadow.Location = new Point(250, 77);
             panelShadow.Name = "panelShadow";
@@ -367,6 +367,7 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.Black;
+            panelDesktop.BorderStyle = BorderStyle.FixedSingle;
             panelDesktop.Controls.Add(lblFechaActual);
             panelDesktop.Controls.Add(lblHoraActual);
             panelDesktop.Controls.Add(pictureBox1);
@@ -405,7 +406,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.Logo_SRS;
-            pictureBox1.Location = new Point(390, 54);
+            pictureBox1.Location = new Point(389, 53);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(518, 490);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
