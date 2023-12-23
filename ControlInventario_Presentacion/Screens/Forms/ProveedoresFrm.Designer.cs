@@ -46,6 +46,7 @@
             btnAgregarProveedor = new Button();
             label7 = new Label();
             lblLine = new Label();
+            lblLimpiarProv = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -215,6 +216,17 @@
             lblLine.TabIndex = 26;
             lblLine.Text = "_______________________________________________________________________________________________________________________________________________________________________________________________";
             // 
+            // lblLimpiarProv
+            // 
+            lblLimpiarProv.AutoSize = true;
+            lblLimpiarProv.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            lblLimpiarProv.ForeColor = Color.White;
+            lblLimpiarProv.Location = new Point(366, 172);
+            lblLimpiarProv.Name = "lblLimpiarProv";
+            lblLimpiarProv.Size = new Size(59, 20);
+            lblLimpiarProv.TabIndex = 21;
+            lblLimpiarProv.Text = "Limpiar";
+            // 
             // ProveedoresFrm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -232,6 +244,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            Controls.Add(lblLimpiarProv);
             Controls.Add(label1);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
@@ -266,5 +279,6 @@
         private Button btnAgregarProveedor;
         private Label label7;
         private Label lblLine;
+        private Label lblLimpiarProv;
     }
 }

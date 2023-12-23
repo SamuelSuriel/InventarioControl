@@ -36,7 +36,7 @@
             textBox5 = new TextBox();
             btnAgregarProducto = new Button();
             btnEditarProducto = new Button();
-            label1 = new Label();
+            lblLimpiarCamporProd = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -113,15 +113,16 @@
             btnEditarProducto.Text = "Editar";
             btnEditarProducto.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblLimpiarCamporProd
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(178, 141);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 5;
-            label1.Text = "label1";
+            lblLimpiarCamporProd.AutoSize = true;
+            lblLimpiarCamporProd.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            lblLimpiarCamporProd.ForeColor = Color.White;
+            lblLimpiarCamporProd.Location = new Point(391, 144);
+            lblLimpiarCamporProd.Name = "lblLimpiarCamporProd";
+            lblLimpiarCamporProd.Size = new Size(59, 20);
+            lblLimpiarCamporProd.TabIndex = 5;
+            lblLimpiarCamporProd.Text = "Limpiar";
             // 
             // label2
             // 
@@ -230,7 +231,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblLimpiarCamporProd);
             Controls.Add(btnEditarProducto);
             Controls.Add(btnAgregarProducto);
             Controls.Add(textBox5);
@@ -256,7 +257,7 @@
         private TextBox textBox5;
         private Button btnAgregarProducto;
         private Button btnEditarProducto;
-        private Label label1;
+        private Label lblLimpiarCamporProd;
         private Label label2;
         private Label label3;
         private Label label4;

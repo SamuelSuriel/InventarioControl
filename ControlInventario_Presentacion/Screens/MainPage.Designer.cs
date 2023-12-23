@@ -297,7 +297,7 @@
             iconMaxim.IconColor = Color.Gainsboro;
             iconMaxim.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMaxim.IconSize = 20;
-            iconMaxim.Location = new Point(1273, 35);
+            iconMaxim.Location = new Point(1288, 9);
             iconMaxim.Name = "iconMaxim";
             iconMaxim.Size = new Size(20, 20);
             iconMaxim.TabIndex = 4;
@@ -310,7 +310,7 @@
             lblMinimizeApp.AutoSize = true;
             lblMinimizeApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblMinimizeApp.ForeColor = Color.Gainsboro;
-            lblMinimizeApp.Location = new Point(1237, 25);
+            lblMinimizeApp.Location = new Point(1252, -1);
             lblMinimizeApp.Name = "lblMinimizeApp";
             lblMinimizeApp.Size = new Size(28, 27);
             lblMinimizeApp.TabIndex = 4;
@@ -323,7 +323,7 @@
             lblCerrarApp.AutoSize = true;
             lblCerrarApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCerrarApp.ForeColor = Color.Gainsboro;
-            lblCerrarApp.Location = new Point(1302, 29);
+            lblCerrarApp.Location = new Point(1317, 3);
             lblCerrarApp.Name = "lblCerrarApp";
             lblCerrarApp.Size = new Size(25, 27);
             lblCerrarApp.TabIndex = 2;
@@ -439,6 +439,7 @@
             Controls.Add(panelTitle);
             Controls.Add(iconCurrentChild);
             Controls.Add(panelMenu);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "MainPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainPage";

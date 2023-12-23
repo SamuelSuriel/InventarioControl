@@ -16,5 +16,22 @@ namespace ControlInventario_Presentacion.Screens
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtUserName.Text != "" && txtPassword.Text != "")
+            {
+                Form mainPage = new MainPage();
+                this.Hide();
+                mainPage.Show();
+            }
+        }
+
+        private void lblRegistrarse_Click(object sender, EventArgs e)
+        {
+            Form registro = new RegistroFrm();
+            this.Hide();
+            registro.Show();
+        }
     }
 }
