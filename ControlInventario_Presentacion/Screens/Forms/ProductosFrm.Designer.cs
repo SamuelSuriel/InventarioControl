@@ -46,7 +46,17 @@
             btnEliminarProducto = new Label();
             lblLine = new Label();
             label7 = new Label();
+            Nombre = new DataGridViewTextBoxColumn();
+            codigo = new DataGridViewTextBoxColumn();
+            descripcion = new DataGridViewTextBoxColumn();
+            stock = new DataGridViewTextBoxColumn();
+            precioCompra = new DataGridViewTextBoxColumn();
+            precioVenta = new DataGridViewTextBoxColumn();
+            label1 = new Label();
+            textBox6 = new TextBox();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblTitleProducto
@@ -193,6 +203,7 @@
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, codigo, descripcion, stock, precioCompra, precioVenta });
             dataGridView1.Location = new Point(485, 176);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
@@ -228,11 +239,89 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ControlDarkDark;
-            label7.Location = new Point(112, 108);
+            label7.Location = new Point(112, 84);
             label7.Name = "label7";
             label7.Size = new Size(1155, 20);
             label7.TabIndex = 9;
             label7.Text = "_______________________________________________________________________________________________________________________________________________________________________________________________";
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.Width = 125;
+            // 
+            // codigo
+            // 
+            codigo.HeaderText = "Código";
+            codigo.MinimumWidth = 6;
+            codigo.Name = "codigo";
+            codigo.Width = 125;
+            // 
+            // descripcion
+            // 
+            descripcion.HeaderText = "Descripción";
+            descripcion.MinimumWidth = 6;
+            descripcion.Name = "descripcion";
+            descripcion.Width = 125;
+            // 
+            // stock
+            // 
+            stock.HeaderText = "Stock";
+            stock.MinimumWidth = 6;
+            stock.Name = "stock";
+            stock.Width = 125;
+            // 
+            // precioCompra
+            // 
+            precioCompra.HeaderText = "Precio Compra";
+            precioCompra.MinimumWidth = 6;
+            precioCompra.Name = "precioCompra";
+            precioCompra.Width = 125;
+            // 
+            // precioVenta
+            // 
+            precioVenta.HeaderText = "Precio venta";
+            precioVenta.MinimumWidth = 6;
+            precioVenta.Name = "precioVenta";
+            precioVenta.Width = 125;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(1215, 118);
+            label1.Name = "label1";
+            label1.Size = new Size(52, 20);
+            label1.TabIndex = 39;
+            label1.Text = "Buscar";
+            // 
+            // textBox6
+            // 
+            textBox6.Anchor = AnchorStyles.None;
+            textBox6.Location = new Point(698, 141);
+            textBox6.Name = "textBox6";
+            textBox6.PlaceholderText = "Buscar por código o nombre del producto";
+            textBox6.Size = new Size(569, 27);
+            textBox6.TabIndex = 38;
+            // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.Anchor = AnchorStyles.None;
+            iconPictureBox1.BackColor = Color.White;
+            iconPictureBox1.Cursor = Cursors.Hand;
+            iconPictureBox1.ForeColor = Color.Black;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+            iconPictureBox1.IconColor = Color.Black;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 25;
+            iconPictureBox1.Location = new Point(1232, 142);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(25, 26);
+            iconPictureBox1.TabIndex = 40;
+            iconPictureBox1.TabStop = false;
             // 
             // ProductosFrm
             // 
@@ -240,6 +329,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1329, 653);
+            Controls.Add(iconPictureBox1);
+            Controls.Add(label1);
+            Controls.Add(textBox6);
             Controls.Add(label7);
             Controls.Add(lblLine);
             Controls.Add(btnEliminarProducto);
@@ -261,6 +353,7 @@
             Name = "ProductosFrm";
             Text = "ProductosFrm";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -285,5 +378,14 @@
         private Label btnEliminarProducto;
         private Label lblLine;
         private Label label7;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn codigo;
+        private DataGridViewTextBoxColumn descripcion;
+        private DataGridViewTextBoxColumn stock;
+        private DataGridViewTextBoxColumn precioCompra;
+        private DataGridViewTextBoxColumn precioVenta;
+        private Label label1;
+        private TextBox textBox6;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

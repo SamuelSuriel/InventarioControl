@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             panelMenu = new Panel();
+            btnStocks = new FontAwesome.Sharp.IconButton();
             btnSettings = new FontAwesome.Sharp.IconButton();
             btnInformes = new FontAwesome.Sharp.IconButton();
             btnVentas = new FontAwesome.Sharp.IconButton();
@@ -74,6 +75,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(37, 36, 81);
+            panelMenu.Controls.Add(btnStocks);
             panelMenu.Controls.Add(btnSettings);
             panelMenu.Controls.Add(btnInformes);
             panelMenu.Controls.Add(btnVentas);
@@ -87,6 +89,29 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(250, 786);
             panelMenu.TabIndex = 0;
+            // 
+            // btnStocks
+            // 
+            btnStocks.Cursor = Cursors.Hand;
+            btnStocks.Dock = DockStyle.Top;
+            btnStocks.FlatAppearance.BorderSize = 0;
+            btnStocks.FlatStyle = FlatStyle.Flat;
+            btnStocks.ForeColor = Color.Gainsboro;
+            btnStocks.IconChar = FontAwesome.Sharp.IconChar.CubesStacked;
+            btnStocks.IconColor = Color.Gainsboro;
+            btnStocks.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnStocks.IconSize = 68;
+            btnStocks.ImageAlign = ContentAlignment.MiddleLeft;
+            btnStocks.Location = new Point(0, 560);
+            btnStocks.Name = "btnStocks";
+            btnStocks.Padding = new Padding(10, 0, 20, 0);
+            btnStocks.Size = new Size(250, 60);
+            btnStocks.TabIndex = 8;
+            btnStocks.Text = "Stocks";
+            btnStocks.TextAlign = ContentAlignment.MiddleLeft;
+            btnStocks.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnStocks.UseVisualStyleBackColor = true;
+            btnStocks.Click += btnStocks_Click;
             // 
             // btnSettings
             // 
@@ -307,6 +332,7 @@
             // 
             // iconMenu
             // 
+            iconMenu.Anchor = AnchorStyles.None;
             iconMenu.BackColor = Color.FromArgb(37, 36, 81);
             iconMenu.Cursor = Cursors.Hand;
             iconMenu.ForeColor = Color.Gainsboro;
@@ -321,6 +347,7 @@
             // 
             // iconUser
             // 
+            iconUser.Anchor = AnchorStyles.None;
             iconUser.BackColor = Color.FromArgb(37, 36, 81);
             iconUser.Cursor = Cursors.Hand;
             iconUser.ForeColor = Color.Gainsboro;
@@ -335,6 +362,7 @@
             // 
             // IconNotificacion
             // 
+            IconNotificacion.Anchor = AnchorStyles.None;
             IconNotificacion.BackColor = Color.FromArgb(37, 36, 81);
             IconNotificacion.Cursor = Cursors.Hand;
             IconNotificacion.ForeColor = Color.Gainsboro;
@@ -554,5 +582,6 @@
         private FontAwesome.Sharp.IconPictureBox IconNotificacion;
         private FontAwesome.Sharp.IconPictureBox iconMenu;
         private FontAwesome.Sharp.IconPictureBox iconUser;
+        private FontAwesome.Sharp.IconButton btnStocks;
     }
 }

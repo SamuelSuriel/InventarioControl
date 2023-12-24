@@ -47,7 +47,11 @@
             label7 = new Label();
             lblLine = new Label();
             lblLimpiarProv = new Label();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            label8 = new Label();
+            textBox6 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblTitleProveedores
@@ -217,7 +221,7 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ControlDarkDark;
-            label7.Location = new Point(87, 120);
+            label7.Location = new Point(87, 110);
             label7.Name = "label7";
             label7.Size = new Size(1155, 20);
             label7.TabIndex = 27;
@@ -246,12 +250,51 @@
             lblLimpiarProv.TabIndex = 21;
             lblLimpiarProv.Text = "Limpiar";
             // 
+            // iconPictureBox1
+            // 
+            iconPictureBox1.Anchor = AnchorStyles.None;
+            iconPictureBox1.BackColor = Color.White;
+            iconPictureBox1.Cursor = Cursors.Hand;
+            iconPictureBox1.ForeColor = Color.Black;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Searchengin;
+            iconPictureBox1.IconColor = Color.Black;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 25;
+            iconPictureBox1.Location = new Point(1207, 166);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(25, 26);
+            iconPictureBox1.TabIndex = 43;
+            iconPictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.None;
+            label8.AutoSize = true;
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(1190, 142);
+            label8.Name = "label8";
+            label8.Size = new Size(52, 20);
+            label8.TabIndex = 42;
+            label8.Text = "Buscar";
+            // 
+            // textBox6
+            // 
+            textBox6.Anchor = AnchorStyles.None;
+            textBox6.Location = new Point(673, 165);
+            textBox6.Name = "textBox6";
+            textBox6.PlaceholderText = "Buscar por código o nombre del proveedor";
+            textBox6.Size = new Size(569, 27);
+            textBox6.TabIndex = 41;
+            // 
             // ProveedoresFrm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1329, 653);
+            Controls.Add(iconPictureBox1);
+            Controls.Add(label8);
+            Controls.Add(textBox6);
             Controls.Add(label7);
             Controls.Add(lblLine);
             Controls.Add(btnEliminarProveedor);
@@ -274,6 +317,7 @@
             Name = "ProveedoresFrm";
             Text = "ProveedoresFrm";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -299,5 +343,8 @@
         private Label label7;
         private Label lblLine;
         private Label lblLimpiarProv;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Label label8;
+        private TextBox textBox6;
     }
 }
