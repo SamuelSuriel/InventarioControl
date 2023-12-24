@@ -46,6 +46,7 @@
             // 
             // lblTitlePedidos
             // 
+            lblTitlePedidos.Anchor = AnchorStyles.None;
             lblTitlePedidos.AutoSize = true;
             lblTitlePedidos.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitlePedidos.ForeColor = Color.Gainsboro;
@@ -57,6 +58,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(69, 402);
             dataGridView1.Name = "dataGridView1";
@@ -67,6 +69,7 @@
             // 
             // checkBox3
             // 
+            checkBox3.Anchor = AnchorStyles.None;
             checkBox3.AutoSize = true;
             checkBox3.ForeColor = Color.White;
             checkBox3.Location = new Point(749, 297);
@@ -78,6 +81,7 @@
             // 
             // checkBox2
             // 
+            checkBox2.Anchor = AnchorStyles.None;
             checkBox2.AutoSize = true;
             checkBox2.ForeColor = Color.White;
             checkBox2.Location = new Point(749, 248);
@@ -89,6 +93,7 @@
             // 
             // checkBox1
             // 
+            checkBox1.Anchor = AnchorStyles.None;
             checkBox1.AutoSize = true;
             checkBox1.ForeColor = Color.White;
             checkBox1.Location = new Point(749, 202);
@@ -100,6 +105,7 @@
             // 
             // textBox3
             // 
+            textBox3.Anchor = AnchorStyles.None;
             textBox3.Location = new Point(163, 285);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(267, 27);
@@ -107,6 +113,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(163, 212);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(267, 27);
@@ -114,6 +121,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(163, 134);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(267, 27);
@@ -121,6 +129,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.BackColor = Color.Black;
             label3.ForeColor = Color.White;
@@ -132,6 +141,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.BackColor = Color.Black;
             label2.ForeColor = Color.White;
@@ -143,6 +153,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.BackColor = Color.Black;
             label1.ForeColor = Color.White;
@@ -154,6 +165,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.BackColor = Color.Black;
             label4.ForeColor = Color.White;
@@ -165,6 +177,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.Anchor = AnchorStyles.None;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(163, 358);
             comboBox1.Name = "comboBox1";

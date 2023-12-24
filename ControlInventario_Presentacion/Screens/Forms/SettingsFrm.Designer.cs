@@ -44,6 +44,7 @@
             // 
             // lblTitleSettings
             // 
+            lblTitleSettings.Anchor = AnchorStyles.None;
             lblTitleSettings.AutoSize = true;
             lblTitleSettings.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleSettings.ForeColor = Color.Gainsboro;
@@ -55,6 +56,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.BackColor = Color.Black;
             label1.ForeColor = Color.White;
@@ -66,6 +68,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(182, 95);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(267, 27);
@@ -73,6 +76,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.BackColor = Color.Black;
             label2.ForeColor = Color.White;
@@ -84,6 +88,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(182, 173);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(267, 27);
@@ -91,6 +96,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.BackColor = Color.Black;
             label3.ForeColor = Color.White;
@@ -102,6 +108,7 @@
             // 
             // textBox3
             // 
+            textBox3.Anchor = AnchorStyles.None;
             textBox3.Location = new Point(182, 259);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(267, 27);
@@ -109,6 +116,7 @@
             // 
             // checkBox1
             // 
+            checkBox1.Anchor = AnchorStyles.None;
             checkBox1.AutoSize = true;
             checkBox1.ForeColor = Color.White;
             checkBox1.Location = new Point(755, 360);
@@ -120,6 +128,7 @@
             // 
             // checkBox2
             // 
+            checkBox2.Anchor = AnchorStyles.None;
             checkBox2.AutoSize = true;
             checkBox2.ForeColor = Color.White;
             checkBox2.Location = new Point(755, 406);
@@ -131,6 +140,7 @@
             // 
             // checkBox3
             // 
+            checkBox3.Anchor = AnchorStyles.None;
             checkBox3.AutoSize = true;
             checkBox3.ForeColor = Color.White;
             checkBox3.Location = new Point(755, 455);
@@ -142,6 +152,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(496, 95);
             dataGridView1.Name = "dataGridView1";

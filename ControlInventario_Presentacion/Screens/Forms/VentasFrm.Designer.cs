@@ -67,6 +67,7 @@
             // 
             // lblTitleVentas
             // 
+            lblTitleVentas.Anchor = AnchorStyles.None;
             lblTitleVentas.AutoSize = true;
             lblTitleVentas.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleVentas.ForeColor = Color.Gainsboro;
@@ -78,6 +79,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(34, 131);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Buscar por código o nombre del producto";
@@ -86,6 +88,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(622, 131);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(111, 27);
@@ -93,6 +96,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.ForeColor = Color.White;
             label1.Location = new Point(34, 108);
@@ -103,6 +107,7 @@
             // 
             // lblCantidad
             // 
+            lblCantidad.Anchor = AnchorStyles.None;
             lblCantidad.AutoSize = true;
             lblCantidad.ForeColor = Color.White;
             lblCantidad.Location = new Point(622, 108);
@@ -113,6 +118,7 @@
             // 
             // btnAgregarProveedor
             // 
+            btnAgregarProveedor.Anchor = AnchorStyles.None;
             btnAgregarProveedor.Location = new Point(761, 118);
             btnAgregarProveedor.Name = "btnAgregarProveedor";
             btnAgregarProveedor.Size = new Size(235, 40);
@@ -122,6 +128,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Item, Unidad, Cantidad, Precio, Subtotal, Descuento, Total });

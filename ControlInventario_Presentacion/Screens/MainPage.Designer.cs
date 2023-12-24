@@ -43,6 +43,7 @@
             iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
             panelTitle = new Panel();
             iconMenu = new FontAwesome.Sharp.IconPictureBox();
+            iconUser = new FontAwesome.Sharp.IconPictureBox();
             IconNotificacion = new FontAwesome.Sharp.IconPictureBox();
             iconMaxim = new FontAwesome.Sharp.IconPictureBox();
             lblMinimizeApp = new Label();
@@ -56,19 +57,18 @@
             pictureBox1 = new PictureBox();
             lblTitleDashboard = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            iconUser = new FontAwesome.Sharp.IconPictureBox();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChild).BeginInit();
             panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconMenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconUser).BeginInit();
             ((System.ComponentModel.ISupportInitialize)IconNotificacion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconMaxim).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildFrm).BeginInit();
             panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconUser).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -90,6 +90,7 @@
             // 
             // btnSettings
             // 
+            btnSettings.Cursor = Cursors.Hand;
             btnSettings.Dock = DockStyle.Top;
             btnSettings.FlatAppearance.BorderSize = 0;
             btnSettings.FlatStyle = FlatStyle.Flat;
@@ -112,6 +113,7 @@
             // 
             // btnInformes
             // 
+            btnInformes.Cursor = Cursors.Hand;
             btnInformes.Dock = DockStyle.Top;
             btnInformes.FlatAppearance.BorderSize = 0;
             btnInformes.FlatStyle = FlatStyle.Flat;
@@ -134,6 +136,7 @@
             // 
             // btnVentas
             // 
+            btnVentas.Cursor = Cursors.Hand;
             btnVentas.Dock = DockStyle.Top;
             btnVentas.FlatAppearance.BorderSize = 0;
             btnVentas.FlatStyle = FlatStyle.Flat;
@@ -156,6 +159,7 @@
             // 
             // btnProveedores
             // 
+            btnProveedores.Cursor = Cursors.Hand;
             btnProveedores.Dock = DockStyle.Top;
             btnProveedores.FlatAppearance.BorderSize = 0;
             btnProveedores.FlatStyle = FlatStyle.Flat;
@@ -178,6 +182,7 @@
             // 
             // btnProductos
             // 
+            btnProductos.Cursor = Cursors.Hand;
             btnProductos.Dock = DockStyle.Top;
             btnProductos.FlatAppearance.BorderSize = 0;
             btnProductos.FlatStyle = FlatStyle.Flat;
@@ -200,6 +205,7 @@
             // 
             // btnPedidos
             // 
+            btnPedidos.Cursor = Cursors.Hand;
             btnPedidos.Dock = DockStyle.Top;
             btnPedidos.FlatAppearance.BorderSize = 0;
             btnPedidos.FlatStyle = FlatStyle.Flat;
@@ -222,6 +228,7 @@
             // 
             // btnDashboard
             // 
+            btnDashboard.Cursor = Cursors.Hand;
             btnDashboard.Dock = DockStyle.Top;
             btnDashboard.FlatAppearance.BorderSize = 0;
             btnDashboard.FlatStyle = FlatStyle.Flat;
@@ -254,6 +261,7 @@
             // 
             // btnHome
             // 
+            btnHome.Cursor = Cursors.Hand;
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.Location = new Point(66, 17);
             btnHome.Name = "btnHome";
@@ -300,6 +308,7 @@
             // iconMenu
             // 
             iconMenu.BackColor = Color.FromArgb(37, 36, 81);
+            iconMenu.Cursor = Cursors.Hand;
             iconMenu.ForeColor = Color.Gainsboro;
             iconMenu.IconChar = FontAwesome.Sharp.IconChar.Navicon;
             iconMenu.IconColor = Color.Gainsboro;
@@ -310,9 +319,24 @@
             iconMenu.TabIndex = 5;
             iconMenu.TabStop = false;
             // 
+            // iconUser
+            // 
+            iconUser.BackColor = Color.FromArgb(37, 36, 81);
+            iconUser.Cursor = Cursors.Hand;
+            iconUser.ForeColor = Color.Gainsboro;
+            iconUser.IconChar = FontAwesome.Sharp.IconChar.User;
+            iconUser.IconColor = Color.Gainsboro;
+            iconUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconUser.Location = new Point(1227, 42);
+            iconUser.Name = "iconUser";
+            iconUser.Size = new Size(33, 32);
+            iconUser.TabIndex = 5;
+            iconUser.TabStop = false;
+            // 
             // IconNotificacion
             // 
             IconNotificacion.BackColor = Color.FromArgb(37, 36, 81);
+            IconNotificacion.Cursor = Cursors.Hand;
             IconNotificacion.ForeColor = Color.Gainsboro;
             IconNotificacion.IconChar = FontAwesome.Sharp.IconChar.Bell;
             IconNotificacion.IconColor = Color.Gainsboro;
@@ -327,6 +351,7 @@
             // 
             iconMaxim.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             iconMaxim.BackColor = Color.FromArgb(37, 36, 81);
+            iconMaxim.Cursor = Cursors.Hand;
             iconMaxim.ForeColor = Color.Gainsboro;
             iconMaxim.IconChar = FontAwesome.Sharp.IconChar.Square;
             iconMaxim.IconColor = Color.Gainsboro;
@@ -343,6 +368,7 @@
             // 
             lblMinimizeApp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblMinimizeApp.AutoSize = true;
+            lblMinimizeApp.Cursor = Cursors.Hand;
             lblMinimizeApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblMinimizeApp.ForeColor = Color.Gainsboro;
             lblMinimizeApp.Location = new Point(1252, -1);
@@ -356,6 +382,7 @@
             // 
             lblCerrarApp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblCerrarApp.AutoSize = true;
+            lblCerrarApp.Cursor = Cursors.Hand;
             lblCerrarApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCerrarApp.ForeColor = Color.Gainsboro;
             lblCerrarApp.Location = new Point(1317, 3);
@@ -416,6 +443,7 @@
             // 
             // lblFechaActual
             // 
+            lblFechaActual.Anchor = AnchorStyles.None;
             lblFechaActual.AutoSize = true;
             lblFechaActual.Font = new Font("Segoe UI Variable Display Semib", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblFechaActual.ForeColor = Color.Gainsboro;
@@ -427,6 +455,7 @@
             // 
             // lblHoraActual
             // 
+            lblHoraActual.Anchor = AnchorStyles.None;
             lblHoraActual.AutoSize = true;
             lblHoraActual.BackColor = Color.Transparent;
             lblHoraActual.Font = new Font("Segoe UI Variable Display", 36F, FontStyle.Bold, GraphicsUnit.Point);
@@ -450,6 +479,7 @@
             // 
             // lblTitleDashboard
             // 
+            lblTitleDashboard.Anchor = AnchorStyles.None;
             lblTitleDashboard.AutoSize = true;
             lblTitleDashboard.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleDashboard.ForeColor = Color.Gainsboro;
@@ -463,19 +493,6 @@
             // 
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
-            // 
-            // iconUser
-            // 
-            iconUser.BackColor = Color.FromArgb(37, 36, 81);
-            iconUser.ForeColor = Color.Gainsboro;
-            iconUser.IconChar = FontAwesome.Sharp.IconChar.User;
-            iconUser.IconColor = Color.Gainsboro;
-            iconUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconUser.Location = new Point(1227, 42);
-            iconUser.Name = "iconUser";
-            iconUser.Size = new Size(33, 32);
-            iconUser.TabIndex = 5;
-            iconUser.TabStop = false;
             // 
             // MainPage
             // 
@@ -498,13 +515,13 @@
             panelTitle.ResumeLayout(false);
             panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconMenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconUser).EndInit();
             ((System.ComponentModel.ISupportInitialize)IconNotificacion).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconMaxim).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChildFrm).EndInit();
             panelDesktop.ResumeLayout(false);
             panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconUser).EndInit();
             ResumeLayout(false);
         }
 

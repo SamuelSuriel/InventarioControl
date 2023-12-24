@@ -51,6 +51,7 @@
             // 
             // lblTitleProducto
             // 
+            lblTitleProducto.Anchor = AnchorStyles.None;
             lblTitleProducto.AutoSize = true;
             lblTitleProducto.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleProducto.ForeColor = Color.Gainsboro;
@@ -62,6 +63,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(168, 177);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(282, 27);
@@ -69,6 +71,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(168, 223);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(282, 27);
@@ -76,6 +79,7 @@
             // 
             // textBox3
             // 
+            textBox3.Anchor = AnchorStyles.None;
             textBox3.Location = new Point(168, 270);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(282, 27);
@@ -83,6 +87,7 @@
             // 
             // textBox4
             // 
+            textBox4.Anchor = AnchorStyles.None;
             textBox4.Location = new Point(168, 317);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(282, 27);
@@ -90,6 +95,7 @@
             // 
             // textBox5
             // 
+            textBox5.Anchor = AnchorStyles.None;
             textBox5.Location = new Point(168, 362);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(282, 27);
@@ -97,6 +103,7 @@
             // 
             // btnAgregarProducto
             // 
+            btnAgregarProducto.Anchor = AnchorStyles.None;
             btnAgregarProducto.Location = new Point(168, 471);
             btnAgregarProducto.Name = "btnAgregarProducto";
             btnAgregarProducto.Size = new Size(135, 44);
@@ -106,6 +113,7 @@
             // 
             // btnEditarProducto
             // 
+            btnEditarProducto.Anchor = AnchorStyles.None;
             btnEditarProducto.Location = new Point(315, 471);
             btnEditarProducto.Name = "btnEditarProducto";
             btnEditarProducto.Size = new Size(135, 44);
@@ -115,6 +123,7 @@
             // 
             // lblLimpiarCamporProd
             // 
+            lblLimpiarCamporProd.Anchor = AnchorStyles.None;
             lblLimpiarCamporProd.AutoSize = true;
             lblLimpiarCamporProd.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             lblLimpiarCamporProd.ForeColor = Color.White;
@@ -126,6 +135,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.ForeColor = Color.White;
             label2.Location = new Point(112, 184);
@@ -136,6 +146,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.ForeColor = Color.White;
             label3.Location = new Point(112, 223);
@@ -146,6 +157,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.ForeColor = Color.White;
             label4.Location = new Point(112, 273);
@@ -156,6 +168,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.ForeColor = Color.White;
             label5.Location = new Point(112, 317);
@@ -166,6 +179,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.ForeColor = Color.White;
             label6.Location = new Point(112, 362);
@@ -176,6 +190,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(485, 176);
@@ -187,6 +202,7 @@
             // 
             // btnEliminarProducto
             // 
+            btnEliminarProducto.Anchor = AnchorStyles.None;
             btnEliminarProducto.AutoSize = true;
             btnEliminarProducto.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnEliminarProducto.ForeColor = Color.DarkRed;
@@ -198,6 +214,7 @@
             // 
             // lblLine
             // 
+            lblLine.Anchor = AnchorStyles.None;
             lblLine.AutoSize = true;
             lblLine.ForeColor = SystemColors.ControlDarkDark;
             lblLine.Location = new Point(112, 591);
@@ -208,6 +225,7 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ControlDarkDark;
             label7.Location = new Point(112, 108);

@@ -189,16 +189,15 @@ namespace ControlInventario_Presentacion.Screens
 
         private void iconMaxim_Click(object sender, EventArgs e)
         {
-            //if (WindowState == FormWindowState.Normal)
-            //    WindowState = FormWindowState.Maximized;
-            //else
-            //    WindowState = FormWindowState.Normal;
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
         }
 
         private void lblMinimizeApp_Click(object sender, EventArgs e)
         {
             //WindowState = FormWindowState.Minimized;
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
