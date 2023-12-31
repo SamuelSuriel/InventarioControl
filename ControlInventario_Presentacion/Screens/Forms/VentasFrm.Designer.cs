@@ -366,11 +366,11 @@
             label2.BackColor = Color.Gray;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(76, 45);
+            label2.Location = new Point(102, 46);
             label2.Name = "label2";
-            label2.Size = new Size(151, 31);
+            label2.Size = new Size(92, 31);
             label2.TabIndex = 1;
-            label2.Text = "Total Factura";
+            label2.Text = "Factura";
             // 
             // label3
             // 

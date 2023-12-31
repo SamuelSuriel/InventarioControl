@@ -50,6 +50,9 @@
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             label8 = new Label();
             textBox6 = new TextBox();
+            Pedidos = new DataGridViewTextBoxColumn();
+            Fecha = new DataGridViewTextBoxColumn();
+            Proveedor = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
@@ -71,11 +74,12 @@
             dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(460, 194);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Pedidos, Fecha, Proveedor });
+            dataGridView1.Location = new Point(673, 194);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(782, 389);
+            dataGridView1.Size = new Size(569, 389);
             dataGridView1.TabIndex = 22;
             // 
             // label6
@@ -83,71 +87,72 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.ForeColor = Color.White;
-            label6.Location = new Point(87, 380);
+            label6.Location = new Point(143, 380);
             label6.Name = "label6";
-            label6.Size = new Size(50, 20);
+            label6.Size = new Size(175, 20);
             label6.TabIndex = 16;
-            label6.Text = "label1";
+            label6.Text = "Productos que suministra";
             // 
             // label5
             // 
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.ForeColor = Color.White;
-            label5.Location = new Point(87, 335);
+            label5.Location = new Point(143, 335);
             label5.Name = "label5";
-            label5.Size = new Size(50, 20);
+            label5.Size = new Size(54, 20);
             label5.TabIndex = 17;
-            label5.Text = "label1";
+            label5.Text = "Correo";
             // 
             // label4
             // 
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.ForeColor = Color.White;
-            label4.Location = new Point(87, 291);
+            label4.Location = new Point(143, 291);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(67, 20);
             label4.TabIndex = 18;
-            label4.Text = "label1";
+            label4.Text = "Teléfono";
             // 
             // label3
             // 
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.ForeColor = Color.White;
-            label3.Location = new Point(87, 241);
+            label3.Location = new Point(143, 241);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(72, 20);
             label3.TabIndex = 19;
-            label3.Text = "label1";
+            label3.Text = "Dirección";
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(87, 202);
+            label2.Location = new Point(143, 202);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(64, 20);
             label2.TabIndex = 20;
-            label2.Text = "label1";
+            label2.Text = "Nombre";
             // 
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(153, 159);
+            label1.Location = new Point(143, 142);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(91, 28);
             label1.TabIndex = 21;
-            label1.Text = "label1";
+            label1.Text = "Registro";
             // 
             // textBox5
             // 
             textBox5.Anchor = AnchorStyles.None;
-            textBox5.Location = new Point(143, 380);
+            textBox5.Location = new Point(361, 380);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(282, 27);
             textBox5.TabIndex = 8;
@@ -155,7 +160,7 @@
             // textBox4
             // 
             textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(143, 335);
+            textBox4.Location = new Point(361, 335);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(282, 27);
             textBox4.TabIndex = 9;
@@ -163,7 +168,7 @@
             // textBox3
             // 
             textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(143, 288);
+            textBox3.Location = new Point(361, 288);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(282, 27);
             textBox3.TabIndex = 10;
@@ -171,7 +176,7 @@
             // textBox2
             // 
             textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(143, 241);
+            textBox2.Location = new Point(361, 241);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(282, 27);
             textBox2.TabIndex = 11;
@@ -179,7 +184,7 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(143, 195);
+            textBox1.Location = new Point(361, 195);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(282, 27);
             textBox1.TabIndex = 12;
@@ -190,7 +195,7 @@
             btnEliminarProveedor.AutoSize = true;
             btnEliminarProveedor.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnEliminarProveedor.ForeColor = Color.DarkRed;
-            btnEliminarProveedor.Location = new Point(241, 551);
+            btnEliminarProveedor.Location = new Point(459, 525);
             btnEliminarProveedor.Name = "btnEliminarProveedor";
             btnEliminarProveedor.Size = new Size(90, 28);
             btnEliminarProveedor.TabIndex = 25;
@@ -199,7 +204,7 @@
             // btnEditarProveedor
             // 
             btnEditarProveedor.Anchor = AnchorStyles.None;
-            btnEditarProveedor.Location = new Point(290, 491);
+            btnEditarProveedor.Location = new Point(508, 469);
             btnEditarProveedor.Name = "btnEditarProveedor";
             btnEditarProveedor.Size = new Size(135, 44);
             btnEditarProveedor.TabIndex = 23;
@@ -209,7 +214,7 @@
             // btnAgregarProveedor
             // 
             btnAgregarProveedor.Anchor = AnchorStyles.None;
-            btnAgregarProveedor.Location = new Point(143, 491);
+            btnAgregarProveedor.Location = new Point(361, 469);
             btnAgregarProveedor.Name = "btnAgregarProveedor";
             btnAgregarProveedor.Size = new Size(135, 44);
             btnAgregarProveedor.TabIndex = 24;
@@ -244,7 +249,7 @@
             lblLimpiarProv.AutoSize = true;
             lblLimpiarProv.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             lblLimpiarProv.ForeColor = Color.White;
-            lblLimpiarProv.Location = new Point(366, 172);
+            lblLimpiarProv.Location = new Point(584, 172);
             lblLimpiarProv.Name = "lblLimpiarProv";
             lblLimpiarProv.Size = new Size(59, 20);
             lblLimpiarProv.TabIndex = 21;
@@ -285,6 +290,27 @@
             textBox6.PlaceholderText = "Buscar por código o nombre del proveedor";
             textBox6.Size = new Size(569, 27);
             textBox6.TabIndex = 41;
+            // 
+            // Pedidos
+            // 
+            Pedidos.HeaderText = "Pedidos";
+            Pedidos.MinimumWidth = 6;
+            Pedidos.Name = "Pedidos";
+            Pedidos.Width = 125;
+            // 
+            // Fecha
+            // 
+            Fecha.HeaderText = "Fecha";
+            Fecha.MinimumWidth = 6;
+            Fecha.Name = "Fecha";
+            Fecha.Width = 125;
+            // 
+            // Proveedor
+            // 
+            Proveedor.HeaderText = "Proveedor";
+            Proveedor.MinimumWidth = 6;
+            Proveedor.Name = "Proveedor";
+            Proveedor.Width = 125;
             // 
             // ProveedoresFrm
             // 
@@ -346,5 +372,8 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Label label8;
         private TextBox textBox6;
+        private DataGridViewTextBoxColumn Pedidos;
+        private DataGridViewTextBoxColumn Fecha;
+        private DataGridViewTextBoxColumn Proveedor;
     }
 }
