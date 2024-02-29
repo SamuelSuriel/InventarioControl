@@ -29,6 +29,7 @@ namespace ControlInventario_Datos
         //        query = "SELECT u.Usuario_Id, u.Usuario_Nombre, u.Clave, u.IdPerfil, p.Perfil FROM Usuarios u INNER JOIN Perfiles p on u.IdPerfil = p.IdPerfil WHERE Clave = " + clave;
         //    return query;
         //}
+        //
 
         public string queryBuscarUsuario(int idUsuario)
         {
