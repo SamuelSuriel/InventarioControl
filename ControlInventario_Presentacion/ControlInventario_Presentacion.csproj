@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ControlInventario_Datos\ControlInventario_Datos.csproj" />
     <ProjectReference Include="..\ControlInventario_Negocio\ControlInventario_Negocio.csproj" />
   </ItemGroup>
 
