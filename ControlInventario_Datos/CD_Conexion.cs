@@ -5,7 +5,8 @@ namespace ControlInventario_Datos
 {
     public class CD_Conexion
     {
-        public SqlConnection Conexion = new SqlConnection(@"server=SRSDELLI5; Database=InventariosControlDb; integrated security =True; TrustServerCertificate=True");
+        //public SqlConnection Conexion = new SqlConnection(@"server=SRSDELLI5; Database=InventariosControlDb; integrated security =True; TrustServerCertificate=True");
+        public SqlConnection Conexion = new SqlConnection(@"server=DBInventariosControl.mssql.somee.com; Database=DBInventariosControl; user id=ramirezssamuel_SQLLogin_1; pwd=zjkrtws5rc;");
 
         public SqlConnection AbrirConexion()
         {
