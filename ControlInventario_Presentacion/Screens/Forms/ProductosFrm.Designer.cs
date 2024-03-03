@@ -67,6 +67,7 @@
             // 
             // txtNombreProducto
             // 
+            txtNombreProducto.Cursor = Cursors.IBeam;
             txtNombreProducto.Location = new Point(159, 133);
             txtNombreProducto.Margin = new Padding(3, 2, 3, 2);
             txtNombreProducto.Name = "txtNombreProducto";
@@ -75,6 +76,7 @@
             // 
             // txtCodigoProducto
             // 
+            txtCodigoProducto.Cursor = Cursors.IBeam;
             txtCodigoProducto.Location = new Point(159, 167);
             txtCodigoProducto.Margin = new Padding(3, 2, 3, 2);
             txtCodigoProducto.Name = "txtCodigoProducto";
@@ -83,16 +85,18 @@
             // 
             // txtDescripcion
             // 
+            txtDescripcion.Cursor = Cursors.IBeam;
             txtDescripcion.Location = new Point(159, 202);
             txtDescripcion.Margin = new Padding(3, 2, 3, 2);
             txtDescripcion.Multiline = true;
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(247, 23);
+            txtDescripcion.Size = new Size(247, 53);
             txtDescripcion.TabIndex = 3;
             // 
             // txtCantidadStock
             // 
-            txtCantidadStock.Location = new Point(159, 235);
+            txtCantidadStock.Cursor = Cursors.IBeam;
+            txtCantidadStock.Location = new Point(159, 271);
             txtCantidadStock.Margin = new Padding(3, 2, 3, 2);
             txtCantidadStock.Name = "txtCantidadStock";
             txtCantidadStock.Size = new Size(71, 23);
@@ -100,7 +104,8 @@
             // 
             // txtPrecioCompra
             // 
-            txtPrecioCompra.Location = new Point(159, 269);
+            txtPrecioCompra.Cursor = Cursors.IBeam;
+            txtPrecioCompra.Location = new Point(159, 305);
             txtPrecioCompra.Margin = new Padding(3, 2, 3, 2);
             txtPrecioCompra.Name = "txtPrecioCompra";
             txtPrecioCompra.Size = new Size(160, 23);
@@ -109,8 +114,9 @@
             // btnAgregarProducto
             // 
             btnAgregarProducto.BackColor = Color.ForestGreen;
+            btnAgregarProducto.Cursor = Cursors.Hand;
             btnAgregarProducto.ForeColor = Color.White;
-            btnAgregarProducto.Location = new Point(147, 353);
+            btnAgregarProducto.Location = new Point(159, 377);
             btnAgregarProducto.Margin = new Padding(3, 2, 3, 2);
             btnAgregarProducto.Name = "btnAgregarProducto";
             btnAgregarProducto.Size = new Size(118, 33);
@@ -122,8 +128,9 @@
             // btnEditarProducto
             // 
             btnEditarProducto.BackColor = Color.DarkOrange;
+            btnEditarProducto.Cursor = Cursors.Hand;
             btnEditarProducto.ForeColor = Color.White;
-            btnEditarProducto.Location = new Point(276, 353);
+            btnEditarProducto.Location = new Point(288, 377);
             btnEditarProducto.Margin = new Padding(3, 2, 3, 2);
             btnEditarProducto.Name = "btnEditarProducto";
             btnEditarProducto.Size = new Size(118, 33);
@@ -135,6 +142,7 @@
             // lblLimpiarCamporProd
             // 
             lblLimpiarCamporProd.AutoSize = true;
+            lblLimpiarCamporProd.Cursor = Cursors.Hand;
             lblLimpiarCamporProd.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             lblLimpiarCamporProd.ForeColor = Color.White;
             lblLimpiarCamporProd.Location = new Point(342, 108);
@@ -178,7 +186,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.White;
-            label5.Location = new Point(54, 238);
+            label5.Location = new Point(54, 274);
             label5.Name = "label5";
             label5.Size = new Size(87, 15);
             label5.TabIndex = 5;
@@ -188,7 +196,7 @@
             // 
             label6.AutoSize = true;
             label6.ForeColor = Color.White;
-            label6.Location = new Point(54, 272);
+            label6.Location = new Point(54, 308);
             label6.Name = "label6";
             label6.Size = new Size(86, 15);
             label6.TabIndex = 5;
@@ -214,9 +222,10 @@
             // btnEliminarProducto
             // 
             btnEliminarProducto.AutoSize = true;
+            btnEliminarProducto.Cursor = Cursors.Hand;
             btnEliminarProducto.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnEliminarProducto.ForeColor = Color.Red;
-            btnEliminarProducto.Location = new Point(233, 398);
+            btnEliminarProducto.Location = new Point(245, 422);
             btnEliminarProducto.Name = "btnEliminarProducto";
             btnEliminarProducto.Size = new Size(74, 21);
             btnEliminarProducto.TabIndex = 7;
@@ -247,7 +256,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(54, 306);
+            label1.Location = new Point(54, 342);
             label1.Name = "label1";
             label1.Size = new Size(72, 15);
             label1.TabIndex = 11;
@@ -255,7 +264,8 @@
             // 
             // txtPrecioVenta
             // 
-            txtPrecioVenta.Location = new Point(159, 303);
+            txtPrecioVenta.Cursor = Cursors.IBeam;
+            txtPrecioVenta.Location = new Point(159, 339);
             txtPrecioVenta.Margin = new Padding(3, 2, 3, 2);
             txtPrecioVenta.Name = "txtPrecioVenta";
             txtPrecioVenta.Size = new Size(160, 23);

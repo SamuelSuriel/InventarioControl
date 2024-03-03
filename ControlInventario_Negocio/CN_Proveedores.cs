@@ -1,0 +1,118 @@
+﻿using ControlInventario_Datos;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ControlInventario_Negocio
+{
+    public class CN_Proveedores
+    {
+        private CD_Conexion conexion = new CD_Conexion();
+
+        SqlDataReader leer;
+        SqlCommand comando = new SqlCommand();
+
+        public DataTable MostrarProveedores()
+        {
+            CD_Conexion conexion = new CD_Conexion();
+            SqlCommand comando = new SqlCommand();
+            DataTable tabla = new DataTable();
+
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_MostrarProveedores";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+
+            conexion.CerrarConexion();
+
+            return tabla;
+
+        }
+
+        public void AgregarProveedor(Proveedores proveedor)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_InsertarProveedor";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@NombreProveedor", proveedor.NombreProveedor);
+            comando.Parameters.AddWithValue("@DireccionProveedor", proveedor.DireccionProveedor);
+            comando.Parameters.AddWithValue("@TelefonoProveedor", proveedor.TelefonoProveedor);
+            comando.Parameters.AddWithValue("@CorreoProveedor", proveedor.CorreoProveedor);
+            comando.Parameters.AddWithValue("@IdProductosSuministra", proveedor.IdProductosSuministra);
+
+            comando.ExecuteNonQuery();
+
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+
+        public void EditarProveedor(int idProveedor, Proveedores proveedor)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_EditarProveedor";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@idProveedor", idProveedor);
+            comando.Parameters.AddWithValue("@NombreProveedor", proveedor.NombreProveedor);
+            comando.Parameters.AddWithValue("@DireccionProveedor", proveedor.DireccionProveedor);
+            comando.Parameters.AddWithValue("@TelefonoProveedor", proveedor.TelefonoProveedor);
+            comando.Parameters.AddWithValue("@CorreoProveedor", proveedor.CorreoProveedor);
+            comando.Parameters.AddWithValue("@IdProductosSuministra", proveedor.IdProductosSuministra);
+
+            comando.ExecuteNonQuery();
+
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+
+        public void EliminarProveedor(int idProveedor)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_EliminarProveedor";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@idProveedor", idProveedor);
+            comando.ExecuteNonQuery();
+
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+
+        public List<Productos> ObtenerProductos()
+        {
+            List<Productos> oListaProductos = new List<Productos>();
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "prc_GetProductos";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    leer = comando.ExecuteReader();
+
+                    while (leer.Read())
+                    {
+                        oListaProductos.Add(new Productos
+                        {
+                            IdProducto = Convert.ToInt32(leer["IdProducto"]),
+                            NombreProducto = leer["NombreProducto"].ToString()
+                        });
+                    }
+                    leer.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al obtener los productos: " + ex.Message, ex);
+                }
+
+            }
+            return oListaProductos;
+
+        }
+
+    }
+}

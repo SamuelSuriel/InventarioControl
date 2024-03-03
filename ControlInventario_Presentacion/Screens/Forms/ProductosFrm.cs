@@ -17,7 +17,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
         private void ProductosFrm_Load(object sender, EventArgs e)
         {
-            MostrarProductos();
+            CargarProductos();
             LimpiarControles();
 
         }
@@ -32,9 +32,9 @@ namespace ControlInventario_Presentacion.Screens.Forms
             txtPrecioVenta.Clear();
         }
 
-        private void MostrarProductos()
+        private void CargarProductos()
         {
-            dgvProductos.DataSource = productosCN.MostrasProductos();
+            dgvProductos.DataSource = productosCN.MostrarProductos();
             this.dgvProductos.Columns["IdProducto"].Visible = false;
             this.dgvProductos.Columns["Activo"].Visible = false;
         }
@@ -65,7 +65,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
                         productosCN.Agregarproducto(_productos);
                         MessageBox.Show("SE INSERTÓ CORRECTAMENTE!");
                         LimpiarControles();
-                        MostrarProductos();
+                        CargarProductos();
 
                     }
                     catch (Exception ex)
@@ -83,7 +83,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
                         MessageBox.Show("Se editó correctamente!");
                         LimpiarControles();
-                        MostrarProductos();
+                        CargarProductos();
                     }
                     catch (Exception ex)
                     {
@@ -142,7 +142,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
                     productosCN.EliminarProducto(Convert.ToInt32(idProducto_));
                     MessageBox.Show("Se eliminó correctamente!");
-                    MostrarProductos();
+                    CargarProductos();
                 }
             }
             else

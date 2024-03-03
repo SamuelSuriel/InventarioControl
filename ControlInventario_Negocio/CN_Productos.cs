@@ -11,7 +11,7 @@ namespace ControlInventario_Negocio
         SqlDataReader leer;
         SqlCommand comando = new SqlCommand();
 
-        public DataTable MostrasProductos()
+        public DataTable MostrarProductos()
         {
             CD_Conexion conexion = new CD_Conexion();
             SqlCommand comando = new SqlCommand();
