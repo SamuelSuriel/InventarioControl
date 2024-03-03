@@ -196,7 +196,7 @@
             btnAgregarProveedor.Name = "btnAgregarProveedor";
             btnAgregarProveedor.Size = new Size(118, 33);
             btnAgregarProveedor.TabIndex = 24;
-            btnAgregarProveedor.Text = "Agregar";
+            btnAgregarProveedor.Text = "Guardar";
             btnAgregarProveedor.UseVisualStyleBackColor = false;
             btnAgregarProveedor.Click += btnAgregarProveedor_Click;
             // 

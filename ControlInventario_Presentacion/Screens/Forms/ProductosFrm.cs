@@ -49,14 +49,15 @@ namespace ControlInventario_Presentacion.Screens.Forms
             if (EsValido())
             {
 
-                Productos _productos = new Productos();
-
-                _productos.NombreProducto = txtNombreProducto.Text;
-                _productos.Descripcion = txtDescripcion.Text;
-                _productos.CantidadStock = Convert.ToInt32(txtCantidadStock.Text);
-                _productos.CodigoProducto = txtCodigoProducto.Text;
-                _productos.PrecioVenta = Convert.ToDouble(txtPrecioVenta.Text);
-                _productos.PrecioCompra = Convert.ToDouble(txtPrecioCompra.Text);
+                Productos _productos = new()
+                {
+                    NombreProducto = txtNombreProducto.Text,
+                    Descripcion = txtDescripcion.Text,
+                    CantidadStock = Convert.ToInt32(txtCantidadStock.Text),
+                    CodigoProducto = txtCodigoProducto.Text,
+                    PrecioVenta = Convert.ToDouble(txtPrecioVenta.Text),
+                    PrecioCompra = Convert.ToDouble(txtPrecioCompra.Text)
+                };
 
                 if (EsEditar == false)
                 {

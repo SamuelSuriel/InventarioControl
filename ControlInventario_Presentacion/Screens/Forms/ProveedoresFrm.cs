@@ -165,6 +165,6 @@ namespace ControlInventario_Presentacion.Screens.Forms
                 return false;
         }
 
-      
+
     }
 }

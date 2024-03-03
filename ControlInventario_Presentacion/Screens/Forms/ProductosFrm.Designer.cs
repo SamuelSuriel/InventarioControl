@@ -121,7 +121,7 @@
             btnAgregarProducto.Name = "btnAgregarProducto";
             btnAgregarProducto.Size = new Size(118, 33);
             btnAgregarProducto.TabIndex = 4;
-            btnAgregarProducto.Text = "Agregar";
+            btnAgregarProducto.Text = "Guardar";
             btnAgregarProducto.UseVisualStyleBackColor = false;
             btnAgregarProducto.Click += btnAgregarProducto_Click;
             // 

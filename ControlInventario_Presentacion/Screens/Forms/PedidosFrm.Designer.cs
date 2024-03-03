@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             lblTitlePedidos = new Label();
-            dataGridView1 = new DataGridView();
-            checkBox3 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            label4 = new Label();
-            comboBox1 = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            cbProveedoresPedidos = new ComboBox();
+            dtpFechaPedido = new DateTimePicker();
+            txtCantidadProductos = new TextBox();
+            dgvPedidosProveedores = new DataGridView();
+            btnEliminarPedido = new Label();
+            btnEditarPedido = new Button();
+            btnGuardarPedido = new Button();
+            btnLimpiarCamposPedido = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvPedidosProveedores).BeginInit();
             SuspendLayout();
             // 
             // lblTitlePedidos
@@ -49,150 +48,158 @@
             lblTitlePedidos.AutoSize = true;
             lblTitlePedidos.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitlePedidos.ForeColor = Color.Gainsboro;
-            lblTitlePedidos.Location = new Point(69, 52);
+            lblTitlePedidos.Location = new Point(60, 39);
             lblTitlePedidos.Name = "lblTitlePedidos";
-            lblTitlePedidos.Size = new Size(106, 31);
+            lblTitlePedidos.Size = new Size(87, 26);
             lblTitlePedidos.TabIndex = 2;
             lblTitlePedidos.Text = "PEDIDOS";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(69, 402);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(781, 191);
-            dataGridView1.TabIndex = 16;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.ForeColor = Color.White;
-            checkBox3.Location = new Point(749, 297);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(101, 24);
-            checkBox3.TabIndex = 13;
-            checkBox3.Text = "checkBox3";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.ForeColor = Color.White;
-            checkBox2.Location = new Point(749, 248);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(101, 24);
-            checkBox2.TabIndex = 14;
-            checkBox2.Text = "checkBox2";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(749, 202);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(101, 24);
-            checkBox1.TabIndex = 15;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(163, 285);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(267, 27);
-            textBox3.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(163, 212);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(267, 27);
-            textBox2.TabIndex = 11;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(163, 134);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(267, 27);
-            textBox1.TabIndex = 12;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Black;
             label3.ForeColor = Color.White;
-            label3.Location = new Point(71, 288);
+            label3.Location = new Point(154, 256);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(112, 15);
             label3.TabIndex = 7;
-            label3.Text = "label3";
+            label3.Text = "Cantidad Productos";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Black;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(71, 215);
+            label2.Location = new Point(154, 201);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(78, 15);
             label2.TabIndex = 8;
-            label2.Text = "label2";
+            label2.Text = "Fecha Pedido";
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Black;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(71, 137);
+            label1.Location = new Point(154, 143);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(61, 15);
             label1.TabIndex = 9;
-            label1.Text = "label1";
+            label1.Text = "Proveedor";
             // 
-            // label4
+            // cbProveedoresPedidos
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Black;
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(749, 134);
-            label4.Name = "label4";
-            label4.Size = new Size(50, 20);
-            label4.TabIndex = 9;
-            label4.Text = "label4";
+            cbProveedoresPedidos.FormattingEnabled = true;
+            cbProveedoresPedidos.Location = new Point(281, 143);
+            cbProveedoresPedidos.Margin = new Padding(3, 2, 3, 2);
+            cbProveedoresPedidos.Name = "cbProveedoresPedidos";
+            cbProveedoresPedidos.Size = new Size(234, 23);
+            cbProveedoresPedidos.TabIndex = 17;
             // 
-            // comboBox1
+            // dtpFechaPedido
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(163, 358);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(267, 28);
-            comboBox1.TabIndex = 17;
+            dtpFechaPedido.Location = new Point(281, 201);
+            dtpFechaPedido.Name = "dtpFechaPedido";
+            dtpFechaPedido.Size = new Size(200, 23);
+            dtpFechaPedido.TabIndex = 18;
+            // 
+            // txtCantidadProductos
+            // 
+            txtCantidadProductos.Location = new Point(281, 256);
+            txtCantidadProductos.Name = "txtCantidadProductos";
+            txtCantidadProductos.Size = new Size(93, 23);
+            txtCantidadProductos.TabIndex = 19;
+            // 
+            // dgvPedidosProveedores
+            // 
+            dgvPedidosProveedores.AllowUserToAddRows = false;
+            dgvPedidosProveedores.AllowUserToDeleteRows = false;
+            dgvPedidosProveedores.BackgroundColor = SystemColors.Window;
+            dgvPedidosProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPedidosProveedores.Location = new Point(559, 103);
+            dgvPedidosProveedores.Name = "dgvPedidosProveedores";
+            dgvPedidosProveedores.ReadOnly = true;
+            dgvPedidosProveedores.RowTemplate.Height = 25;
+            dgvPedidosProveedores.Size = new Size(513, 344);
+            dgvPedidosProveedores.TabIndex = 20;
+            // 
+            // btnEliminarPedido
+            // 
+            btnEliminarPedido.AutoSize = true;
+            btnEliminarPedido.Cursor = Cursors.Hand;
+            btnEliminarPedido.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            btnEliminarPedido.ForeColor = Color.Red;
+            btnEliminarPedido.Location = new Point(343, 408);
+            btnEliminarPedido.Name = "btnEliminarPedido";
+            btnEliminarPedido.Size = new Size(74, 21);
+            btnEliminarPedido.TabIndex = 28;
+            btnEliminarPedido.Text = "Eliminar";
+            btnEliminarPedido.Click += btnEliminarPedido_Click;
+            // 
+            // btnEditarPedido
+            // 
+            btnEditarPedido.BackColor = Color.DarkOrange;
+            btnEditarPedido.Cursor = Cursors.Hand;
+            btnEditarPedido.ForeColor = Color.White;
+            btnEditarPedido.Location = new Point(397, 345);
+            btnEditarPedido.Margin = new Padding(3, 2, 3, 2);
+            btnEditarPedido.Name = "btnEditarPedido";
+            btnEditarPedido.Size = new Size(118, 33);
+            btnEditarPedido.TabIndex = 26;
+            btnEditarPedido.Text = "Editar";
+            btnEditarPedido.UseVisualStyleBackColor = false;
+            btnEditarPedido.Click += btnEditarPedido_Click;
+            // 
+            // btnGuardarPedido
+            // 
+            btnGuardarPedido.BackColor = Color.ForestGreen;
+            btnGuardarPedido.Cursor = Cursors.Hand;
+            btnGuardarPedido.ForeColor = Color.White;
+            btnGuardarPedido.Location = new Point(243, 345);
+            btnGuardarPedido.Margin = new Padding(3, 2, 3, 2);
+            btnGuardarPedido.Name = "btnGuardarPedido";
+            btnGuardarPedido.Size = new Size(118, 33);
+            btnGuardarPedido.TabIndex = 27;
+            btnGuardarPedido.Text = "Guardar";
+            btnGuardarPedido.UseVisualStyleBackColor = false;
+            btnGuardarPedido.Click += btnGuardarPedido_Click;
+            // 
+            // btnLimpiarCamposPedido
+            // 
+            btnLimpiarCamposPedido.AutoSize = true;
+            btnLimpiarCamposPedido.Cursor = Cursors.Hand;
+            btnLimpiarCamposPedido.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            btnLimpiarCamposPedido.ForeColor = Color.White;
+            btnLimpiarCamposPedido.Location = new Point(468, 103);
+            btnLimpiarCamposPedido.Name = "btnLimpiarCamposPedido";
+            btnLimpiarCamposPedido.Size = new Size(47, 15);
+            btnLimpiarCamposPedido.TabIndex = 29;
+            btnLimpiarCamposPedido.Text = "Limpiar";
+            btnLimpiarCamposPedido.Click += btnLimpiarCamposPedido_Click;
             // 
             // PedidosFrm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1329, 653);
-            Controls.Add(comboBox1);
-            Controls.Add(dataGridView1);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(1163, 490);
+            Controls.Add(btnLimpiarCamposPedido);
+            Controls.Add(btnEliminarPedido);
+            Controls.Add(btnEditarPedido);
+            Controls.Add(btnGuardarPedido);
+            Controls.Add(dgvPedidosProveedores);
+            Controls.Add(txtCantidadProductos);
+            Controls.Add(dtpFechaPedido);
+            Controls.Add(cbProveedoresPedidos);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(lblTitlePedidos);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "PedidosFrm";
             Text = "PedidosFrm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += PedidosFrm_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvPedidosProveedores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -201,16 +208,19 @@
 
         private Label lblTitlePedidos;
         private DataGridView dataGridView1;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
         private TextBox textBox3;
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label3;
         private Label label2;
         private Label label1;
-        private Label label4;
-        private ComboBox comboBox1;
+        private ComboBox cbProveedoresPedidos;
+        private DateTimePicker dtpFechaPedido;
+        private TextBox txtCantidadProductos;
+        private DataGridView dgvPedidosProveedores;
+        private Label btnEliminarPedido;
+        private Button btnEditarPedido;
+        private Button btnGuardarPedido;
+        private Label btnLimpiarCamposPedido;
     }
 }
