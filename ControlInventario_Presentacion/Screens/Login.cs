@@ -25,7 +25,7 @@ namespace ControlInventario_Presentacion.Screens
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             DataTable dt = new DataTable();
             obje.NombreUsuario = txtUserName.Text;
             obje.PasswordUsuario = txtPassword.Text;
@@ -41,10 +41,12 @@ namespace ControlInventario_Presentacion.Screens
                 mainPage.Show();
             }
             else
-                MessageBox.Show("Error");
-            
+                MessageBox.Show("Usuario no encontrada", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-           
+
+
+
+
         }
 
         private void lblRegistrarse_Click(object sender, EventArgs e)
@@ -53,5 +55,7 @@ namespace ControlInventario_Presentacion.Screens
             this.Hide();
             registro.Show();
         }
+
+       
     }
 }
