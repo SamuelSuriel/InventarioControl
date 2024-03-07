@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControlInventario_Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ControlInventario_Datos;
+using ControlInventario_Negocio;
 
 namespace ControlInventario_Presentacion.Screens
 {
     public partial class RegistroFrm : Form
     {
+
+        CN_Registro registrocn = new CN_Registro();
         public RegistroFrm()
         {
             InitializeComponent();
@@ -24,31 +29,68 @@ namespace ControlInventario_Presentacion.Screens
             login.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (txtPasswordRegistro.Text == txtPasswordConfirmReg.Text)
-            {
-                Form login = new Login();
-                this.Hide();
-                login.Show();
-            }
-        }
 
-        private bool validarRegistro(object sender, EventArgs e)
+
+        private bool validarRegistro()
         {
             bool result = false;
-            string NameRegistro = txtNameRegistro.Text;
-            string CorreoRegistro = txtCorreoRegistro.Text;
-            string DireccionRegistro = txtDireccionRegistro.Text;
             string UserRegistro = txtUserRegistro.Text;
             string PasswordRegistro = txtPasswordRegistro.Text;
             string PasswordConfirmReg = txtPasswordConfirmReg.Text;
 
-            if (NameRegistro.Length > 4 && CorreoRegistro.Length > 10 && DireccionRegistro.Length > 5 && UserRegistro.Length > 5 && PasswordRegistro.Length >= 4 && PasswordConfirmReg.Length >= 4)
+            if (PasswordConfirmReg == PasswordRegistro)
             {
-                result = true;
+
+
+                if (UserRegistro.Length > 5 && PasswordRegistro.Length >= 4 && PasswordConfirmReg.Length >= 4)
+                {
+                    result = true;
+                }
+                return result;
             }
-            return result;
+            else
+                return result;
+
+        }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            if (validarRegistro())
+            {
+
+                Capa_Entidades_login _productos = new()
+                {
+                    NombreUsuario = txtUserRegistro.Text,
+                    PasswordUsuario = txtPasswordRegistro.Text,
+
+                };
+
+
+                try
+                {
+                    registrocn.Registro_usu(_productos);
+                    MessageBox.Show("SE INSERTÓ CORRECTAMENTE!");
+                    LimpiarControles();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo realizar la operación: " + ex);
+                }
+
+
+            }
+            else
+                MessageBox.Show("ingrese datos validos");
+        }
+
+         private void LimpiarControles()
+        {
+            txtUserRegistro.Clear();
+            txtPasswordConfirmReg.Clear();
+            txtPasswordRegistro.Clear();
+
         }
     }
+
+    
 }

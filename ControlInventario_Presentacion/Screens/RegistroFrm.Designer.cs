@@ -57,7 +57,7 @@
             btnRegistrarse.TabIndex = 11;
             btnRegistrarse.Text = "Registrarse";
             btnRegistrarse.UseVisualStyleBackColor = false;
-            btnRegistrarse.Click += button1_Click;
+            btnRegistrarse.Click += btnRegistrarse_Click;
             // 
             // txtPasswordRegistro
             // 

@@ -144,7 +144,7 @@
             panel1.Location = new Point(0, 418);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(522, 52);
+            panel1.Size = new Size(502, 52);
             panel1.TabIndex = 5;
             // 
             // label3
@@ -162,9 +162,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Black;
-            ClientSize = new Size(522, 470);
+            ClientSize = new Size(502, 470);
             Controls.Add(panel1);
             Controls.Add(lblRegistrarse);
             Controls.Add(lblOlvideContrasena);
@@ -177,7 +176,7 @@
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "Login";
-            StartPosition = FormStartPosition.WindowsDefaultBounds;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
