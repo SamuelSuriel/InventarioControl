@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitleProveedores = new Label();
             dgvProveedores = new DataGridView();
             label6 = new Label();
@@ -62,11 +63,16 @@
             // 
             // dgvProveedores
             // 
+            dataGridViewCellStyle1.BackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvProveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgvProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProveedores.BackgroundColor = Color.White;
             dgvProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProveedores.Location = new Point(402, 146);
             dgvProveedores.Margin = new Padding(3, 2, 3, 2);
             dgvProveedores.Name = "dgvProveedores";
+            dgvProveedores.RowHeadersVisible = false;
             dgvProveedores.RowHeadersWidth = 51;
             dgvProveedores.RowTemplate.Height = 29;
             dgvProveedores.Size = new Size(649, 292);
