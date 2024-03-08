@@ -111,7 +111,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
             {
                 EsEditar = true;
                 txtCantidadProductos.Text = dgvPedidosProveedores.CurrentRow.Cells["Cantidad Productos"].Value.ToString();
-                dtpFechaPedido.Text = dgvPedidosProveedores.CurrentRow.Cells["Fecha Pedido"].Value.ToString();                
+                dtpFechaPedido.Text = dgvPedidosProveedores.CurrentRow.Cells["Fecha Pedido"].Value.ToString();
                 cbProveedoresPedidos.Text = dgvPedidosProveedores.CurrentRow.Cells["Proveedor"].Value.ToString();
 
                 idPedido_ = dgvPedidosProveedores.CurrentRow.Cells["PedidoID"].Value.ToString();

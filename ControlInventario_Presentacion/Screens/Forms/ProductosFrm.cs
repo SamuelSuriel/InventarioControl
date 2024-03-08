@@ -6,6 +6,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
     public partial class ProductosFrm : Form
     {
         CN_Productos productosCN = new CN_Productos();
+        CN_Stocks _StocksCN = new CN_Stocks();
 
         private string? idProducto_ = null;
         private bool EsEditar = false;
@@ -59,11 +60,22 @@ namespace ControlInventario_Presentacion.Screens.Forms
                     PrecioCompra = Convert.ToDouble(txtPrecioCompra.Text)
                 };
 
+                Stocks stocks = new()
+                {
+                    CodigoProducto = txtCodigoProducto.Text,
+                    NombreProducto = txtNombreProducto.Text,
+                    DescripcionProducto = txtDescripcion.Text,
+                    CantidadStock = Convert.ToInt32(txtCantidadStock.Text),
+                    PrecioCompra = Convert.ToDouble(txtPrecioCompra.Text),
+                    PrecioVenta = Convert.ToDouble(txtPrecioVenta.Text)
+                };
+
                 if (EsEditar == false)
                 {
                     try
                     {
                         productosCN.Agregarproducto(_productos);
+                        _StocksCN.AgregarStock(stocks);
                         MessageBox.Show("SE INSERTÓ CORRECTAMENTE!");
                         LimpiarControles();
                         CargarProductos();
@@ -81,7 +93,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
                     {
                         int idProducto = Convert.ToInt32(idProducto_);
                         productosCN.EditarProducto(Convert.ToInt32(idProducto), _productos);
-
+                        _StocksCN.EditarRegStock(stocks);
                         MessageBox.Show("Se editó correctamente!");
                         LimpiarControles();
                         CargarProductos();
