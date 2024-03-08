@@ -1,14 +1,4 @@
-﻿using ControlInventario_Datos;
-using ControlInventario_Negocio;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ControlInventario_Negocio;
 
 namespace ControlInventario_Presentacion.Screens.Forms
 {
@@ -22,17 +12,21 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
         private void StockFrm_Load(object sender, EventArgs e)
         {
-            CargarDgvStocks();
+            CargarDgvStocks("");
         }
 
-        private void CargarDgvStocks()
+        private void CargarDgvStocks(string? cr)
         {
-            dgvStocks.DataSource = stocksCN.LlenarDgvStocks("");
+            dgvStocks.DataSource = stocksCN.LlenarDgvStocks(cr);
             this.dgvStocks.Columns["IdStock"].Visible = false;
             this.dgvStocks.Columns["Activo"].Visible = false;
 
-            //string crt = txtMateriaBuscar.Text;
-            //LlenarDgvStocks(crt);
+        }
+
+        private void btnBuscarStock_Click(object sender, EventArgs e)
+        {
+            string crt = txtBuscarStock.Text;
+            CargarDgvStocks(crt);
         }
     }
 }

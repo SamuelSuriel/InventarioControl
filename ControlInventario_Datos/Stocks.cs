@@ -11,7 +11,7 @@ namespace ControlInventario_Datos
     {
         [Key]
         public int IdStock { get; set; }
-        public int CodigoProducto { get; set; }
+        public string CodigoProducto { get; set; }
         public required string NombreProducto { get; set; }
         public string? DescripcionProducto { get; set; }
         public int CantidadStock { get; set; }

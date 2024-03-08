@@ -36,5 +36,38 @@ namespace ControlInventario_Negocio
            
         }
 
+        public void AgregarStock(Stocks stocks)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_AgregarStock";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@codigoProd", stocks.CodigoProducto);
+            comando.Parameters.AddWithValue("@nombreProd", stocks.NombreProducto);
+            comando.Parameters.AddWithValue("@descripcionProd", stocks.DescripcionProducto);
+            comando.Parameters.AddWithValue("@cantidadStock", stocks.CantidadStock);
+            comando.Parameters.AddWithValue("@precioCompra", stocks.PrecioCompra);
+            comando.Parameters.AddWithValue("@precioVenta", stocks.PrecioVenta);
+                        
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+
+        public void EditarRegStock(Stocks stocks)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_EditarRegStock";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@codigoProducto", stocks.CodigoProducto);
+            comando.Parameters.AddWithValue("@nombreProducto", stocks.NombreProducto);
+            comando.Parameters.AddWithValue("@descripcion", stocks.DescripcionProducto);
+            comando.Parameters.AddWithValue("@cantidadStock", stocks.CantidadStock);
+            comando.Parameters.AddWithValue("@precioCompra", stocks.PrecioCompra);
+            comando.Parameters.AddWithValue("@precioVenta", stocks.PrecioVenta);
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
     }
 }

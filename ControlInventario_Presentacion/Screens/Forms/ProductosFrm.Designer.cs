@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitleProducto = new Label();
             txtNombreProducto = new TextBox();
             txtCodigoProducto = new TextBox();
@@ -204,6 +205,9 @@
             // 
             // dgvProductos
             // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 192, 128);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProductos.BackgroundColor = Color.White;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;

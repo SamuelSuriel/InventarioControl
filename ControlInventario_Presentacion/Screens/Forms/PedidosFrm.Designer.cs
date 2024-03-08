@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblTitlePedidos = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -59,7 +60,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Black;
             label3.ForeColor = Color.White;
-            label3.Location = new Point(154, 256);
+            label3.Location = new Point(56, 256);
             label3.Name = "label3";
             label3.Size = new Size(112, 15);
             label3.TabIndex = 7;
@@ -70,7 +71,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Black;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(154, 201);
+            label2.Location = new Point(56, 201);
             label2.Name = "label2";
             label2.Size = new Size(78, 15);
             label2.TabIndex = 8;
@@ -81,7 +82,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Black;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(154, 143);
+            label1.Location = new Point(56, 143);
             label1.Name = "label1";
             label1.Size = new Size(61, 15);
             label1.TabIndex = 9;
@@ -90,7 +91,7 @@
             // cbProveedoresPedidos
             // 
             cbProveedoresPedidos.FormattingEnabled = true;
-            cbProveedoresPedidos.Location = new Point(281, 143);
+            cbProveedoresPedidos.Location = new Point(183, 143);
             cbProveedoresPedidos.Margin = new Padding(3, 2, 3, 2);
             cbProveedoresPedidos.Name = "cbProveedoresPedidos";
             cbProveedoresPedidos.Size = new Size(234, 23);
@@ -98,14 +99,14 @@
             // 
             // dtpFechaPedido
             // 
-            dtpFechaPedido.Location = new Point(281, 201);
+            dtpFechaPedido.Location = new Point(183, 201);
             dtpFechaPedido.Name = "dtpFechaPedido";
             dtpFechaPedido.Size = new Size(200, 23);
             dtpFechaPedido.TabIndex = 18;
             // 
             // txtCantidadProductos
             // 
-            txtCantidadProductos.Location = new Point(281, 256);
+            txtCantidadProductos.Location = new Point(183, 256);
             txtCantidadProductos.Name = "txtCantidadProductos";
             txtCantidadProductos.Size = new Size(93, 23);
             txtCantidadProductos.TabIndex = 19;
@@ -114,15 +115,18 @@
             // 
             dgvPedidosProveedores.AllowUserToAddRows = false;
             dgvPedidosProveedores.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 192, 255);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dgvPedidosProveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvPedidosProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPedidosProveedores.BackgroundColor = SystemColors.Window;
             dgvPedidosProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPedidosProveedores.Location = new Point(559, 103);
+            dgvPedidosProveedores.Location = new Point(473, 103);
             dgvPedidosProveedores.Name = "dgvPedidosProveedores";
             dgvPedidosProveedores.ReadOnly = true;
             dgvPedidosProveedores.RowHeadersVisible = false;
             dgvPedidosProveedores.RowTemplate.Height = 25;
-            dgvPedidosProveedores.Size = new Size(513, 344);
+            dgvPedidosProveedores.Size = new Size(630, 344);
             dgvPedidosProveedores.TabIndex = 20;
             // 
             // btnEliminarPedido
@@ -131,7 +135,7 @@
             btnEliminarPedido.Cursor = Cursors.Hand;
             btnEliminarPedido.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnEliminarPedido.ForeColor = Color.Red;
-            btnEliminarPedido.Location = new Point(343, 408);
+            btnEliminarPedido.Location = new Point(245, 408);
             btnEliminarPedido.Name = "btnEliminarPedido";
             btnEliminarPedido.Size = new Size(74, 21);
             btnEliminarPedido.TabIndex = 28;
@@ -143,7 +147,7 @@
             btnEditarPedido.BackColor = Color.DarkOrange;
             btnEditarPedido.Cursor = Cursors.Hand;
             btnEditarPedido.ForeColor = Color.White;
-            btnEditarPedido.Location = new Point(397, 345);
+            btnEditarPedido.Location = new Point(299, 345);
             btnEditarPedido.Margin = new Padding(3, 2, 3, 2);
             btnEditarPedido.Name = "btnEditarPedido";
             btnEditarPedido.Size = new Size(118, 33);
@@ -157,7 +161,7 @@
             btnGuardarPedido.BackColor = Color.ForestGreen;
             btnGuardarPedido.Cursor = Cursors.Hand;
             btnGuardarPedido.ForeColor = Color.White;
-            btnGuardarPedido.Location = new Point(243, 345);
+            btnGuardarPedido.Location = new Point(145, 345);
             btnGuardarPedido.Margin = new Padding(3, 2, 3, 2);
             btnGuardarPedido.Name = "btnGuardarPedido";
             btnGuardarPedido.Size = new Size(118, 33);
@@ -172,7 +176,7 @@
             btnLimpiarCamposPedido.Cursor = Cursors.Hand;
             btnLimpiarCamposPedido.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             btnLimpiarCamposPedido.ForeColor = Color.White;
-            btnLimpiarCamposPedido.Location = new Point(468, 103);
+            btnLimpiarCamposPedido.Location = new Point(370, 103);
             btnLimpiarCamposPedido.Name = "btnLimpiarCamposPedido";
             btnLimpiarCamposPedido.Size = new Size(47, 15);
             btnLimpiarCamposPedido.TabIndex = 29;
