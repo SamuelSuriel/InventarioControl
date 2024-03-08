@@ -37,14 +37,11 @@ namespace ControlInventario_Presentacion.Screens
         private bool validarRegistro(object sender, EventArgs e)
         {
             bool result = false;
-            string NameRegistro = txtNameRegistro.Text;
-            string CorreoRegistro = txtCorreoRegistro.Text;
-            string DireccionRegistro = txtDireccionRegistro.Text;
             string UserRegistro = txtUserRegistro.Text;
             string PasswordRegistro = txtPasswordRegistro.Text;
             string PasswordConfirmReg = txtPasswordConfirmReg.Text;
 
-            if (NameRegistro.Length > 4 && CorreoRegistro.Length > 10 && DireccionRegistro.Length > 5 && UserRegistro.Length > 5 && PasswordRegistro.Length >= 4 && PasswordConfirmReg.Length >= 4)
+            if (UserRegistro.Length > 5 && PasswordRegistro.Length >= 4 && PasswordConfirmReg.Length >= 4)
             {
                 result = true;
             }

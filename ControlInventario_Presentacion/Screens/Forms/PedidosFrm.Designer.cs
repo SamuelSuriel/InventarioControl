@@ -47,11 +47,11 @@
             // lblTitlePedidos
             // 
             lblTitlePedidos.AutoSize = true;
-            lblTitlePedidos.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitlePedidos.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitlePedidos.ForeColor = Color.Gainsboro;
             lblTitlePedidos.Location = new Point(60, 39);
             lblTitlePedidos.Name = "lblTitlePedidos";
-            lblTitlePedidos.Size = new Size(87, 26);
+            lblTitlePedidos.Size = new Size(92, 24);
             lblTitlePedidos.TabIndex = 2;
             lblTitlePedidos.Text = "PEDIDOS";
             // 
@@ -188,7 +188,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1163, 490);
+            ClientSize = new Size(1015, 490);
             Controls.Add(btnLimpiarCamposPedido);
             Controls.Add(btnEliminarPedido);
             Controls.Add(btnEditarPedido);
