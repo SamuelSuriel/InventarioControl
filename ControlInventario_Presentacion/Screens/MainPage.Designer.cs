@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             panelMenu = new Panel();
+            btnStocks = new FontAwesome.Sharp.IconButton();
             btnSettings = new FontAwesome.Sharp.IconButton();
             btnInformes = new FontAwesome.Sharp.IconButton();
             btnVentas = new FontAwesome.Sharp.IconButton();
@@ -54,7 +55,6 @@
             pictureBox1 = new PictureBox();
             lblTitleDashboard = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            btnStocks = new FontAwesome.Sharp.IconButton();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHome).BeginInit();
@@ -85,6 +85,30 @@
             panelMenu.Size = new Size(219, 590);
             panelMenu.TabIndex = 0;
             // 
+            // btnStocks
+            // 
+            btnStocks.Cursor = Cursors.Hand;
+            btnStocks.Dock = DockStyle.Top;
+            btnStocks.FlatAppearance.BorderSize = 0;
+            btnStocks.FlatStyle = FlatStyle.Flat;
+            btnStocks.ForeColor = Color.Gainsboro;
+            btnStocks.IconChar = FontAwesome.Sharp.IconChar.CubesStacked;
+            btnStocks.IconColor = Color.Gainsboro;
+            btnStocks.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnStocks.IconSize = 68;
+            btnStocks.ImageAlign = ContentAlignment.MiddleLeft;
+            btnStocks.Location = new Point(0, 511);
+            btnStocks.Margin = new Padding(3, 2, 3, 2);
+            btnStocks.Name = "btnStocks";
+            btnStocks.Padding = new Padding(9, 0, 18, 0);
+            btnStocks.Size = new Size(219, 58);
+            btnStocks.TabIndex = 9;
+            btnStocks.Text = "Stocks";
+            btnStocks.TextAlign = ContentAlignment.MiddleLeft;
+            btnStocks.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnStocks.UseVisualStyleBackColor = true;
+            btnStocks.Click += btnStocks_Click;
+            // 
             // btnSettings
             // 
             btnSettings.Dock = DockStyle.Top;
@@ -96,11 +120,11 @@
             btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSettings.IconSize = 68;
             btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(0, 375);
+            btnSettings.Location = new Point(0, 453);
             btnSettings.Margin = new Padding(3, 2, 3, 2);
             btnSettings.Name = "btnSettings";
             btnSettings.Padding = new Padding(9, 0, 18, 0);
-            btnSettings.Size = new Size(219, 45);
+            btnSettings.Size = new Size(219, 58);
             btnSettings.TabIndex = 7;
             btnSettings.Text = "Settings";
             btnSettings.TextAlign = ContentAlignment.MiddleLeft;
@@ -119,11 +143,11 @@
             btnInformes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnInformes.IconSize = 68;
             btnInformes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnInformes.Location = new Point(0, 330);
+            btnInformes.Location = new Point(0, 395);
             btnInformes.Margin = new Padding(3, 2, 3, 2);
             btnInformes.Name = "btnInformes";
             btnInformes.Padding = new Padding(9, 0, 18, 0);
-            btnInformes.Size = new Size(219, 45);
+            btnInformes.Size = new Size(219, 58);
             btnInformes.TabIndex = 6;
             btnInformes.Text = "Informes";
             btnInformes.TextAlign = ContentAlignment.MiddleLeft;
@@ -142,11 +166,11 @@
             btnVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnVentas.IconSize = 68;
             btnVentas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVentas.Location = new Point(0, 285);
+            btnVentas.Location = new Point(0, 337);
             btnVentas.Margin = new Padding(3, 2, 3, 2);
             btnVentas.Name = "btnVentas";
             btnVentas.Padding = new Padding(9, 0, 18, 0);
-            btnVentas.Size = new Size(219, 45);
+            btnVentas.Size = new Size(219, 58);
             btnVentas.TabIndex = 5;
             btnVentas.Text = "Ventas";
             btnVentas.TextAlign = ContentAlignment.MiddleLeft;
@@ -165,11 +189,11 @@
             btnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnProveedores.IconSize = 68;
             btnProveedores.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProveedores.Location = new Point(0, 240);
+            btnProveedores.Location = new Point(0, 279);
             btnProveedores.Margin = new Padding(3, 2, 3, 2);
             btnProveedores.Name = "btnProveedores";
             btnProveedores.Padding = new Padding(9, 0, 18, 0);
-            btnProveedores.Size = new Size(219, 45);
+            btnProveedores.Size = new Size(219, 58);
             btnProveedores.TabIndex = 4;
             btnProveedores.Text = "Proveedores";
             btnProveedores.TextAlign = ContentAlignment.MiddleLeft;
@@ -188,11 +212,11 @@
             btnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnProductos.IconSize = 68;
             btnProductos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProductos.Location = new Point(0, 195);
+            btnProductos.Location = new Point(0, 221);
             btnProductos.Margin = new Padding(3, 2, 3, 2);
             btnProductos.Name = "btnProductos";
             btnProductos.Padding = new Padding(9, 0, 18, 0);
-            btnProductos.Size = new Size(219, 45);
+            btnProductos.Size = new Size(219, 58);
             btnProductos.TabIndex = 3;
             btnProductos.Text = "Productos";
             btnProductos.TextAlign = ContentAlignment.MiddleLeft;
@@ -211,11 +235,11 @@
             btnPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnPedidos.IconSize = 68;
             btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPedidos.Location = new Point(0, 150);
+            btnPedidos.Location = new Point(0, 163);
             btnPedidos.Margin = new Padding(3, 2, 3, 2);
             btnPedidos.Name = "btnPedidos";
             btnPedidos.Padding = new Padding(9, 0, 18, 0);
-            btnPedidos.Size = new Size(219, 45);
+            btnPedidos.Size = new Size(219, 58);
             btnPedidos.TabIndex = 2;
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = ContentAlignment.MiddleLeft;
@@ -238,7 +262,7 @@
             btnDashboard.Margin = new Padding(3, 2, 3, 2);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Padding = new Padding(9, 0, 18, 0);
-            btnDashboard.Size = new Size(219, 45);
+            btnDashboard.Size = new Size(219, 58);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
@@ -447,29 +471,6 @@
             // 
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
-            // 
-            // btnStocks
-            // 
-            btnStocks.Cursor = Cursors.Hand;
-            btnStocks.Dock = DockStyle.Top;
-            btnStocks.FlatAppearance.BorderSize = 0;
-            btnStocks.FlatStyle = FlatStyle.Flat;
-            btnStocks.ForeColor = Color.Gainsboro;
-            btnStocks.IconChar = FontAwesome.Sharp.IconChar.CubesStacked;
-            btnStocks.IconColor = Color.Gainsboro;
-            btnStocks.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnStocks.IconSize = 68;
-            btnStocks.ImageAlign = ContentAlignment.MiddleLeft;
-            btnStocks.Location = new Point(0, 420);
-            btnStocks.Margin = new Padding(3, 2, 3, 2);
-            btnStocks.Name = "btnStocks";
-            btnStocks.Padding = new Padding(9, 0, 18, 0);
-            btnStocks.Size = new Size(219, 45);
-            btnStocks.TabIndex = 9;
-            btnStocks.Text = "Stocks";
-            btnStocks.TextAlign = ContentAlignment.MiddleLeft;
-            btnStocks.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnStocks.UseVisualStyleBackColor = true;
             // 
             // MainPage
             // 

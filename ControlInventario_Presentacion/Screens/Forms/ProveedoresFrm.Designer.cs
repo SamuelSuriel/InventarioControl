@@ -62,11 +62,13 @@
             // 
             // dgvProveedores
             // 
+            dgvProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProveedores.BackgroundColor = Color.White;
             dgvProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProveedores.Location = new Point(402, 146);
             dgvProveedores.Margin = new Padding(3, 2, 3, 2);
             dgvProveedores.Name = "dgvProveedores";
+            dgvProveedores.RowHeadersVisible = false;
             dgvProveedores.RowHeadersWidth = 51;
             dgvProveedores.RowTemplate.Height = 29;
             dgvProveedores.Size = new Size(649, 292);

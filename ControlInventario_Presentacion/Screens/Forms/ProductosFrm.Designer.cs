@@ -204,12 +204,14 @@
             // 
             // dgvProductos
             // 
+            dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProductos.BackgroundColor = Color.White;
             dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProductos.GridColor = SystemColors.Window;
             dgvProductos.Location = new Point(424, 132);
             dgvProductos.Margin = new Padding(3, 2, 3, 2);
             dgvProductos.Name = "dgvProductos";
+            dgvProductos.RowHeadersVisible = false;
             dgvProductos.RowHeadersWidth = 51;
             dgvProductos.RowTemplate.Height = 29;
             dgvProductos.Size = new Size(684, 292);

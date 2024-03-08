@@ -114,11 +114,13 @@
             // 
             dgvPedidosProveedores.AllowUserToAddRows = false;
             dgvPedidosProveedores.AllowUserToDeleteRows = false;
+            dgvPedidosProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPedidosProveedores.BackgroundColor = SystemColors.Window;
             dgvPedidosProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPedidosProveedores.Location = new Point(559, 103);
             dgvPedidosProveedores.Name = "dgvPedidosProveedores";
             dgvPedidosProveedores.ReadOnly = true;
+            dgvPedidosProveedores.RowHeadersVisible = false;
             dgvPedidosProveedores.RowTemplate.Height = 25;
             dgvPedidosProveedores.Size = new Size(513, 344);
             dgvPedidosProveedores.TabIndex = 20;

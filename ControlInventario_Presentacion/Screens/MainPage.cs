@@ -49,6 +49,7 @@ namespace ControlInventario_Presentacion.Screens
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
             public static Color color7 = Color.FromArgb(26, 82, 64);
+            public static Color color8 = Color.FromArgb(105, 77, 64);
         }
 
         //Methods
@@ -205,6 +206,13 @@ namespace ControlInventario_Presentacion.Screens
         {
             lblHoraActual.Text = DateTime.Now.ToLongTimeString();
             lblFechaActual.Text = DateTime.Now.ToLongDateString();
+        }
+
+        //btnStocks
+        private void btnStocks_Click(object sender, EventArgs e)
+        {
+            ActivarBoton(sender, RGBColors.color8);
+            OpenChildForm(new StockFrm());
         }
     }
 }
