@@ -39,7 +39,14 @@
             lblCantidad = new Label();
             btnAgregarReg = new Button();
             dgvVentas = new DataGridView();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Precio = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Total = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
             panelFactura = new Panel();
+            txtClienteVenta = new TextBox();
             lblDevolucion = new Label();
             label11 = new Label();
             txtEfectivo = new TextBox();
@@ -49,18 +56,15 @@
             lblDescuento = new Label();
             lblItbis = new Label();
             lblSubTotal = new Label();
-            comboBox2 = new ComboBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label14 = new Label();
             label5 = new Label();
-            comboBox1 = new ComboBox();
             label4 = new Label();
             panelTotal = new Panel();
             label2 = new Label();
-            label3 = new Label();
             cbProductosVenta = new ComboBox();
             label15 = new Label();
             label16 = new Label();
@@ -71,11 +75,7 @@
             btnEliminarProducto = new Button();
             btnEjecutarVenta = new Button();
             groupBox1 = new GroupBox();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Precio = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            Total = new DataGridViewTextBoxColumn();
+            lblIdProducto = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvVentas).BeginInit();
             panelFactura.SuspendLayout();
             panelTotal.SuspendLayout();
@@ -87,28 +87,27 @@
             lblTitleVentas.AutoSize = true;
             lblTitleVentas.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleVentas.ForeColor = Color.Gainsboro;
-            lblTitleVentas.Location = new Point(4, 4);
+            lblTitleVentas.Location = new Point(5, 5);
             lblTitleVentas.Name = "lblTitleVentas";
-            lblTitleVentas.Size = new Size(79, 26);
+            lblTitleVentas.Size = new Size(94, 31);
             lblTitleVentas.TabIndex = 2;
             lblTitleVentas.Text = "VENTAS";
             // 
             // txtCantidadProductos
             // 
             txtCantidadProductos.Cursor = Cursors.IBeam;
-            txtCantidadProductos.Location = new Point(542, 128);
-            txtCantidadProductos.Margin = new Padding(3, 2, 3, 2);
+            txtCantidadProductos.Location = new Point(619, 171);
             txtCantidadProductos.Name = "txtCantidadProductos";
-            txtCantidadProductos.Size = new Size(98, 23);
+            txtCantidadProductos.Size = new Size(111, 27);
             txtCantidadProductos.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(12, 51);
+            label1.Location = new Point(14, 68);
             label1.Name = "label1";
-            label1.Size = new Size(71, 15);
+            label1.Size = new Size(88, 20);
             label1.TabIndex = 4;
             label1.Text = "PRODUCTO:";
             // 
@@ -116,9 +115,9 @@
             // 
             lblCantidad.AutoSize = true;
             lblCantidad.ForeColor = Color.White;
-            lblCantidad.Location = new Point(542, 110);
+            lblCantidad.Location = new Point(619, 147);
             lblCantidad.Name = "lblCantidad";
-            lblCantidad.Size = new Size(68, 15);
+            lblCantidad.Size = new Size(86, 20);
             lblCantidad.TabIndex = 4;
             lblCantidad.Text = "CANTIDAD:";
             // 
@@ -126,10 +125,9 @@
             // 
             btnAgregarReg.Cursor = Cursors.Hand;
             btnAgregarReg.ForeColor = Color.RoyalBlue;
-            btnAgregarReg.Location = new Point(684, 120);
-            btnAgregarReg.Margin = new Padding(3, 2, 3, 2);
+            btnAgregarReg.Location = new Point(782, 160);
             btnAgregarReg.Name = "btnAgregarReg";
-            btnAgregarReg.Size = new Size(128, 28);
+            btnAgregarReg.Size = new Size(146, 37);
             btnAgregarReg.TabIndex = 25;
             btnAgregarReg.Text = "AGREGAR";
             btnAgregarReg.UseVisualStyleBackColor = true;
@@ -142,381 +140,15 @@
             dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvVentas.BackgroundColor = Color.White;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVentas.Columns.AddRange(new DataGridViewColumn[] { Column2, Column1, Precio, Cantidad, Total });
-            dgvVentas.Location = new Point(25, 196);
-            dgvVentas.Margin = new Padding(3, 2, 3, 2);
+            dgvVentas.Columns.AddRange(new DataGridViewColumn[] { Column2, Column1, Precio, Cantidad, Total, Column3 });
+            dgvVentas.Location = new Point(29, 261);
             dgvVentas.Name = "dgvVentas";
             dgvVentas.ReadOnly = true;
             dgvVentas.RowHeadersVisible = false;
             dgvVentas.RowHeadersWidth = 51;
             dgvVentas.RowTemplate.Height = 29;
-            dgvVentas.Size = new Size(830, 225);
+            dgvVentas.Size = new Size(949, 380);
             dgvVentas.TabIndex = 26;
-            // 
-            // panelFactura
-            // 
-            panelFactura.Anchor = AnchorStyles.None;
-            panelFactura.BorderStyle = BorderStyle.Fixed3D;
-            panelFactura.Controls.Add(lblDevolucion);
-            panelFactura.Controls.Add(label11);
-            panelFactura.Controls.Add(txtEfectivo);
-            panelFactura.Controls.Add(label18);
-            panelFactura.Controls.Add(dateTimePicker1);
-            panelFactura.Controls.Add(lblTotalaPagar);
-            panelFactura.Controls.Add(lblDescuento);
-            panelFactura.Controls.Add(lblItbis);
-            panelFactura.Controls.Add(lblSubTotal);
-            panelFactura.Controls.Add(comboBox2);
-            panelFactura.Controls.Add(label9);
-            panelFactura.Controls.Add(label8);
-            panelFactura.Controls.Add(label7);
-            panelFactura.Controls.Add(label6);
-            panelFactura.Controls.Add(label14);
-            panelFactura.Controls.Add(label5);
-            panelFactura.Controls.Add(comboBox1);
-            panelFactura.Controls.Add(label4);
-            panelFactura.Controls.Add(panelTotal);
-            panelFactura.Controls.Add(label3);
-            panelFactura.Location = new Point(877, 28);
-            panelFactura.Margin = new Padding(3, 2, 3, 2);
-            panelFactura.Name = "panelFactura";
-            panelFactura.Size = new Size(276, 442);
-            panelFactura.TabIndex = 27;
-            // 
-            // lblDevolucion
-            // 
-            lblDevolucion.AutoSize = true;
-            lblDevolucion.ForeColor = Color.White;
-            lblDevolucion.Location = new Point(164, 376);
-            lblDevolucion.Name = "lblDevolucion";
-            lblDevolucion.Size = new Size(49, 15);
-            lblDevolucion.TabIndex = 32;
-            lblDevolucion.Text = "RD$0.00";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(20, 376);
-            label11.Name = "label11";
-            label11.Size = new Size(80, 15);
-            label11.TabIndex = 31;
-            label11.Text = "DEVOLUCIÓN";
-            // 
-            // txtEfectivo
-            // 
-            txtEfectivo.Cursor = Cursors.IBeam;
-            txtEfectivo.Location = new Point(107, 272);
-            txtEfectivo.Margin = new Padding(3, 2, 3, 2);
-            txtEfectivo.Name = "txtEfectivo";
-            txtEfectivo.Size = new Size(148, 23);
-            txtEfectivo.TabIndex = 30;
-            txtEfectivo.TextChanged += txtEfectivo_TextChanged;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.ForeColor = Color.White;
-            label18.Location = new Point(20, 274);
-            label18.Name = "label18";
-            label18.Size = new Size(61, 15);
-            label18.TabIndex = 29;
-            label18.Text = "EFECTIVO:";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(21, 224);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(234, 23);
-            dateTimePicker1.TabIndex = 28;
-            // 
-            // lblTotalaPagar
-            // 
-            lblTotalaPagar.AutoSize = true;
-            lblTotalaPagar.ForeColor = Color.White;
-            lblTotalaPagar.Location = new Point(164, 362);
-            lblTotalaPagar.Name = "lblTotalaPagar";
-            lblTotalaPagar.Size = new Size(49, 15);
-            lblTotalaPagar.TabIndex = 5;
-            lblTotalaPagar.Text = "RD$0.00";
-            // 
-            // lblDescuento
-            // 
-            lblDescuento.AutoSize = true;
-            lblDescuento.ForeColor = Color.White;
-            lblDescuento.Location = new Point(164, 346);
-            lblDescuento.Name = "lblDescuento";
-            lblDescuento.Size = new Size(49, 15);
-            lblDescuento.TabIndex = 6;
-            lblDescuento.Text = "RD$0.00";
-            // 
-            // lblItbis
-            // 
-            lblItbis.AutoSize = true;
-            lblItbis.ForeColor = Color.White;
-            lblItbis.Location = new Point(164, 332);
-            lblItbis.Name = "lblItbis";
-            lblItbis.Size = new Size(49, 15);
-            lblItbis.TabIndex = 7;
-            lblItbis.Text = "RD$0.00";
-            // 
-            // lblSubTotal
-            // 
-            lblSubTotal.AutoSize = true;
-            lblSubTotal.ForeColor = Color.White;
-            lblSubTotal.Location = new Point(164, 316);
-            lblSubTotal.Name = "lblSubTotal";
-            lblSubTotal.Size = new Size(49, 15);
-            lblSubTotal.TabIndex = 8;
-            lblSubTotal.Text = "RD$0.00";
-            // 
-            // comboBox2
-            // 
-            comboBox2.DisplayMember = "CONSTRUCTORA L&R S.A";
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(20, 173);
-            comboBox2.Margin = new Padding(3, 2, 3, 2);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(235, 23);
-            comboBox2.TabIndex = 1;
-            comboBox2.ValueMember = "01";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(20, 362);
-            label9.Name = "label9";
-            label9.Size = new Size(90, 15);
-            label9.TabIndex = 4;
-            label9.Text = "TOTAL A PAGAR";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(20, 346);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 15);
-            label8.TabIndex = 4;
-            label8.Text = "DESCUENTO";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(20, 332);
-            label7.Name = "label7";
-            label7.Size = new Size(32, 15);
-            label7.TabIndex = 4;
-            label7.Text = "ITBIS";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(20, 316);
-            label6.Name = "label6";
-            label6.Size = new Size(59, 15);
-            label6.TabIndex = 4;
-            label6.Text = "SUBTOTAL";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.ForeColor = Color.White;
-            label14.Location = new Point(21, 289);
-            label14.Name = "label14";
-            label14.Size = new Size(222, 15);
-            label14.TabIndex = 4;
-            label14.Text = "___________________________________________";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(20, 206);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 15);
-            label5.TabIndex = 4;
-            label5.Text = "Fecha de emisión";
-            // 
-            // comboBox1
-            // 
-            comboBox1.DisplayMember = "FACTURA";
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(20, 122);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(235, 23);
-            comboBox1.TabIndex = 1;
-            comboBox1.ValueMember = "1";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(20, 156);
-            label4.Name = "label4";
-            label4.Size = new Size(44, 15);
-            label4.TabIndex = 4;
-            label4.Text = "Cliente";
-            // 
-            // panelTotal
-            // 
-            panelTotal.BackColor = Color.Gray;
-            panelTotal.Controls.Add(label2);
-            panelTotal.ForeColor = Color.Gray;
-            panelTotal.Location = new Point(3, 2);
-            panelTotal.Margin = new Padding(3, 2, 3, 2);
-            panelTotal.Name = "panelTotal";
-            panelTotal.Size = new Size(267, 87);
-            panelTotal.TabIndex = 0;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Gray;
-            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(66, 34);
-            label2.Name = "label2";
-            label2.Size = new Size(96, 25);
-            label2.TabIndex = 1;
-            label2.Text = "FACTURA";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(20, 104);
-            label3.Name = "label3";
-            label3.Size = new Size(119, 15);
-            label3.TabIndex = 4;
-            label3.Text = "Documento contable";
-            // 
-            // cbProductosVenta
-            // 
-            cbProductosVenta.FormattingEnabled = true;
-            cbProductosVenta.Location = new Point(12, 75);
-            cbProductosVenta.Margin = new Padding(3, 2, 3, 2);
-            cbProductosVenta.Name = "cbProductosVenta";
-            cbProductosVenta.Size = new Size(232, 23);
-            cbProductosVenta.TabIndex = 28;
-            cbProductosVenta.SelectedIndexChanged += cbProductosVenta_SelectedIndexChanged;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.ForeColor = Color.White;
-            label15.Location = new Point(12, 110);
-            label15.Name = "label15";
-            label15.Size = new Size(55, 15);
-            label15.TabIndex = 29;
-            label15.Text = "CÓDIGO:";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.ForeColor = Color.White;
-            label16.Location = new Point(179, 110);
-            label16.Name = "label16";
-            label16.Size = new Size(59, 15);
-            label16.TabIndex = 30;
-            label16.Text = "NOMBRE:";
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.ForeColor = Color.White;
-            label17.Location = new Point(382, 110);
-            label17.Name = "label17";
-            label17.Size = new Size(50, 15);
-            label17.TabIndex = 31;
-            label17.Text = "PRECIO:";
-            // 
-            // lblPrecioProducto
-            // 
-            lblPrecioProducto.AutoSize = true;
-            lblPrecioProducto.ForeColor = Color.White;
-            lblPrecioProducto.Location = new Point(382, 134);
-            lblPrecioProducto.Name = "lblPrecioProducto";
-            lblPrecioProducto.Size = new Size(12, 15);
-            lblPrecioProducto.TabIndex = 34;
-            lblPrecioProducto.Text = "-";
-            // 
-            // lblNombreProducto
-            // 
-            lblNombreProducto.AutoSize = true;
-            lblNombreProducto.ForeColor = Color.White;
-            lblNombreProducto.Location = new Point(179, 134);
-            lblNombreProducto.Name = "lblNombreProducto";
-            lblNombreProducto.Size = new Size(12, 15);
-            lblNombreProducto.TabIndex = 33;
-            lblNombreProducto.Text = "-";
-            // 
-            // lblCodigoProducto
-            // 
-            lblCodigoProducto.AutoSize = true;
-            lblCodigoProducto.ForeColor = Color.White;
-            lblCodigoProducto.Location = new Point(12, 134);
-            lblCodigoProducto.Name = "lblCodigoProducto";
-            lblCodigoProducto.Size = new Size(12, 15);
-            lblCodigoProducto.TabIndex = 32;
-            lblCodigoProducto.Text = "-";
-            // 
-            // btnEliminarProducto
-            // 
-            btnEliminarProducto.Cursor = Cursors.Hand;
-            btnEliminarProducto.ForeColor = Color.Red;
-            btnEliminarProducto.Location = new Point(684, 75);
-            btnEliminarProducto.Margin = new Padding(3, 2, 3, 2);
-            btnEliminarProducto.Name = "btnEliminarProducto";
-            btnEliminarProducto.Size = new Size(128, 28);
-            btnEliminarProducto.TabIndex = 35;
-            btnEliminarProducto.Text = "ELIMINAR";
-            btnEliminarProducto.UseVisualStyleBackColor = true;
-            btnEliminarProducto.Click += btnEliminarProducto_Click;
-            // 
-            // btnEjecutarVenta
-            // 
-            btnEjecutarVenta.BackColor = Color.Teal;
-            btnEjecutarVenta.Cursor = Cursors.Hand;
-            btnEjecutarVenta.ForeColor = Color.White;
-            btnEjecutarVenta.Location = new Point(683, 425);
-            btnEjecutarVenta.Margin = new Padding(3, 2, 3, 2);
-            btnEjecutarVenta.Name = "btnEjecutarVenta";
-            btnEjecutarVenta.Size = new Size(167, 44);
-            btnEjecutarVenta.TabIndex = 36;
-            btnEjecutarVenta.Text = "EJECUTAR";
-            btnEjecutarVenta.UseVisualStyleBackColor = false;
-            btnEjecutarVenta.Click += btnEjecutarVenta_Click;
-            // 
-            // groupBox1
-            // 
-            groupBox1.BackColor = Color.Teal;
-            groupBox1.Controls.Add(btnEliminarProducto);
-            groupBox1.Controls.Add(lblPrecioProducto);
-            groupBox1.Controls.Add(lblNombreProducto);
-            groupBox1.Controls.Add(lblCodigoProducto);
-            groupBox1.Controls.Add(label17);
-            groupBox1.Controls.Add(label16);
-            groupBox1.Controls.Add(label15);
-            groupBox1.Controls.Add(cbProductosVenta);
-            groupBox1.Controls.Add(btnAgregarReg);
-            groupBox1.Controls.Add(lblCantidad);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(txtCantidadProductos);
-            groupBox1.Controls.Add(lblTitleVentas);
-            groupBox1.Location = new Point(25, 23);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(830, 166);
-            groupBox1.TabIndex = 37;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
             // 
             // Column2
             // 
@@ -569,17 +201,366 @@
             Total.Name = "Total";
             Total.ReadOnly = true;
             // 
+            // Column3
+            // 
+            Column3.HeaderText = "ID";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            Column3.Visible = false;
+            // 
+            // panelFactura
+            // 
+            panelFactura.Anchor = AnchorStyles.None;
+            panelFactura.BorderStyle = BorderStyle.Fixed3D;
+            panelFactura.Controls.Add(txtClienteVenta);
+            panelFactura.Controls.Add(lblDevolucion);
+            panelFactura.Controls.Add(label11);
+            panelFactura.Controls.Add(txtEfectivo);
+            panelFactura.Controls.Add(label18);
+            panelFactura.Controls.Add(dateTimePicker1);
+            panelFactura.Controls.Add(lblTotalaPagar);
+            panelFactura.Controls.Add(lblDescuento);
+            panelFactura.Controls.Add(lblItbis);
+            panelFactura.Controls.Add(lblSubTotal);
+            panelFactura.Controls.Add(label9);
+            panelFactura.Controls.Add(label8);
+            panelFactura.Controls.Add(label7);
+            panelFactura.Controls.Add(label6);
+            panelFactura.Controls.Add(label14);
+            panelFactura.Controls.Add(label5);
+            panelFactura.Controls.Add(label4);
+            panelFactura.Controls.Add(panelTotal);
+            panelFactura.Location = new Point(1002, 37);
+            panelFactura.Name = "panelFactura";
+            panelFactura.Size = new Size(315, 504);
+            panelFactura.TabIndex = 27;
+            // 
+            // txtClienteVenta
+            // 
+            txtClienteVenta.Cursor = Cursors.IBeam;
+            txtClienteVenta.Location = new Point(23, 168);
+            txtClienteVenta.Name = "txtClienteVenta";
+            txtClienteVenta.Size = new Size(268, 27);
+            txtClienteVenta.TabIndex = 33;
+            // 
+            // lblDevolucion
+            // 
+            lblDevolucion.AutoSize = true;
+            lblDevolucion.ForeColor = Color.White;
+            lblDevolucion.Location = new Point(187, 429);
+            lblDevolucion.Name = "lblDevolucion";
+            lblDevolucion.Size = new Size(64, 20);
+            lblDevolucion.TabIndex = 32;
+            lblDevolucion.Text = "RD$0.00";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(23, 429);
+            label11.Name = "label11";
+            label11.Size = new Size(100, 20);
+            label11.TabIndex = 31;
+            label11.Text = "DEVOLUCIÓN";
+            // 
+            // txtEfectivo
+            // 
+            txtEfectivo.Cursor = Cursors.IBeam;
+            txtEfectivo.Location = new Point(122, 291);
+            txtEfectivo.Name = "txtEfectivo";
+            txtEfectivo.Size = new Size(169, 27);
+            txtEfectivo.TabIndex = 30;
+            txtEfectivo.TextChanged += txtEfectivo_TextChanged;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.ForeColor = Color.White;
+            label18.Location = new Point(23, 293);
+            label18.Name = "label18";
+            label18.Size = new Size(76, 20);
+            label18.TabIndex = 29;
+            label18.Text = "EFECTIVO:";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(24, 227);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(267, 27);
+            dateTimePicker1.TabIndex = 28;
+            // 
+            // lblTotalaPagar
+            // 
+            lblTotalaPagar.AutoSize = true;
+            lblTotalaPagar.ForeColor = Color.White;
+            lblTotalaPagar.Location = new Point(187, 411);
+            lblTotalaPagar.Name = "lblTotalaPagar";
+            lblTotalaPagar.Size = new Size(64, 20);
+            lblTotalaPagar.TabIndex = 5;
+            lblTotalaPagar.Text = "RD$0.00";
+            // 
+            // lblDescuento
+            // 
+            lblDescuento.AutoSize = true;
+            lblDescuento.ForeColor = Color.White;
+            lblDescuento.Location = new Point(187, 389);
+            lblDescuento.Name = "lblDescuento";
+            lblDescuento.Size = new Size(64, 20);
+            lblDescuento.TabIndex = 6;
+            lblDescuento.Text = "RD$0.00";
+            // 
+            // lblItbis
+            // 
+            lblItbis.AutoSize = true;
+            lblItbis.ForeColor = Color.White;
+            lblItbis.Location = new Point(187, 371);
+            lblItbis.Name = "lblItbis";
+            lblItbis.Size = new Size(64, 20);
+            lblItbis.TabIndex = 7;
+            lblItbis.Text = "RD$0.00";
+            // 
+            // lblSubTotal
+            // 
+            lblSubTotal.AutoSize = true;
+            lblSubTotal.ForeColor = Color.White;
+            lblSubTotal.Location = new Point(187, 349);
+            lblSubTotal.Name = "lblSubTotal";
+            lblSubTotal.Size = new Size(64, 20);
+            lblSubTotal.TabIndex = 8;
+            lblSubTotal.Text = "RD$0.00";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(23, 411);
+            label9.Name = "label9";
+            label9.Size = new Size(114, 20);
+            label9.TabIndex = 4;
+            label9.Text = "TOTAL A PAGAR";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(23, 389);
+            label8.Name = "label8";
+            label8.Size = new Size(92, 20);
+            label8.TabIndex = 4;
+            label8.Text = "DESCUENTO";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(23, 371);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 20);
+            label7.TabIndex = 4;
+            label7.Text = "ITBIS";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(23, 349);
+            label6.Name = "label6";
+            label6.Size = new Size(76, 20);
+            label6.TabIndex = 4;
+            label6.Text = "SUBTOTAL";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(24, 313);
+            label14.Name = "label14";
+            label14.Size = new Size(267, 20);
+            label14.TabIndex = 4;
+            label14.Text = "___________________________________________";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(23, 203);
+            label5.Name = "label5";
+            label5.Size = new Size(124, 20);
+            label5.TabIndex = 4;
+            label5.Text = "Fecha de emisión";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(23, 136);
+            label4.Name = "label4";
+            label4.Size = new Size(55, 20);
+            label4.TabIndex = 4;
+            label4.Text = "Cliente";
+            // 
+            // panelTotal
+            // 
+            panelTotal.BackColor = Color.Gray;
+            panelTotal.Controls.Add(label2);
+            panelTotal.ForeColor = Color.Gray;
+            panelTotal.Location = new Point(3, 3);
+            panelTotal.Name = "panelTotal";
+            panelTotal.Size = new Size(305, 77);
+            panelTotal.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Gray;
+            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(88, 22);
+            label2.Name = "label2";
+            label2.Size = new Size(116, 31);
+            label2.TabIndex = 1;
+            label2.Text = "FACTURA";
+            // 
+            // cbProductosVenta
+            // 
+            cbProductosVenta.FormattingEnabled = true;
+            cbProductosVenta.Location = new Point(14, 100);
+            cbProductosVenta.Name = "cbProductosVenta";
+            cbProductosVenta.Size = new Size(265, 28);
+            cbProductosVenta.TabIndex = 28;
+            cbProductosVenta.SelectedIndexChanged += cbProductosVenta_SelectedIndexChanged;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(14, 147);
+            label15.Name = "label15";
+            label15.Size = new Size(68, 20);
+            label15.TabIndex = 29;
+            label15.Text = "CÓDIGO:";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.ForeColor = Color.White;
+            label16.Location = new Point(205, 147);
+            label16.Name = "label16";
+            label16.Size = new Size(73, 20);
+            label16.TabIndex = 30;
+            label16.Text = "NOMBRE:";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.ForeColor = Color.White;
+            label17.Location = new Point(437, 147);
+            label17.Name = "label17";
+            label17.Size = new Size(61, 20);
+            label17.TabIndex = 31;
+            label17.Text = "PRECIO:";
+            // 
+            // lblPrecioProducto
+            // 
+            lblPrecioProducto.AutoSize = true;
+            lblPrecioProducto.ForeColor = Color.White;
+            lblPrecioProducto.Location = new Point(437, 179);
+            lblPrecioProducto.Name = "lblPrecioProducto";
+            lblPrecioProducto.Size = new Size(15, 20);
+            lblPrecioProducto.TabIndex = 34;
+            lblPrecioProducto.Text = "-";
+            // 
+            // lblNombreProducto
+            // 
+            lblNombreProducto.AutoSize = true;
+            lblNombreProducto.ForeColor = Color.White;
+            lblNombreProducto.Location = new Point(205, 179);
+            lblNombreProducto.Name = "lblNombreProducto";
+            lblNombreProducto.Size = new Size(15, 20);
+            lblNombreProducto.TabIndex = 33;
+            lblNombreProducto.Text = "-";
+            // 
+            // lblCodigoProducto
+            // 
+            lblCodigoProducto.AutoSize = true;
+            lblCodigoProducto.ForeColor = Color.White;
+            lblCodigoProducto.Location = new Point(14, 179);
+            lblCodigoProducto.Name = "lblCodigoProducto";
+            lblCodigoProducto.Size = new Size(15, 20);
+            lblCodigoProducto.TabIndex = 32;
+            lblCodigoProducto.Text = "-";
+            // 
+            // btnEliminarProducto
+            // 
+            btnEliminarProducto.Cursor = Cursors.Hand;
+            btnEliminarProducto.ForeColor = Color.Red;
+            btnEliminarProducto.Location = new Point(782, 100);
+            btnEliminarProducto.Name = "btnEliminarProducto";
+            btnEliminarProducto.Size = new Size(146, 37);
+            btnEliminarProducto.TabIndex = 35;
+            btnEliminarProducto.Text = "ELIMINAR";
+            btnEliminarProducto.UseVisualStyleBackColor = true;
+            btnEliminarProducto.Click += btnEliminarProducto_Click;
+            // 
+            // btnEjecutarVenta
+            // 
+            btnEjecutarVenta.BackColor = Color.Teal;
+            btnEjecutarVenta.Cursor = Cursors.Hand;
+            btnEjecutarVenta.ForeColor = Color.White;
+            btnEjecutarVenta.Location = new Point(1002, 582);
+            btnEjecutarVenta.Name = "btnEjecutarVenta";
+            btnEjecutarVenta.Size = new Size(315, 59);
+            btnEjecutarVenta.TabIndex = 36;
+            btnEjecutarVenta.Text = "EJECUTAR";
+            btnEjecutarVenta.UseVisualStyleBackColor = false;
+            btnEjecutarVenta.Click += btnEjecutarVenta_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.Teal;
+            groupBox1.Controls.Add(lblIdProducto);
+            groupBox1.Controls.Add(btnEliminarProducto);
+            groupBox1.Controls.Add(lblPrecioProducto);
+            groupBox1.Controls.Add(lblNombreProducto);
+            groupBox1.Controls.Add(lblCodigoProducto);
+            groupBox1.Controls.Add(label17);
+            groupBox1.Controls.Add(label16);
+            groupBox1.Controls.Add(label15);
+            groupBox1.Controls.Add(cbProductosVenta);
+            groupBox1.Controls.Add(btnAgregarReg);
+            groupBox1.Controls.Add(lblCantidad);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(txtCantidadProductos);
+            groupBox1.Controls.Add(lblTitleVentas);
+            groupBox1.Location = new Point(29, 31);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(949, 221);
+            groupBox1.TabIndex = 37;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
+            // 
+            // lblIdProducto
+            // 
+            lblIdProducto.AutoSize = true;
+            lblIdProducto.ForeColor = Color.White;
+            lblIdProducto.Location = new Point(331, 100);
+            lblIdProducto.Name = "lblIdProducto";
+            lblIdProducto.Size = new Size(15, 20);
+            lblIdProducto.TabIndex = 36;
+            lblIdProducto.Text = "-";
+            lblIdProducto.Visible = false;
+            // 
             // VentasFrm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1163, 490);
+            ClientSize = new Size(1329, 653);
             Controls.Add(groupBox1);
             Controls.Add(btnEjecutarVenta);
             Controls.Add(panelFactura);
             Controls.Add(dgvVentas);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "VentasFrm";
             Text = "VentasFrm";
             Load += VentasFrm_Load;
@@ -602,13 +583,10 @@
         private Button btnAgregarReg;
         private DataGridView dgvVentas;
         private Panel panelFactura;
-        private ComboBox comboBox2;
         private Label label5;
-        private ComboBox comboBox1;
         private Label label4;
         private Panel panelTotal;
         private Label label2;
-        private Label label3;
         private Label lblTotalaPagar;
         private Label lblDescuento;
         private Label lblItbis;
@@ -633,10 +611,13 @@
         private Label lblDevolucion;
         private Label label11;
         private GroupBox groupBox1;
+        private TextBox txtClienteVenta;
+        private Label lblIdProducto;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn Total;
+        private DataGridViewTextBoxColumn Column3;
     }
 }
