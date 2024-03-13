@@ -92,7 +92,7 @@ namespace ControlInventario_Presentacion.Screens
             }
         }
 
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
             if (currentChildForm != null)
             {
@@ -213,6 +213,11 @@ namespace ControlInventario_Presentacion.Screens
         {
             ActivarBoton(sender, RGBColors.color8);
             OpenChildForm(new StockFrm());
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

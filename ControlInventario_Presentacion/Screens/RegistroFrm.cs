@@ -62,6 +62,7 @@ namespace ControlInventario_Presentacion.Screens
                 {
                     NombreUsuario = txtUserRegistro.Text,
                     PasswordUsuario = txtPasswordRegistro.Text,
+                   // FechaRegistro = DateTime.Now,
 
                 };
 

@@ -16,5 +16,31 @@ namespace ControlInventario_Presentacion.Screens.Forms
         {
             InitializeComponent();
         }
+
+        private Form currentChildForm;
+
+        public void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                //open only form
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            paneldesktop.Controls.Add(childForm);
+            paneldesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            //lblTitleChild.Text = childForm.Text;
+
+        }
+
+        private void btnAjcuentas_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AjustecuentasFrm());
+        }
     }
 }

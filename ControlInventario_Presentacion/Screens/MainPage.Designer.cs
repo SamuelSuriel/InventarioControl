@@ -347,11 +347,11 @@
             // 
             lblMinimizeApp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblMinimizeApp.AutoSize = true;
-            lblMinimizeApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMinimizeApp.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblMinimizeApp.ForeColor = Color.Gainsboro;
             lblMinimizeApp.Location = new Point(1095, -1);
             lblMinimizeApp.Name = "lblMinimizeApp";
-            lblMinimizeApp.Size = new Size(24, 21);
+            lblMinimizeApp.Size = new Size(29, 20);
             lblMinimizeApp.TabIndex = 4;
             lblMinimizeApp.Text = "__";
             lblMinimizeApp.Click += lblMinimizeApp_Click;
@@ -360,11 +360,11 @@
             // 
             lblCerrarApp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblCerrarApp.AutoSize = true;
-            lblCerrarApp.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCerrarApp.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCerrarApp.ForeColor = Color.Gainsboro;
             lblCerrarApp.Location = new Point(1151, 2);
             lblCerrarApp.Name = "lblCerrarApp";
-            lblCerrarApp.Size = new Size(20, 21);
+            lblCerrarApp.Size = new Size(21, 20);
             lblCerrarApp.TabIndex = 2;
             lblCerrarApp.Text = "X";
             lblCerrarApp.Click += lblCerrarApp_Click;
@@ -424,11 +424,11 @@
             // lblFechaActual
             // 
             lblFechaActual.AutoSize = true;
-            lblFechaActual.Font = new Font("Segoe UI Variable Display Semib", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFechaActual.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblFechaActual.ForeColor = Color.Gainsboro;
             lblFechaActual.Location = new Point(365, 470);
             lblFechaActual.Name = "lblFechaActual";
-            lblFechaActual.Size = new Size(150, 32);
+            lblFechaActual.Size = new Size(161, 29);
             lblFechaActual.TabIndex = 5;
             lblFechaActual.Text = "Fecha actual";
             // 
@@ -436,11 +436,11 @@
             // 
             lblHoraActual.AutoSize = true;
             lblHoraActual.BackColor = Color.Transparent;
-            lblHoraActual.Font = new Font("Segoe UI Variable Display", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            lblHoraActual.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Bold, GraphicsUnit.Point);
             lblHoraActual.ForeColor = Color.White;
             lblHoraActual.Location = new Point(396, 410);
             lblHoraActual.Name = "lblHoraActual";
-            lblHoraActual.Size = new Size(286, 64);
+            lblHoraActual.Size = new Size(281, 55);
             lblHoraActual.TabIndex = 4;
             lblHoraActual.Text = "Hora actual";
             // 
@@ -459,11 +459,11 @@
             // lblTitleDashboard
             // 
             lblTitleDashboard.AutoSize = true;
-            lblTitleDashboard.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleDashboard.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleDashboard.ForeColor = Color.Gainsboro;
             lblTitleDashboard.Location = new Point(479, 2);
             lblTitleDashboard.Name = "lblTitleDashboard";
-            lblTitleDashboard.Size = new Size(160, 26);
+            lblTitleDashboard.Size = new Size(167, 24);
             lblTitleDashboard.TabIndex = 2;
             lblTitleDashboard.Text = "BIENVENIDOS/AS";
             // 
@@ -487,6 +487,7 @@
             Name = "MainPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainPage";
+            Load += MainPage_Load;
             panelMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
