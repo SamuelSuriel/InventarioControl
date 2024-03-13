@@ -35,13 +35,13 @@ namespace ControlInventario_Presentacion.Screens
             {
                 obje.NombreUsuario = dt.Rows[0][1].ToString();
                 obje.PasswordUsuario = dt.Rows[0][2].ToString();
-                MessageBox.Show("bienvenido " + obje.NombreUsuario);
+                MessageBox.Show("Bienvenido " + obje.NombreUsuario);
                 Form mainPage = new MainPage();
                 this.Hide();
                 mainPage.Show();
             }
             else
-                MessageBox.Show("Usuario no encontrada", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario no encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
 
