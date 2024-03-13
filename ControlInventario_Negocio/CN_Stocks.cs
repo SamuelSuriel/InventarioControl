@@ -69,5 +69,18 @@ namespace ControlInventario_Negocio
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+
+        public void EditarCantidadRegStock(Stocks stocks)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_UpdateCantidadRegStock";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@codigoProducto", stocks.CodigoProducto);
+            comando.Parameters.AddWithValue("@cantidadStock", stocks.CantidadStock);
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
     }
 }

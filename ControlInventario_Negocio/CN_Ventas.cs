@@ -54,6 +54,32 @@ namespace ControlInventario_Negocio
             return oListaProductos;
 
         }
-       
+
+        public void EjecutarVenta(RegistroVentas registroVentas)
+        {
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "prc_AgregarRegistroVentas";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@idProducto", registroVentas.IdProducto);
+                comando.Parameters.AddWithValue("@codigoProducto", registroVentas.CodigoProducto);
+                comando.Parameters.AddWithValue("@cantidadVendida", registroVentas.CantidadVendida);
+                comando.Parameters.AddWithValue("@precioVenta", registroVentas.PrecioVenta);
+                comando.Parameters.AddWithValue("@clienteVenta", registroVentas.ClienteVenta);
+                comando.Parameters.AddWithValue("@idUsuarioCreacion", registroVentas.IdUsuarioCreacion);
+
+                comando.ExecuteNonQuery();
+
+                comando.Parameters.Clear();
+                conexion.CerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al ejecutar la venta: " + ex.Message);
+            }
+
+        }
+
     }
 }
