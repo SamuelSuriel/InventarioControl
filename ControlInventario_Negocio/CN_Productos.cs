@@ -78,5 +78,62 @@ namespace ControlInventario_Negocio
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
+
+        public void EditarCantidadProducto(Stocks stocks)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_UpdateCantidadStockProducto";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@codigoProducto", stocks.CodigoProducto);
+            comando.Parameters.AddWithValue("@cantidadStock", stocks.CantidadStock);
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+
+
+        public Productos GetProductoById(int id)
+        {
+            var productoFromDB = new Productos();
+
+            using (var _conexion = conexion.Conexion)
+            using (var comando = new SqlCommand())
+            {
+                comando.Connection = _conexion;
+                comando.CommandText = "ObtenerProductoById";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@id", id);
+
+                try
+                {
+                    conexion.AbrirConexion();
+                    using (var leer = comando.ExecuteReader())
+                    {
+                        if (leer.Read())
+                        {
+                            productoFromDB.IdProducto = Convert.ToInt32(leer["IdProducto"]);
+                            productoFromDB.CodigoProducto = leer["CodigoProducto"].ToString();
+                            productoFromDB.NombreProducto = leer["NombreProducto"].ToString();
+                            float precioVenta;
+                            if (float.TryParse(leer["PrecioVenta"].ToString(), out precioVenta))
+                            {
+                                productoFromDB.PrecioVenta = precioVenta;
+                            }
+                            productoFromDB.CantidadStock = (int)leer["CantidadStock"];
+                        }
+                    }
+                    comando.Parameters.Clear();
+                    conexion.CerrarConexion();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al obtener el producto: " + ex.Message);
+                }
+            }
+
+            return productoFromDB;
+
+        }
     }
 }
