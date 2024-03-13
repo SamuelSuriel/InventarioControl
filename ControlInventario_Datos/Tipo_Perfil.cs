@@ -8,7 +8,7 @@ namespace ControlInventario_Datos
 {
     public class Tipo_Perfil
     {
-        public int IdPerfil { get; set; }
-        public string NombrePerfil { get; set; }
+        public int PerfilID { get; set; }
+        public string? Perfil { get; set; }
     }
 }

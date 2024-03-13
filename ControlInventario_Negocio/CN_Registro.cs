@@ -65,8 +65,8 @@ namespace ControlInventario_Negocio
                     {
                         oListaPerfiles.Add(new Tipo_Perfil
                         {
-                            NombrePerfil = leer["Perfil"].ToString(),
-                            IdPerfil = Convert.ToInt32(leer["PerfilID"]),
+                            Perfil = leer["Perfil"].ToString(),
+                            PerfilID = Convert.ToInt32(leer["PerfilID"]),
                             
                         });
                     }
