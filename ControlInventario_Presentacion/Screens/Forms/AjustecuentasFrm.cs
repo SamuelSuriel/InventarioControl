@@ -28,53 +28,79 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
         CN_Registro RegistroCN = new CN_Registro();
 
+        public string IDusu;
 
 
 
 
 
-        private void btnEditarusu_Click(object sender, EventArgs e)
+        
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Capa_Entidades_login registrousu = new()
-            {
-                NombreUsuario = txtNombreUsu.Text,
-                PasswordUsuario = txtContraUsu.Text,
-                UsuarioID = int.Parse(txtIdCuenta.Text),
-                PerfilID = cbxPerfil.SelectedIndex,
-
-            };
-
-            if (EsEditar = false)
+            if (EsValido())
             {
 
-
-
-
-                if (dgvusuario.SelectedCells.Count > 0)
+                Capa_Entidades_login entidadlogin = new()
                 {
+                    UsuarioID = Convert.ToInt32(txtIdCuenta.Text),
+                    NombreUsuario = txtNombreUsu.Text,
+                    PasswordUsuario = txtContraUsu.Text,
+                    PerfilID = (int)cbxPerfil.SelectedValue,
+
+                };
+
+                if (EsEditar == true)
+                {
+                    try
+                    {
+                        RegistroCN.editar_usu(entidadlogin);
+                        MessageBox.Show("Se editó correctamente!");
+                        limpiartxt();
+                        CargarUsuarios();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo realizar la operación: " + ex);
+                    }
+
+                }
+
+                else
+                    MessageBox.Show("Seleccione un Usuario");
+
+            }
+
+            bool EsValido()
+            {
+                bool NombreUsu = txtNombreUsu.Text != "";
+                bool PasswordUsu = txtContraUsu.Text != "";
+                bool IDUsu = txtIdCuenta.Text != "";
+                bool perfil = cbxPerfil.Text != "";
+
+
+                if (NombreUsu && PasswordUsu && IDUsu && perfil)
+                    return true;
+                else
+                    return false;
+            }
+        }
+        private void btnEditarusu_Click_1(object sender, EventArgs e)
+        {
+
+            if (dgvusuario.SelectedCells.Count > 0)
+            {
+               
                     EsEditar = true;
                     txtIdCuenta.Text = dgvusuario.CurrentRow.Cells["UsuarioID"].Value.ToString();
                     txtNombreUsu.Text = dgvusuario.CurrentRow.Cells["NombreUsuario"].Value.ToString();
                     txtContraUsu.Text = dgvusuario.CurrentRow.Cells["PasswordUsuario"].Value.ToString();
                     cbxPerfil.Text = dgvusuario.CurrentRow.Cells["Perfil"].Value.ToString();
 
-                }
+                
             }
-
-            else
-            {
-
-                RegistroCN.Registro_usu(registrousu);
-
-            }
-
-
-
+            
 
         }
-
-
-
         private void AjustecuentasFrm_Load(object sender, EventArgs e)
         {
             CargarUsuarios();
@@ -92,7 +118,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
         private void CargarUsuarios()
         {
             dgvusuario.DataSource = RegistroCN.MostrarUsuarios();
-            this.dgvusuario.Columns["PerfilID"].Visible = false;
+           //this.dgvusuario.Columns["PerfilID"].Visible = false;
 
         }
         private void LlenarCbPerfiles()
@@ -108,13 +134,33 @@ namespace ControlInventario_Presentacion.Screens.Forms
             txtNombreUsu.Clear();
             txtIdCuenta.Clear();
             txtContraUsu.Clear();
-            cbxEstado.SelectedIndex = 0;
+
             cbxPerfil.SelectedIndex = 0;
         }
 
-        private void cbxPerfil_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnEliminareliminarusu_Click(object sender, EventArgs e)
         {
+            if (dgvusuario.SelectedCells.Count > 0)
+            {
+                string message = "¿Estás seguro de que quieres eliminar a este registro?";
+                string title = "Eliminar registro";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
 
+                if (result == DialogResult.Yes)
+                {
+                    IDusu = dgvusuario.CurrentRow.Cells["UsuarioID"].Value.ToString();
+
+                    RegistroCN.Eliminar_Usuario(Convert.ToInt32(IDusu));
+                    MessageBox.Show("Se eliminó correctamente!");
+                    CargarUsuarios();
+                }
+            }
+            else
+                MessageBox.Show("Seleccione una celda para eliminar!");
         }
+
+       
     }
+
 }

@@ -35,12 +35,10 @@
             pictureBox1 = new PictureBox();
             label6 = new Label();
             txtPasswordConfirmReg = new TextBox();
-            label8 = new Label();
-            label3 = new Label();
-            panel1 = new Panel();
             label1 = new Label();
+            label3 = new Label();
+            cbxPerfil = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnRegistrarse
@@ -50,10 +48,10 @@
             btnRegistrarse.FlatAppearance.BorderSize = 0;
             btnRegistrarse.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             btnRegistrarse.ForeColor = Color.White;
-            btnRegistrarse.Location = new Point(47, 326);
+            btnRegistrarse.Location = new Point(47, 378);
             btnRegistrarse.Margin = new Padding(3, 2, 3, 2);
             btnRegistrarse.Name = "btnRegistrarse";
-            btnRegistrarse.Size = new Size(358, 28);
+            btnRegistrarse.Size = new Size(107, 28);
             btnRegistrarse.TabIndex = 11;
             btnRegistrarse.Text = "Registrarse";
             btnRegistrarse.UseVisualStyleBackColor = false;
@@ -121,41 +119,6 @@
             txtPasswordConfirmReg.TabIndex = 9;
             txtPasswordConfirmReg.UseSystemPasswordChar = true;
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Cursor = Cursors.Hand;
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(10, 9);
-            label8.Name = "label8";
-            label8.Size = new Size(39, 15);
-            label8.TabIndex = 15;
-            label8.Text = "Volver";
-            label8.Click += label8_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(88, 11);
-            label3.Name = "label3";
-            label3.Size = new Size(226, 42);
-            label3.TabIndex = 1;
-            label3.Text = "Desarrollado por el equipo 5\r\nProgramacion lll";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.DarkSlateBlue;
-            panel1.Controls.Add(label3);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.ForeColor = SystemColors.ControlText;
-            panel1.Location = new Point(0, 366);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(457, 57);
-            panel1.TabIndex = 14;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -167,15 +130,35 @@
             label1.TabIndex = 8;
             label1.Text = "Usuario:";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.ActiveCaptionText;
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.Gainsboro;
+            label3.Location = new Point(47, 314);
+            label3.Name = "label3";
+            label3.Size = new Size(45, 21);
+            label3.TabIndex = 13;
+            label3.Text = "Perfil";
+            // 
+            // cbxPerfil
+            // 
+            cbxPerfil.FormattingEnabled = true;
+            cbxPerfil.Location = new Point(47, 335);
+            cbxPerfil.Name = "cbxPerfil";
+            cbxPerfil.Size = new Size(358, 23);
+            cbxPerfil.TabIndex = 12;
+            // 
             // RegistroFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Black;
-            ClientSize = new Size(457, 423);
-            Controls.Add(label8);
-            Controls.Add(panel1);
+            ClientSize = new Size(825, 443);
+            Controls.Add(label3);
+            Controls.Add(cbxPerfil);
             Controls.Add(btnRegistrarse);
             Controls.Add(txtPasswordConfirmReg);
             Controls.Add(txtPasswordRegistro);
@@ -189,9 +172,8 @@
             Name = "RegistroFrm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RegistroFrm";
+            Load += RegistroFrm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -204,9 +186,8 @@
         private PictureBox pictureBox1;
         private Label label6;
         private TextBox txtPasswordConfirmReg;
-        private Label label8;
-        private Label label3;
-        private Panel panel1;
         private Label label1;
+        private Label label3;
+        private ComboBox cbxPerfil;
     }
 }

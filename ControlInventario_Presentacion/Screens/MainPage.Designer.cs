@@ -50,6 +50,7 @@
             iconCurrentChildFrm = new FontAwesome.Sharp.IconPictureBox();
             panelShadow = new Panel();
             panelDesktop = new Panel();
+            lblNombre = new Label();
             lblFechaActual = new Label();
             lblHoraActual = new Label();
             pictureBox1 = new PictureBox();
@@ -409,6 +410,7 @@
             // 
             panelDesktop.BackColor = Color.Black;
             panelDesktop.BorderStyle = BorderStyle.FixedSingle;
+            panelDesktop.Controls.Add(lblNombre);
             panelDesktop.Controls.Add(lblFechaActual);
             panelDesktop.Controls.Add(lblHoraActual);
             panelDesktop.Controls.Add(pictureBox1);
@@ -421,12 +423,23 @@
             panelDesktop.Size = new Size(1178, 525);
             panelDesktop.TabIndex = 3;
             // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Microsoft Sans Serif", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNombre.ForeColor = Color.Gainsboro;
+            lblNombre.Location = new Point(507, 27);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(68, 20);
+            lblNombre.TabIndex = 6;
+            lblNombre.Text = "Nombre";
+            // 
             // lblFechaActual
             // 
             lblFechaActual.AutoSize = true;
             lblFechaActual.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblFechaActual.ForeColor = Color.Gainsboro;
-            lblFechaActual.Location = new Point(365, 470);
+            lblFechaActual.Location = new Point(365, 481);
             lblFechaActual.Name = "lblFechaActual";
             lblFechaActual.Size = new Size(161, 29);
             lblFechaActual.TabIndex = 5;
@@ -438,7 +451,7 @@
             lblHoraActual.BackColor = Color.Transparent;
             lblHoraActual.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Bold, GraphicsUnit.Point);
             lblHoraActual.ForeColor = Color.White;
-            lblHoraActual.Location = new Point(396, 410);
+            lblHoraActual.Location = new Point(396, 421);
             lblHoraActual.Name = "lblHoraActual";
             lblHoraActual.Size = new Size(281, 55);
             lblHoraActual.TabIndex = 4;
@@ -448,7 +461,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.Logo_SRS;
-            pictureBox1.Location = new Point(340, 39);
+            pictureBox1.Location = new Point(340, 53);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(453, 368);
@@ -459,11 +472,11 @@
             // lblTitleDashboard
             // 
             lblTitleDashboard.AutoSize = true;
-            lblTitleDashboard.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleDashboard.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitleDashboard.ForeColor = Color.Gainsboro;
             lblTitleDashboard.Location = new Point(479, 2);
             lblTitleDashboard.Name = "lblTitleDashboard";
-            lblTitleDashboard.Size = new Size(167, 24);
+            lblTitleDashboard.Size = new Size(146, 20);
             lblTitleDashboard.TabIndex = 2;
             lblTitleDashboard.Text = "BIENVENIDOS/AS";
             // 
@@ -529,5 +542,6 @@
         private Label lblFechaActual;
         private System.Windows.Forms.Timer timer1;
         private FontAwesome.Sharp.IconButton btnStocks;
+        private Label lblNombre;
     }
 }

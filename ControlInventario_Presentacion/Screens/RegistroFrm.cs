@@ -16,18 +16,15 @@ namespace ControlInventario_Presentacion.Screens
     public partial class RegistroFrm : Form
     {
 
-        CN_Registro registrocn = new CN_Registro();
+        CN_Registro RegistroCN = new CN_Registro();
         public RegistroFrm()
         {
             InitializeComponent();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-            Form login = new Login();
-            this.Hide();
-            login.Show();
-        }
+        
+
+
 
 
 
@@ -42,7 +39,7 @@ namespace ControlInventario_Presentacion.Screens
             {
 
 
-                if (UserRegistro.Length > 5 && PasswordRegistro.Length >= 4 && PasswordConfirmReg.Length >= 4)
+                if (UserRegistro.Length >= 4 && PasswordRegistro.Length >= 4 && PasswordConfirmReg.Length >= 4)
                 {
                     result = true;
                 }
@@ -62,14 +59,14 @@ namespace ControlInventario_Presentacion.Screens
                 {
                     NombreUsuario = txtUserRegistro.Text,
                     PasswordUsuario = txtPasswordRegistro.Text,
-                   // FechaRegistro = DateTime.Now,
+                    PerfilID = (int)cbxPerfil.SelectedValue,
 
                 };
 
 
                 try
                 {
-                    registrocn.Registro_usu(_productos);
+                    RegistroCN.Registro_usu(_productos);
                     MessageBox.Show("SE INSERTÓ CORRECTAMENTE!");
                     LimpiarControles();
                 }
@@ -84,14 +81,27 @@ namespace ControlInventario_Presentacion.Screens
                 MessageBox.Show("ingrese datos validos");
         }
 
-         private void LimpiarControles()
+        private void LlenarCbPerfiles()
+        {
+            cbxPerfil.DataSource = RegistroCN.ObtenerPerfiles();
+            cbxPerfil.DisplayMember = "Perfil";
+            cbxPerfil.ValueMember = "PerfilID";
+
+        }
+
+        private void LimpiarControles()
         {
             txtUserRegistro.Clear();
             txtPasswordConfirmReg.Clear();
             txtPasswordRegistro.Clear();
 
         }
+
+        private void RegistroFrm_Load(object sender, EventArgs e)
+        {
+            LlenarCbPerfiles();
+        }
     }
 
-    
+
 }

@@ -42,5 +42,10 @@ namespace ControlInventario_Presentacion.Screens.Forms
         {
             OpenChildForm(new AjustecuentasFrm());
         }
+
+        private void btnRegistrarUsu_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new RegistroFrm());
+        }
     }
 }

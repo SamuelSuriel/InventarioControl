@@ -37,14 +37,13 @@
             txtContraUsu = new TextBox();
             label2 = new Label();
             txtIdCuenta = new TextBox();
-            label3 = new Label();
-            cbxEstado = new ComboBox();
             label4 = new Label();
             btnEliminareliminarusu = new Label();
             btnEditarusu = new Button();
             lblLimpiarCampousu = new Label();
             btnBuscarusu = new Button();
             txtBuscarusu = new TextBox();
+            btnAgregar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvusuario).BeginInit();
             SuspendLayout();
             // 
@@ -75,7 +74,6 @@
             cbxPerfil.Name = "cbxPerfil";
             cbxPerfil.Size = new Size(171, 23);
             cbxPerfil.TabIndex = 4;
-            cbxPerfil.SelectedIndexChanged += cbxPerfil_SelectedIndexChanged;
             // 
             // txtNombreUsu
             // 
@@ -131,25 +129,6 @@
             txtIdCuenta.Size = new Size(171, 23);
             txtIdCuenta.TabIndex = 9;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.ActiveCaptionText;
-            label3.ForeColor = Color.Gainsboro;
-            label3.Location = new Point(22, 214);
-            label3.Name = "label3";
-            label3.Size = new Size(42, 15);
-            label3.TabIndex = 12;
-            label3.Text = "Estado";
-            // 
-            // cbxEstado
-            // 
-            cbxEstado.FormattingEnabled = true;
-            cbxEstado.Location = new Point(113, 211);
-            cbxEstado.Name = "cbxEstado";
-            cbxEstado.Size = new Size(171, 23);
-            cbxEstado.TabIndex = 11;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -167,24 +146,26 @@
             btnEliminareliminarusu.Cursor = Cursors.Hand;
             btnEliminareliminarusu.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnEliminareliminarusu.ForeColor = Color.Red;
-            btnEliminareliminarusu.Location = new Point(432, 66);
+            btnEliminareliminarusu.Location = new Point(538, 66);
             btnEliminareliminarusu.Name = "btnEliminareliminarusu";
             btnEliminareliminarusu.Size = new Size(74, 21);
             btnEliminareliminarusu.TabIndex = 16;
             btnEliminareliminarusu.Text = "Eliminar";
+            btnEliminareliminarusu.Click += btnEliminareliminarusu_Click;
             // 
             // btnEditarusu
             // 
             btnEditarusu.BackColor = Color.DarkOrange;
             btnEditarusu.Cursor = Cursors.Hand;
             btnEditarusu.ForeColor = Color.White;
-            btnEditarusu.Location = new Point(308, 54);
+            btnEditarusu.Location = new Point(414, 54);
             btnEditarusu.Margin = new Padding(3, 2, 3, 2);
             btnEditarusu.Name = "btnEditarusu";
             btnEditarusu.Size = new Size(118, 33);
             btnEditarusu.TabIndex = 14;
             btnEditarusu.Text = "Editar";
             btnEditarusu.UseVisualStyleBackColor = false;
+            btnEditarusu.Click += btnEditarusu_Click_1;
             // 
             // lblLimpiarCampousu
             // 
@@ -192,7 +173,7 @@
             lblLimpiarCampousu.Cursor = Cursors.Hand;
             lblLimpiarCampousu.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             lblLimpiarCampousu.ForeColor = Color.White;
-            lblLimpiarCampousu.Location = new Point(524, 72);
+            lblLimpiarCampousu.Location = new Point(630, 72);
             lblLimpiarCampousu.Name = "lblLimpiarCampousu";
             lblLimpiarCampousu.Size = new Size(47, 15);
             lblLimpiarCampousu.TabIndex = 17;
@@ -201,7 +182,7 @@
             // 
             // btnBuscarusu
             // 
-            btnBuscarusu.Location = new Point(738, 211);
+            btnBuscarusu.Location = new Point(22, 223);
             btnBuscarusu.Name = "btnBuscarusu";
             btnBuscarusu.Size = new Size(75, 23);
             btnBuscarusu.TabIndex = 18;
@@ -210,10 +191,24 @@
             // 
             // txtBuscarusu
             // 
-            txtBuscarusu.Location = new Point(308, 211);
+            txtBuscarusu.Location = new Point(113, 223);
             txtBuscarusu.Name = "txtBuscarusu";
             txtBuscarusu.Size = new Size(424, 23);
             txtBuscarusu.TabIndex = 19;
+            // 
+            // btnAgregar
+            // 
+            btnAgregar.BackColor = Color.ForestGreen;
+            btnAgregar.Cursor = Cursors.Hand;
+            btnAgregar.ForeColor = Color.White;
+            btnAgregar.Location = new Point(290, 54);
+            btnAgregar.Margin = new Padding(3, 2, 3, 2);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(118, 33);
+            btnAgregar.TabIndex = 20;
+            btnAgregar.Text = "Guardar";
+            btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // AjustecuentasFrm
             // 
@@ -221,14 +216,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(825, 443);
+            Controls.Add(btnAgregar);
             Controls.Add(txtBuscarusu);
             Controls.Add(btnBuscarusu);
             Controls.Add(lblLimpiarCampousu);
             Controls.Add(btnEliminareliminarusu);
             Controls.Add(btnEditarusu);
             Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(cbxEstado);
             Controls.Add(label2);
             Controls.Add(txtIdCuenta);
             Controls.Add(label1);
@@ -257,13 +251,12 @@
         private TextBox txtContraUsu;
         private Label label2;
         private TextBox txtIdCuenta;
-        private Label label3;
-        private ComboBox cbxEstado;
         private Label label4;
         private Label btnEliminareliminarusu;
         private Button btnEditarusu;
         private Label lblLimpiarCampousu;
         private Button btnBuscarusu;
         private TextBox txtBuscarusu;
+        private Button btnAgregar;
     }
 }

@@ -30,6 +30,7 @@
         {
             lblTitleSettings = new Label();
             groupBox1 = new GroupBox();
+            btnRegistrarUsu = new Button();
             btnAjcuentas = new Button();
             paneldesktop = new Panel();
             groupBox1.SuspendLayout();
@@ -49,12 +50,26 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(37, 36, 81);
+            groupBox1.Controls.Add(btnRegistrarUsu);
             groupBox1.Controls.Add(btnAjcuentas);
             groupBox1.Location = new Point(28, 68);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(233, 383);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
+            // 
+            // btnRegistrarUsu
+            // 
+            btnRegistrarUsu.BackColor = Color.Transparent;
+            btnRegistrarUsu.FlatStyle = FlatStyle.Popup;
+            btnRegistrarUsu.ForeColor = SystemColors.ButtonFace;
+            btnRegistrarUsu.Location = new Point(6, 60);
+            btnRegistrarUsu.Name = "btnRegistrarUsu";
+            btnRegistrarUsu.Size = new Size(221, 23);
+            btnRegistrarUsu.TabIndex = 1;
+            btnRegistrarUsu.Text = "Registro de Cuentas";
+            btnRegistrarUsu.UseVisualStyleBackColor = false;
+            btnRegistrarUsu.Click += btnRegistrarUsu_Click;
             // 
             // btnAjcuentas
             // 
@@ -73,7 +88,7 @@
             // 
             paneldesktop.Location = new Point(296, 68);
             paneldesktop.Name = "paneldesktop";
-            paneldesktop.Size = new Size(1043, 383);
+            paneldesktop.Size = new Size(1043, 429);
             paneldesktop.TabIndex = 4;
             // 
             // SettingsFrm
@@ -99,5 +114,6 @@
         private GroupBox groupBox1;
         private Button btnAjcuentas;
         private Panel paneldesktop;
+        private Button btnRegistrarUsu;
     }
 }

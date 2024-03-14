@@ -38,10 +38,24 @@ namespace ControlInventario_Negocio
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "prc_EditarUsuario";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@usuario", registro.NombreUsuario);
+            comando.Parameters.AddWithValue("@idUsuario", registro.UsuarioID);
+            comando.Parameters.AddWithValue("@nombreUsuario", registro.NombreUsuario);
             comando.Parameters.AddWithValue("@password", registro.PasswordUsuario);
+            comando.Parameters.AddWithValue("@perfilID", registro.PerfilID);
             
 
+            comando.ExecuteNonQuery();
+
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+
+        public void Eliminar_Usuario(int IDUsu)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "prc_EliminarUsuario";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@idUsuario", IDUsu);
             comando.ExecuteNonQuery();
 
             comando.Parameters.Clear();
@@ -89,7 +103,8 @@ namespace ControlInventario_Negocio
                 comando.CommandText = "prc_RegistrarUsuario";
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@usuario ", registro.NombreUsuario);
-                comando.Parameters.AddWithValue("@password", registro.PasswordUsuario); 
+                comando.Parameters.AddWithValue("@password", registro.PasswordUsuario);
+                comando.Parameters.AddWithValue("@IdPerfil", registro.PerfilID);
                 comando.ExecuteNonQuery();
                 comando.Parameters.Clear();
                 conexion.CerrarConexion();

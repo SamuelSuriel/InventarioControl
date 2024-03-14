@@ -35,7 +35,6 @@
             txtPassword = new TextBox();
             btnIniciarSesion = new Button();
             lblOlvideContrasena = new Label();
-            lblRegistrarse = new Label();
             panel1 = new Panel();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -122,19 +121,6 @@
             lblOlvideContrasena.TabIndex = 4;
             lblOlvideContrasena.Text = "Ovlidé la contraseña";
             // 
-            // lblRegistrarse
-            // 
-            lblRegistrarse.AutoSize = true;
-            lblRegistrarse.Cursor = Cursors.Hand;
-            lblRegistrarse.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
-            lblRegistrarse.ForeColor = Color.DodgerBlue;
-            lblRegistrarse.Location = new Point(320, 308);
-            lblRegistrarse.Name = "lblRegistrarse";
-            lblRegistrarse.Size = new Size(64, 15);
-            lblRegistrarse.TabIndex = 4;
-            lblRegistrarse.Text = "Registrarse";
-            lblRegistrarse.Click += lblRegistrarse_Click;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.DarkSlateBlue;
@@ -165,7 +151,6 @@
             BackColor = Color.Black;
             ClientSize = new Size(502, 470);
             Controls.Add(panel1);
-            Controls.Add(lblRegistrarse);
             Controls.Add(lblOlvideContrasena);
             Controls.Add(btnIniciarSesion);
             Controls.Add(txtPassword);
@@ -194,7 +179,6 @@
         private TextBox txtPassword;
         private Button btnIniciarSesion;
         private Label lblOlvideContrasena;
-        private Label lblRegistrarse;
         private Panel panel1;
         private Label label3;
     }

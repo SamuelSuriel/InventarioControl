@@ -12,11 +12,16 @@ using System.Windows.Media;
 using ControlInventario_Presentacion.Screens.Forms;
 using FontAwesome.Sharp;
 using Color = System.Drawing.Color;
+using ControlInventario_Datos;
+using ControlInventario_Negocio;
 
 namespace ControlInventario_Presentacion.Screens
 {
     public partial class MainPage : Form
     {
+        public Capa_Entidades_login DatosLogin = new Capa_Entidades_login(); 
+    
+        
         //Fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
@@ -217,7 +222,27 @@ namespace ControlInventario_Presentacion.Screens
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-            
+
+            if(Login.Perfil == 4)
+            {
+                btnSettings.Enabled = false;
+                btnPedidos.Enabled = false;
+                btnProveedores.Enabled = false;
+                lblNombre.Text = Login.NombreUsu;
+                
+            }
+
+            else if(Login.Perfil == 3) 
+            { 
+                btnSettings.Enabled = false;
+                btnVentas.Enabled = false;
+                btnProductos.Enabled = false;
+                lblNombre.Text = Login.NombreUsu;
+            }
+
+            else
+                lblNombre.Text = Login.NombreUsu;
+
         }
     }
 }
