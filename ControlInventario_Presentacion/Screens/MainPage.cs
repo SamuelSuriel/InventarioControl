@@ -19,9 +19,9 @@ namespace ControlInventario_Presentacion.Screens
 {
     public partial class MainPage : Form
     {
-        public Capa_Entidades_login DatosLogin = new Capa_Entidades_login(); 
-    
-        
+        public Capa_Entidades_login DatosLogin = new Capa_Entidades_login();
+
+
         //Fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
@@ -222,26 +222,36 @@ namespace ControlInventario_Presentacion.Screens
 
         private void MainPage_Load(object sender, EventArgs e)
         {
+            lblUltimaConexion.Text = Login.UltimaConexion.ToString();
+            lblNombre.Text = Login.NombreUsu.ToUpper();
+            lblTipoPerfil.Text = Login.Perfil.ToUpper();
 
-            if(Login.Perfil == 4)
+            if (Login.IdPerfil == 4)
             {
                 btnSettings.Enabled = false;
                 btnPedidos.Enabled = false;
                 btnProveedores.Enabled = false;
-                lblNombre.Text = Login.NombreUsu;
-                
-            }
 
-            else if(Login.Perfil == 3) 
-            { 
+            }
+            else if (Login.IdPerfil == 3)
+            {
                 btnSettings.Enabled = false;
                 btnVentas.Enabled = false;
                 btnProductos.Enabled = false;
-                lblNombre.Text = Login.NombreUsu;
             }
 
-            else
-                lblNombre.Text = Login.NombreUsu;
+        }
+
+        private void iconBtbCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login.IdPerfil = 0;
+            Login.NombreUsu = "";
+            Login.Perfil = "";
+            Login.UltimaConexion = null;
+
+            Login login = new Login();
+            login.Show();
 
         }
     }

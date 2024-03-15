@@ -1,17 +1,10 @@
 ﻿using ControlInventario_Datos;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ControlInventario_Datos;
-using Microsoft.Win32;
 
 namespace ControlInventario_Negocio
 {
-    
+
 
     public class CN_Login
     {
@@ -19,9 +12,9 @@ namespace ControlInventario_Negocio
         private CD_Conexion conexion = new CD_Conexion();
         SqlCommand comando = new SqlCommand();
 
-        ControlInventario_Datos.Login_usuarios objd = new ControlInventario_Datos.Login_usuarios();
+        Login_usuarios objd = new Login_usuarios();
 
-        public DataTable N_login(ControlInventario_Datos.Capa_Entidades_login obje)
+        public DataTable N_login(Capa_Entidades_login obje)
         {
             return objd.D_login(obje);
         }
