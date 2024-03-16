@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ControlInventario_Presentacion.Screens.Forms
 {
@@ -23,14 +24,8 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
         private void btnBuscarInforme_Click(object sender, EventArgs e)
         {
-            string crt = txtCriteriosInforme.Text;
-            int id = 0;
-            string date = Convert.ToDateTime(dtpFechaVenta.Text).ToString();
-            if (cbProductosInforme.SelectedValue != null)
-            {
-                id = (int)cbProductosInforme.SelectedValue;
-            }
-            CargarDgvInforme(crt, id, date);
+
+            CargarDgvInforme();
         }
 
         private void LlenarCbProductos()
@@ -38,6 +33,10 @@ namespace ControlInventario_Presentacion.Screens.Forms
             cbProductosInforme.DataSource = productos.ObtenerProductos();
             cbProductosInforme.DisplayMember = "NombreProducto";
             cbProductosInforme.ValueMember = "IdProducto";
+
+            cbProductoproveedor.DataSource = productos.ObtenerProductos();
+            cbProductoproveedor.DisplayMember = "NombreProducto";
+            cbProductoproveedor.ValueMember = "IdProducto";
         }
 
         private void InformesFrm_Load(object sender, EventArgs e)
@@ -46,9 +45,54 @@ namespace ControlInventario_Presentacion.Screens.Forms
             cbProductosInforme.SelectedValue = 0;
             cbProductosInforme.Text = "Seleccione un producto...";
 
+            cbProductoproveedor.SelectedValue = 0;
+            cbProductoproveedor.Text = "Seleccione un producto...";
         }
 
-        private void CargarDgvInforme(string? cr, int idProd, string? fecha)
+        private void CargarDgvInforme()
+        {
+            if (cbTipoInforme.SelectedIndex == 0)
+            {
+                string crt = txtCriteriosInforme.Text;
+                int id = 0;
+                DateTime date = Convert.ToDateTime(dtpFechaVenta.Text);
+                if (cbProductosInforme.SelectedValue != null)
+                {
+                    id = (int)cbProductosInforme.SelectedValue;
+                }
+                dgvInformeVentas.Columns.Clear();
+                CargarDgvVentas(crt, id, date);
+            }
+            else if (cbTipoInforme.SelectedIndex == 1)
+            {
+                string crt = txtCriterioStockInforme.Text;
+                int id = 0;
+                if (cbProductosInforme.SelectedValue != null)
+                {
+                    id = (int)cbProductoproveedor.SelectedValue;
+                }
+                dgvInformeVentas.Columns.Clear();
+                CargarDgvStocks(id, crt);
+            }
+            else if (cbTipoInforme.SelectedIndex == 2)
+            {
+                int idprod = 0;
+                if (cbProductoproveedor.SelectedValue != null)
+                {
+                    idprod = (int)cbProductoproveedor.SelectedValue;
+                }
+                int idprove = 0;
+                if (cbProveedoresInforme.SelectedValue != null)
+                {
+                    idprove = (int)cbProveedoresInforme.SelectedValue;
+                }
+                dgvInformeVentas.Columns.Clear();
+                CargarProveedores(idprod, idprove);
+            }
+
+        }
+
+        private void CargarDgvVentas(string? cr, int idProd, DateTime? fecha)
         {
             dgvInformeVentas.DataSource = cNInformes.MostrarRegistros(cr, idProd, fecha);
             this.dgvInformeVentas.Columns["IdRegistroVenta"].Visible = false;
@@ -57,6 +101,21 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
         }
 
+        private void CargarDgvStocks(int IdProducto, string? cr)
+        {
+            dgvInformeVentas.DataSource = cNInformes.LlenarDgvStocks(IdProducto, cr);
+            this.dgvInformeVentas.Columns["IdStock"].Visible = false;
+            this.dgvInformeVentas.Columns["Activo"].Visible = false;
+
+        }
+
+        private void CargarProveedores(int idProducto, int idProveedor)
+        {
+            dgvInformeVentas.DataSource = cNInformes.MostrarProveedores(idProducto, idProveedor);
+            this.dgvInformeVentas.Columns["Idproveedor"].Visible = false;
+            this.dgvInformeVentas.Columns["IdProductosSuministra"].Visible = false;
+            this.dgvInformeVentas.Columns["Activo"].Visible = false;
+        }
         private void btnGenerarInforme_Click(object sender, EventArgs e)
         {
             LimpiarFiltros();
@@ -69,8 +128,38 @@ namespace ControlInventario_Presentacion.Screens.Forms
             dtpFechaVenta.Text = string.Empty;
             dtpFechaVenta.Text = "";
             txtCriteriosInforme.Text = "";
+            txtCriterioStockInforme.Text = "";
             cbProductosInforme.SelectedValue = 0;
             cbProductosInforme.Text = "Seleccione un producto...";
+            cbProductoproveedor.SelectedValue = 0;
+            cbProductoproveedor.Text = "Seleccione un producto...";
+            dgvInformeVentas.Columns.Clear();
+        }
+
+        private void cbTipoInforme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbTipoInforme.SelectedIndex == 0)
+            {
+                groupBoxStocks.Visible = false;
+                groupBoxProveedores.Visible = false;
+                groupBoxVentas.Visible = true;
+            }
+            else if (cbTipoInforme.SelectedIndex == 1)
+            {
+                groupBoxProveedores.Visible = false;
+                groupBoxVentas.Visible = false;
+                groupBoxStocks.Visible = true;
+            }
+            else if (cbTipoInforme.SelectedIndex == 2)
+            {
+                groupBoxVentas.Visible = false;
+                groupBoxStocks.Visible = false;
+                groupBoxProveedores.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un tipo de informe..!");
+            }
         }
     }
 }
