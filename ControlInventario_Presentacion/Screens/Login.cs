@@ -10,6 +10,7 @@ namespace ControlInventario_Presentacion.Screens
         Capa_Entidades_login obje = new Capa_Entidades_login();
         CN_Login objn = new CN_Login();
         public static int IdPerfil;
+        public static int IdUsuario;
         public static string? Perfil;
         public static string? NombreUsu;
         public static DateTime? UltimaConexion;
@@ -34,6 +35,7 @@ namespace ControlInventario_Presentacion.Screens
             if (dt.Rows.Count > 0)
             {
                 obje.UsuarioID = int.Parse(dt.Rows[0][0].ToString());
+                IdUsuario = obje.UsuarioID;
                 obje.NombreUsuario = dt.Rows[0][1].ToString();
                 NombreUsu = dt.Rows[0][1].ToString();
                 obje.PasswordUsuario = dt.Rows[0][2].ToString();

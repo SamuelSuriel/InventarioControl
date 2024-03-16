@@ -92,6 +92,37 @@ namespace ControlInventario_Negocio
             conexion.CerrarConexion();
         }
 
+        public List<Productos> ObtenerProductos()
+        {
+            List<Productos> oListaProductos = new List<Productos>();
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "prc_GetProductos";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    leer = comando.ExecuteReader();
+
+                    while (leer.Read())
+                    {
+                        oListaProductos.Add(new Productos
+                        {
+                            IdProducto = Convert.ToInt32(leer["IdProducto"]),
+                            NombreProducto = leer["NombreProducto"].ToString()
+                        });
+                    }
+                    leer.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al obtener los productos: " + ex.Message, ex);
+                }
+
+            }
+            return oListaProductos;
+
+        }
 
         public Productos GetProductoById(int id)
         {

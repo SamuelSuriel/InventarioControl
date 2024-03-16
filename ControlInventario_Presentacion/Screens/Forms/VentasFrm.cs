@@ -73,12 +73,13 @@ namespace ControlInventario_Presentacion.Screens.Forms
         private void VentasFrm_Load(object sender, EventArgs e)
         {
             LlenarCbProductos();
-
+            cbProductosVenta.SelectedValue = 0;
+            cbProductosVenta.Text = "Seleccione un producto...";
         }
 
         private void LlenarCbProductos()
         {
-            cbProductosVenta.DataSource = proveedoresCN.ObtenerProductos();
+            cbProductosVenta.DataSource = _cNProductos.ObtenerProductos();
             cbProductosVenta.DisplayMember = "NombreProducto";
             cbProductosVenta.ValueMember = "IdProducto";
 
@@ -86,7 +87,11 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
         private void cbProductosVenta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int cod = ((Productos)cbProductosVenta.SelectedItem).IdProducto;
+            int cod = 0;
+            if (cbProductosVenta.SelectedItem != null)
+            {
+                cod = ((Productos)cbProductosVenta.SelectedItem).IdProducto;
+            }
             try
             {
                 using (SqlCommand cmd = new SqlCommand("ObtenerProductoById", conexion.Conexion))
@@ -232,7 +237,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
                     registro.CantidadVendida = Int32.Parse(dgvVentas.Rows[i].Cells[3].Value?.ToString());
                     registro.IdProducto = Int32.Parse(dgvVentas.Rows[i].Cells[5].Value?.ToString());
                     registro.ClienteVenta = txtClienteVenta.Text;
-                    registro.IdUsuarioCreacion = 1;
+                    registro.IdUsuarioCreacion = Login.IdUsuario;
 
                     // Validar que la cantidad a vender no exceda el stock del producto.
                     Productos producto = _cNProductos.GetProductoById(registro.IdProducto);

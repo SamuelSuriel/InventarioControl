@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ControlInventario_Datos
 {
@@ -16,7 +11,7 @@ namespace ControlInventario_Datos
         public int? CantidadVendida { get; set; }
         public double PrecioVenta { get; set; }
         public DateTime? FechaVenta { get; set; }
-        public string ClienteVenta { get; set; }
+        public string? ClienteVenta { get; set; }
         public int IdUsuarioCreacion { get; set; }
         public int? IdUsuarioModificacion { get; set; }
 

@@ -16,6 +16,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
     public partial class ProveedoresFrm : Form
     {
         CN_Proveedores proveedoresCN = new CN_Proveedores();
+        CN_Productos productos = new CN_Productos();
 
         private string? idProveedor_ = null;
         private bool EsEditar = false;
@@ -29,11 +30,13 @@ namespace ControlInventario_Presentacion.Screens.Forms
             CargarProveedores();
             LimpiarControles();
             LlenarCbProductos();
+            cbProductosProveedor.SelectedValue = 0;
+            cbProductosProveedor.Text = "Seleccione un producto...";
         }
 
         private void LlenarCbProductos()
         {
-            cbProductosProveedor.DataSource = proveedoresCN.ObtenerProductos();
+            cbProductosProveedor.DataSource = productos.ObtenerProductos();
             cbProductosProveedor.DisplayMember = "NombreProducto";
             cbProductosProveedor.ValueMember = "IdProducto";
         }

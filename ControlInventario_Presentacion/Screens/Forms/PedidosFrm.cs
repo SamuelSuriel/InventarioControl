@@ -28,6 +28,8 @@ namespace ControlInventario_Presentacion.Screens.Forms
             CargarPedidos();
             LimpiarControles();
             LlenarCbProveedores();
+            cbProveedoresPedidos.SelectedValue = 0;
+            cbProveedoresPedidos.Text = "Seleccione el proveedor...";
         }
 
         private void LlenarCbProveedores()
@@ -41,11 +43,11 @@ namespace ControlInventario_Presentacion.Screens.Forms
         private void LimpiarControles()
         {
             cbProveedoresPedidos.SelectedValue = 0;
+            cbProveedoresPedidos.Text = "Seleccione el proveedor...";
             txtCantidadProductos.Clear();
             dtpFechaPedido.Text = string.Empty;
+            dtpFechaPedido.Text = "";
 
-            //dtpFechaPedido.CustomFormat = " ";
-            //dtpFechaPedido.Format = DateTimePickerFormat.Custom;
         }
 
         private void CargarPedidos()
