@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ControlInventario_Presentacion.Screens.Forms
 {
@@ -33,10 +32,20 @@ namespace ControlInventario_Presentacion.Screens.Forms
             cbProductosInforme.DataSource = productos.ObtenerProductos();
             cbProductosInforme.DisplayMember = "NombreProducto";
             cbProductosInforme.ValueMember = "IdProducto";
+        }
 
+        private void LlenarCbProveedorProductos()
+        {
             cbProductoproveedor.DataSource = productos.ObtenerProductos();
             cbProductoproveedor.DisplayMember = "NombreProducto";
             cbProductoproveedor.ValueMember = "IdProducto";
+        }
+
+        private void LlenarCbStocksProductos()
+        {
+            cbStockProductos.DataSource = productos.ObtenerProductos();
+            cbStockProductos.DisplayMember = "NombreProducto";
+            cbStockProductos.ValueMember = "IdProducto";
         }
 
         private void InformesFrm_Load(object sender, EventArgs e)
@@ -44,9 +53,23 @@ namespace ControlInventario_Presentacion.Screens.Forms
             LlenarCbProductos();
             cbProductosInforme.SelectedValue = 0;
             cbProductosInforme.Text = "Seleccione un producto...";
-
+            LlenarCbProveedores();
+            cbProveedoresInforme.SelectedValue = 0;
+            cbProveedoresInforme.Text = "Seleccione un proveedor...";
+            LlenarCbProveedorProductos();
             cbProductoproveedor.SelectedValue = 0;
             cbProductoproveedor.Text = "Seleccione un producto...";
+            LlenarCbStocksProductos();
+            cbStockProductos.SelectedValue = 0;
+            cbStockProductos.Text = "Seleccione un producto...";
+        }
+
+        private void LlenarCbProveedores()
+        {
+            cbProveedoresInforme.DataSource = cNInformes.ObtenerListaProveedores();
+            cbProveedoresInforme.DisplayMember = "NombreProveedor";
+            cbProveedoresInforme.ValueMember = "IdProveedor";
+
         }
 
         private void CargarDgvInforme()

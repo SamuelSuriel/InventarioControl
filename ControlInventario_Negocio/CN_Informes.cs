@@ -71,5 +71,39 @@ namespace ControlInventario_Negocio
             return tabla;
 
         }
+
+        public List<Proveedores> ObtenerListaProveedores()
+        {
+            SqlCommand comando = new SqlCommand();
+            CD_Conexion conexion = new CD_Conexion();
+            List<Proveedores> oListaProveedores = new List<Proveedores>();
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "prc_GetProveedores";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    leer = comando.ExecuteReader();
+
+                    while (leer.Read())
+                    {
+                        oListaProveedores.Add(new Proveedores
+                        {
+                            IdProveedor = Convert.ToInt32(leer["IdProveedor"]),
+                            NombreProveedor = leer["NombreProveedor"].ToString()
+                        });
+                    }
+                    leer.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al obtener los proveedores: " + ex.Message, ex);
+                }
+
+            }
+            return oListaProveedores;
+
+        }
     }
 }
