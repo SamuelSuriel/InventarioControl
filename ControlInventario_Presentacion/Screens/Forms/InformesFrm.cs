@@ -161,6 +161,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
         private void cbTipoInforme_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dgvInformeVentas.Columns.Clear();
             if (cbTipoInforme.SelectedIndex == 0)
             {
                 groupBoxStocks.Visible = false;
