@@ -23,6 +23,9 @@ namespace ControlInventario_Presentacion.Screens.Forms
             InitializeComponent();
         }
 
+
+        //
+
         private void PedidosFrm_Load(object sender, EventArgs e)
         {
             CargarPedidos();
