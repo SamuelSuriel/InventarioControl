@@ -29,6 +29,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
         CN_Registro RegistroCN = new CN_Registro();
 
         public string IDusu;
+        public string IDcuenta;
 
 
 
@@ -42,7 +43,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
                 Capa_Entidades_login entidadlogin = new()
                 {
-                    UsuarioID = Convert.ToInt32(txtIdCuenta.Text),
+                    UsuarioID = Convert.ToInt32(IDcuenta),
                     NombreUsuario = txtNombreUsu.Text,
                     PasswordUsuario = txtContraUsu.Text,
                     PerfilID = (int)cbxPerfil.SelectedValue,
@@ -74,7 +75,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
             {
                 bool NombreUsu = txtNombreUsu.Text != "";
                 bool PasswordUsu = txtContraUsu.Text != "";
-                bool IDUsu = txtIdCuenta.Text != "";
+                bool IDUsu = IDcuenta != "";
                 bool perfil = cbxPerfil.Text != "";
 
 
@@ -91,7 +92,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
             {
                
                     EsEditar = true;
-                    txtIdCuenta.Text = dgvusuario.CurrentRow.Cells["UsuarioID"].Value.ToString();
+                    IDcuenta = dgvusuario.CurrentRow.Cells["UsuarioID"].Value.ToString();
                     txtNombreUsu.Text = dgvusuario.CurrentRow.Cells["NombreUsuario"].Value.ToString();
                     txtContraUsu.Text = dgvusuario.CurrentRow.Cells["PasswordUsuario"].Value.ToString();
                     cbxPerfil.Text = dgvusuario.CurrentRow.Cells["Perfil"].Value.ToString();
@@ -118,7 +119,9 @@ namespace ControlInventario_Presentacion.Screens.Forms
         private void CargarUsuarios()
         {
             dgvusuario.DataSource = RegistroCN.MostrarUsuarios();
-           //this.dgvusuario.Columns["PerfilID"].Visible = false;
+           this.dgvusuario.Columns["PerfilID"].Visible = false;
+            this.dgvusuario.Columns["UsuarioID"].Visible=false;
+            this.dgvusuario.Columns["Activo"].Visible = false;
 
         }
         private void LlenarCbPerfiles()
@@ -132,7 +135,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
         {
             txtBuscarusu.Clear();
             txtNombreUsu.Clear();
-            txtIdCuenta.Clear();
+            IDcuenta = "";
             txtContraUsu.Clear();
 
             cbxPerfil.SelectedIndex = 0;
