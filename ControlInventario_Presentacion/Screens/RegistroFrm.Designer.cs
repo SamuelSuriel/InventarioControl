@@ -38,7 +38,11 @@
             label1 = new Label();
             label3 = new Label();
             cbxPerfil = new ComboBox();
+            btnAcultarcontraseña = new PictureBox();
+            btnMostrarcontra = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnAcultarcontraseña).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMostrarcontra).BeginInit();
             SuspendLayout();
             // 
             // btnRegistrarse
@@ -62,10 +66,10 @@
             txtPasswordRegistro.Location = new Point(47, 230);
             txtPasswordRegistro.Margin = new Padding(3, 2, 3, 2);
             txtPasswordRegistro.Name = "txtPasswordRegistro";
+            txtPasswordRegistro.PasswordChar = '*';
             txtPasswordRegistro.PlaceholderText = "Password";
             txtPasswordRegistro.Size = new Size(358, 23);
             txtPasswordRegistro.TabIndex = 9;
-            txtPasswordRegistro.UseSystemPasswordChar = true;
             // 
             // txtUserRegistro
             // 
@@ -114,10 +118,10 @@
             txtPasswordConfirmReg.Location = new Point(47, 283);
             txtPasswordConfirmReg.Margin = new Padding(3, 2, 3, 2);
             txtPasswordConfirmReg.Name = "txtPasswordConfirmReg";
+            txtPasswordConfirmReg.PasswordChar = '*';
             txtPasswordConfirmReg.PlaceholderText = "Confirm password";
             txtPasswordConfirmReg.Size = new Size(358, 23);
             txtPasswordConfirmReg.TabIndex = 9;
-            txtPasswordConfirmReg.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -150,6 +154,32 @@
             cbxPerfil.Size = new Size(358, 23);
             cbxPerfil.TabIndex = 12;
             // 
+            // btnAcultarcontraseña
+            // 
+            btnAcultarcontraseña.BackColor = Color.White;
+            btnAcultarcontraseña.Image = Properties.Resources.invisible__1_;
+            btnAcultarcontraseña.Location = new Point(424, 230);
+            btnAcultarcontraseña.Margin = new Padding(3, 2, 3, 2);
+            btnAcultarcontraseña.Name = "btnAcultarcontraseña";
+            btnAcultarcontraseña.Size = new Size(24, 23);
+            btnAcultarcontraseña.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnAcultarcontraseña.TabIndex = 15;
+            btnAcultarcontraseña.TabStop = false;
+            btnAcultarcontraseña.Click += btnAcultarcontraseña_Click;
+            // 
+            // btnMostrarcontra
+            // 
+            btnMostrarcontra.BackColor = Color.White;
+            btnMostrarcontra.Image = Properties.Resources.ojo;
+            btnMostrarcontra.Location = new Point(424, 230);
+            btnMostrarcontra.Margin = new Padding(3, 2, 3, 2);
+            btnMostrarcontra.Name = "btnMostrarcontra";
+            btnMostrarcontra.Size = new Size(24, 23);
+            btnMostrarcontra.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnMostrarcontra.TabIndex = 14;
+            btnMostrarcontra.TabStop = false;
+            btnMostrarcontra.Click += btnMostrarcontra_Click;
+            // 
             // RegistroFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -157,6 +187,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.Black;
             ClientSize = new Size(825, 443);
+            Controls.Add(btnMostrarcontra);
             Controls.Add(label3);
             Controls.Add(cbxPerfil);
             Controls.Add(btnRegistrarse);
@@ -167,6 +198,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            Controls.Add(btnAcultarcontraseña);
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "RegistroFrm";
@@ -174,6 +206,8 @@
             Text = "RegistroFrm";
             Load += RegistroFrm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnAcultarcontraseña).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMostrarcontra).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,5 +223,7 @@
         private Label label1;
         private Label label3;
         private ComboBox cbxPerfil;
+        private PictureBox btnAcultarcontraseña;
+        private PictureBox btnMostrarcontra;
     }
 }
