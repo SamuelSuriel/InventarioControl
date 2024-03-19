@@ -22,7 +22,7 @@ namespace ControlInventario_Presentacion.Screens
             InitializeComponent();
         }
 
-        
+
 
 
 
@@ -100,6 +100,20 @@ namespace ControlInventario_Presentacion.Screens
         private void RegistroFrm_Load(object sender, EventArgs e)
         {
             LlenarCbPerfiles();
+        }
+
+        private void btnAcultarcontraseña_Click(object sender, EventArgs e)
+        {
+            btnMostrarcontra.BringToFront();
+            txtPasswordRegistro.PasswordChar = '*';
+            txtPasswordConfirmReg.PasswordChar = '*';
+        }
+
+        private void btnMostrarcontra_Click(object sender, EventArgs e)
+        {
+            btnAcultarcontraseña.BringToFront();
+            txtPasswordRegistro.PasswordChar = '\0';
+            txtPasswordConfirmReg.PasswordChar = '\0';
         }
     }
 

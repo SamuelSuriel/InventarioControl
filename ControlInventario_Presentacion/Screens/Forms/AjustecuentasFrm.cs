@@ -35,7 +35,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
 
 
-        
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (EsValido())
@@ -90,16 +90,16 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
             if (dgvusuario.SelectedCells.Count > 0)
             {
-               
-                    EsEditar = true;
-                    IDcuenta = dgvusuario.CurrentRow.Cells["UsuarioID"].Value.ToString();
-                    txtNombreUsu.Text = dgvusuario.CurrentRow.Cells["NombreUsuario"].Value.ToString();
-                    txtContraUsu.Text = dgvusuario.CurrentRow.Cells["PasswordUsuario"].Value.ToString();
-                    cbxPerfil.Text = dgvusuario.CurrentRow.Cells["Perfil"].Value.ToString();
 
-                
+                EsEditar = true;
+                IDcuenta = dgvusuario.CurrentRow.Cells["UsuarioID"].Value.ToString();
+                txtNombreUsu.Text = dgvusuario.CurrentRow.Cells["NombreUsuario"].Value.ToString();
+                txtContraUsu.Text = dgvusuario.CurrentRow.Cells["PasswordUsuario"].Value.ToString();
+                cbxPerfil.Text = dgvusuario.CurrentRow.Cells["Perfil"].Value.ToString();
+
+
             }
-            
+
 
         }
         private void AjustecuentasFrm_Load(object sender, EventArgs e)
@@ -119,8 +119,8 @@ namespace ControlInventario_Presentacion.Screens.Forms
         private void CargarUsuarios()
         {
             dgvusuario.DataSource = RegistroCN.MostrarUsuarios();
-           this.dgvusuario.Columns["PerfilID"].Visible = false;
-            this.dgvusuario.Columns["UsuarioID"].Visible=false;
+            this.dgvusuario.Columns["PerfilID"].Visible = false;
+            this.dgvusuario.Columns["UsuarioID"].Visible = false;
             this.dgvusuario.Columns["Activo"].Visible = false;
 
         }
@@ -163,7 +163,18 @@ namespace ControlInventario_Presentacion.Screens.Forms
                 MessageBox.Show("Seleccione una celda para eliminar!");
         }
 
-       
+        private void btnMostrarcontra_Click(object sender, EventArgs e)
+        {
+            btnAcultarcontraseña.BringToFront();
+            txtContraUsu.PasswordChar = '\0';
+
+        }
+
+        private void btnAcultarcontraseña_Click(object sender, EventArgs e)
+        {
+            btnMostrarcontra.BringToFront();
+            txtContraUsu.PasswordChar = '*';
+        }
     }
 
 }

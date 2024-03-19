@@ -58,6 +58,18 @@ namespace ControlInventario_Presentacion.Screens
                 MessageBox.Show("Usuario no encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
+
+        private void btnMostrarcontra_Click(object sender, EventArgs e)
+        {
+            btnAcultarcontraseña.BringToFront();
+            txtPassword.PasswordChar= '\0';
+        }
+
+        private void btnAcultarcontraseña_Click(object sender, EventArgs e)
+        {
+            btnMostrarcontra.BringToFront();
+            txtPassword.PasswordChar = '*';
+        }
     }
 
 }

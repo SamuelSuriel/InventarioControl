@@ -42,7 +42,11 @@
             btnBuscarusu = new Button();
             txtBuscarusu = new TextBox();
             btnAgregar = new Button();
+            btnMostrarcontra = new PictureBox();
+            btnAcultarcontraseña = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvusuario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMostrarcontra).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnAcultarcontraseña).BeginInit();
             SuspendLayout();
             // 
             // dgvusuario
@@ -106,6 +110,7 @@
             // 
             txtContraUsu.Location = new Point(113, 137);
             txtContraUsu.Name = "txtContraUsu";
+            txtContraUsu.PasswordChar = '*';
             txtContraUsu.Size = new Size(171, 23);
             txtContraUsu.TabIndex = 7;
             // 
@@ -190,12 +195,40 @@
             btnAgregar.UseVisualStyleBackColor = false;
             btnAgregar.Click += btnAgregar_Click;
             // 
+            // btnMostrarcontra
+            // 
+            btnMostrarcontra.BackColor = Color.White;
+            btnMostrarcontra.Image = Properties.Resources.ojo;
+            btnMostrarcontra.Location = new Point(290, 137);
+            btnMostrarcontra.Margin = new Padding(3, 2, 3, 2);
+            btnMostrarcontra.Name = "btnMostrarcontra";
+            btnMostrarcontra.Size = new Size(24, 23);
+            btnMostrarcontra.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnMostrarcontra.TabIndex = 21;
+            btnMostrarcontra.TabStop = false;
+            btnMostrarcontra.Click += btnMostrarcontra_Click;
+            // 
+            // btnAcultarcontraseña
+            // 
+            btnAcultarcontraseña.BackColor = Color.White;
+            btnAcultarcontraseña.Image = Properties.Resources.invisible__1_;
+            btnAcultarcontraseña.Location = new Point(290, 137);
+            btnAcultarcontraseña.Margin = new Padding(3, 2, 3, 2);
+            btnAcultarcontraseña.Name = "btnAcultarcontraseña";
+            btnAcultarcontraseña.Size = new Size(24, 23);
+            btnAcultarcontraseña.SizeMode = PictureBoxSizeMode.StretchImage;
+            btnAcultarcontraseña.TabIndex = 22;
+            btnAcultarcontraseña.TabStop = false;
+            btnAcultarcontraseña.Click += btnAcultarcontraseña_Click;
+            // 
             // AjustecuentasFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(568, 443);
+            Controls.Add(btnMostrarcontra);
+            Controls.Add(btnAcultarcontraseña);
             Controls.Add(btnAgregar);
             Controls.Add(txtBuscarusu);
             Controls.Add(btnBuscarusu);
@@ -214,6 +247,8 @@
             Text = "AjustecuentasFrm";
             Load += AjustecuentasFrm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvusuario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMostrarcontra).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnAcultarcontraseña).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -234,5 +269,7 @@
         private Button btnBuscarusu;
         private TextBox txtBuscarusu;
         private Button btnAgregar;
+        private PictureBox btnMostrarcontra;
+        private PictureBox btnAcultarcontraseña;
     }
 }
