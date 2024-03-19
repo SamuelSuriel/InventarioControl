@@ -36,8 +36,6 @@
             label1 = new Label();
             txtContraUsu = new TextBox();
             label2 = new Label();
-            txtIdCuenta = new TextBox();
-            label4 = new Label();
             btnEliminareliminarusu = new Label();
             btnEditarusu = new Button();
             lblLimpiarCampousu = new Label();
@@ -53,7 +51,7 @@
             dgvusuario.Location = new Point(12, 252);
             dgvusuario.Name = "dgvusuario";
             dgvusuario.RowTemplate.Height = 25;
-            dgvusuario.Size = new Size(801, 179);
+            dgvusuario.Size = new Size(525, 179);
             dgvusuario.TabIndex = 0;
             // 
             // lblTitleSettings
@@ -122,31 +120,13 @@
             label2.TabIndex = 10;
             label2.Text = "Perfil";
             // 
-            // txtIdCuenta
-            // 
-            txtIdCuenta.Location = new Point(113, 60);
-            txtIdCuenta.Name = "txtIdCuenta";
-            txtIdCuenta.Size = new Size(171, 23);
-            txtIdCuenta.TabIndex = 9;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = SystemColors.ActiveCaptionText;
-            label4.ForeColor = Color.Gainsboro;
-            label4.Location = new Point(22, 63);
-            label4.Name = "label4";
-            label4.Size = new Size(85, 15);
-            label4.TabIndex = 13;
-            label4.Text = "ID de la cuenta";
-            // 
             // btnEliminareliminarusu
             // 
             btnEliminareliminarusu.AutoSize = true;
             btnEliminareliminarusu.Cursor = Cursors.Hand;
             btnEliminareliminarusu.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnEliminareliminarusu.ForeColor = Color.Red;
-            btnEliminareliminarusu.Location = new Point(538, 66);
+            btnEliminareliminarusu.Location = new Point(260, 60);
             btnEliminareliminarusu.Name = "btnEliminareliminarusu";
             btnEliminareliminarusu.Size = new Size(74, 21);
             btnEliminareliminarusu.TabIndex = 16;
@@ -158,7 +138,7 @@
             btnEditarusu.BackColor = Color.DarkOrange;
             btnEditarusu.Cursor = Cursors.Hand;
             btnEditarusu.ForeColor = Color.White;
-            btnEditarusu.Location = new Point(414, 54);
+            btnEditarusu.Location = new Point(136, 48);
             btnEditarusu.Margin = new Padding(3, 2, 3, 2);
             btnEditarusu.Name = "btnEditarusu";
             btnEditarusu.Size = new Size(118, 33);
@@ -173,7 +153,7 @@
             lblLimpiarCampousu.Cursor = Cursors.Hand;
             lblLimpiarCampousu.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
             lblLimpiarCampousu.ForeColor = Color.White;
-            lblLimpiarCampousu.Location = new Point(630, 72);
+            lblLimpiarCampousu.Location = new Point(352, 66);
             lblLimpiarCampousu.Name = "lblLimpiarCampousu";
             lblLimpiarCampousu.Size = new Size(47, 15);
             lblLimpiarCampousu.TabIndex = 17;
@@ -201,7 +181,7 @@
             btnAgregar.BackColor = Color.ForestGreen;
             btnAgregar.Cursor = Cursors.Hand;
             btnAgregar.ForeColor = Color.White;
-            btnAgregar.Location = new Point(290, 54);
+            btnAgregar.Location = new Point(12, 48);
             btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(118, 33);
@@ -215,16 +195,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(825, 443);
+            ClientSize = new Size(568, 443);
             Controls.Add(btnAgregar);
             Controls.Add(txtBuscarusu);
             Controls.Add(btnBuscarusu);
             Controls.Add(lblLimpiarCampousu);
             Controls.Add(btnEliminareliminarusu);
             Controls.Add(btnEditarusu);
-            Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(txtIdCuenta);
             Controls.Add(label1);
             Controls.Add(txtContraUsu);
             Controls.Add(Label);
@@ -250,8 +228,6 @@
         private Label label1;
         private TextBox txtContraUsu;
         private Label label2;
-        private TextBox txtIdCuenta;
-        private Label label4;
         private Label btnEliminareliminarusu;
         private Button btnEditarusu;
         private Label lblLimpiarCampousu;
