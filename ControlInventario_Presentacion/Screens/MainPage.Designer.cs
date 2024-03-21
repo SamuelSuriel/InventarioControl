@@ -31,11 +31,13 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             panelMenu = new Panel();
+            iconBtbCerrarSesion = new FontAwesome.Sharp.IconButton();
             btnStocks = new FontAwesome.Sharp.IconButton();
             btnSettings = new FontAwesome.Sharp.IconButton();
             btnInformes = new FontAwesome.Sharp.IconButton();
             btnVentas = new FontAwesome.Sharp.IconButton();
             btnProveedores = new FontAwesome.Sharp.IconButton();
+            label1 = new Label();
             btnProductos = new FontAwesome.Sharp.IconButton();
             btnPedidos = new FontAwesome.Sharp.IconButton();
             btnDashboard = new FontAwesome.Sharp.IconButton();
@@ -43,7 +45,6 @@
             btnHome = new PictureBox();
             iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
             panelTitle = new Panel();
-            iconBtbCerrarSesion = new FontAwesome.Sharp.IconButton();
             iconMaxim = new FontAwesome.Sharp.IconPictureBox();
             lblMinimizeApp = new Label();
             lblCerrarApp = new Label();
@@ -57,7 +58,6 @@
             lblFechaActual = new Label();
             lblHoraActual = new Label();
             label2 = new Label();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             lblTitleDashboard = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
@@ -75,11 +75,13 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(37, 36, 81);
+            panelMenu.Controls.Add(iconBtbCerrarSesion);
             panelMenu.Controls.Add(btnStocks);
             panelMenu.Controls.Add(btnSettings);
             panelMenu.Controls.Add(btnInformes);
             panelMenu.Controls.Add(btnVentas);
             panelMenu.Controls.Add(btnProveedores);
+            panelMenu.Controls.Add(label1);
             panelMenu.Controls.Add(btnProductos);
             panelMenu.Controls.Add(btnPedidos);
             panelMenu.Controls.Add(btnDashboard);
@@ -89,6 +91,23 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(250, 787);
             panelMenu.TabIndex = 0;
+            // 
+            // iconBtbCerrarSesion
+            // 
+            iconBtbCerrarSesion.BackColor = Color.FromArgb(37, 36, 81);
+            iconBtbCerrarSesion.Cursor = Cursors.Hand;
+            iconBtbCerrarSesion.FlatStyle = FlatStyle.Popup;
+            iconBtbCerrarSesion.ForeColor = SystemColors.Desktop;
+            iconBtbCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            iconBtbCerrarSesion.IconColor = Color.Gainsboro;
+            iconBtbCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconBtbCerrarSesion.IconSize = 28;
+            iconBtbCerrarSesion.Location = new Point(22, 723);
+            iconBtbCerrarSesion.Name = "iconBtbCerrarSesion";
+            iconBtbCerrarSesion.Size = new Size(51, 46);
+            iconBtbCerrarSesion.TabIndex = 5;
+            iconBtbCerrarSesion.UseVisualStyleBackColor = false;
+            iconBtbCerrarSesion.Click += iconBtbCerrarSesion_Click;
             // 
             // btnStocks
             // 
@@ -100,12 +119,12 @@
             btnStocks.IconChar = FontAwesome.Sharp.IconChar.CubesStacked;
             btnStocks.IconColor = Color.Gainsboro;
             btnStocks.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnStocks.IconSize = 68;
+            btnStocks.IconSize = 58;
             btnStocks.ImageAlign = ContentAlignment.MiddleLeft;
-            btnStocks.Location = new Point(0, 679);
+            btnStocks.Location = new Point(0, 573);
             btnStocks.Name = "btnStocks";
             btnStocks.Padding = new Padding(10, 0, 21, 0);
-            btnStocks.Size = new Size(250, 77);
+            btnStocks.Size = new Size(250, 66);
             btnStocks.TabIndex = 9;
             btnStocks.Text = "Stocks";
             btnStocks.TextAlign = ContentAlignment.MiddleLeft;
@@ -122,12 +141,12 @@
             btnSettings.IconChar = FontAwesome.Sharp.IconChar.Sliders;
             btnSettings.IconColor = Color.Gainsboro;
             btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnSettings.IconSize = 68;
+            btnSettings.IconSize = 58;
             btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(0, 602);
+            btnSettings.Location = new Point(0, 507);
             btnSettings.Name = "btnSettings";
             btnSettings.Padding = new Padding(10, 0, 21, 0);
-            btnSettings.Size = new Size(250, 77);
+            btnSettings.Size = new Size(250, 66);
             btnSettings.TabIndex = 7;
             btnSettings.Text = "Settings";
             btnSettings.TextAlign = ContentAlignment.MiddleLeft;
@@ -144,12 +163,12 @@
             btnInformes.IconChar = FontAwesome.Sharp.IconChar.TabletAndroid;
             btnInformes.IconColor = Color.Gainsboro;
             btnInformes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnInformes.IconSize = 68;
+            btnInformes.IconSize = 58;
             btnInformes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnInformes.Location = new Point(0, 525);
+            btnInformes.Location = new Point(0, 441);
             btnInformes.Name = "btnInformes";
             btnInformes.Padding = new Padding(10, 0, 21, 0);
-            btnInformes.Size = new Size(250, 77);
+            btnInformes.Size = new Size(250, 66);
             btnInformes.TabIndex = 6;
             btnInformes.Text = "Informes";
             btnInformes.TextAlign = ContentAlignment.MiddleLeft;
@@ -166,12 +185,12 @@
             btnVentas.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
             btnVentas.IconColor = Color.Gainsboro;
             btnVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnVentas.IconSize = 68;
+            btnVentas.IconSize = 58;
             btnVentas.ImageAlign = ContentAlignment.MiddleLeft;
-            btnVentas.Location = new Point(0, 448);
+            btnVentas.Location = new Point(0, 375);
             btnVentas.Name = "btnVentas";
             btnVentas.Padding = new Padding(10, 0, 21, 0);
-            btnVentas.Size = new Size(250, 77);
+            btnVentas.Size = new Size(250, 66);
             btnVentas.TabIndex = 5;
             btnVentas.Text = "Ventas";
             btnVentas.TextAlign = ContentAlignment.MiddleLeft;
@@ -188,18 +207,29 @@
             btnProveedores.IconChar = FontAwesome.Sharp.IconChar.TruckFront;
             btnProveedores.IconColor = Color.Gainsboro;
             btnProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnProveedores.IconSize = 68;
+            btnProveedores.IconSize = 58;
             btnProveedores.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProveedores.Location = new Point(0, 371);
+            btnProveedores.Location = new Point(0, 309);
             btnProveedores.Name = "btnProveedores";
             btnProveedores.Padding = new Padding(10, 0, 21, 0);
-            btnProveedores.Size = new Size(250, 77);
+            btnProveedores.Size = new Size(250, 66);
             btnProveedores.TabIndex = 4;
             btnProveedores.Text = "Proveedores";
             btnProveedores.TextAlign = ContentAlignment.MiddleLeft;
             btnProveedores.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnProveedores.UseVisualStyleBackColor = true;
             btnProveedores.Click += iconButton4_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Gainsboro;
+            label1.Location = new Point(79, 739);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Log out";
             // 
             // btnProductos
             // 
@@ -210,12 +240,12 @@
             btnProductos.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
             btnProductos.IconColor = Color.Gainsboro;
             btnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnProductos.IconSize = 68;
+            btnProductos.IconSize = 58;
             btnProductos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProductos.Location = new Point(0, 294);
+            btnProductos.Location = new Point(0, 243);
             btnProductos.Name = "btnProductos";
             btnProductos.Padding = new Padding(10, 0, 21, 0);
-            btnProductos.Size = new Size(250, 77);
+            btnProductos.Size = new Size(250, 66);
             btnProductos.TabIndex = 3;
             btnProductos.Text = "Productos";
             btnProductos.TextAlign = ContentAlignment.MiddleLeft;
@@ -232,12 +262,12 @@
             btnPedidos.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             btnPedidos.IconColor = Color.Gainsboro;
             btnPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnPedidos.IconSize = 68;
+            btnPedidos.IconSize = 58;
             btnPedidos.ImageAlign = ContentAlignment.MiddleLeft;
-            btnPedidos.Location = new Point(0, 217);
+            btnPedidos.Location = new Point(0, 177);
             btnPedidos.Name = "btnPedidos";
             btnPedidos.Padding = new Padding(10, 0, 21, 0);
-            btnPedidos.Size = new Size(250, 77);
+            btnPedidos.Size = new Size(250, 66);
             btnPedidos.TabIndex = 2;
             btnPedidos.Text = "Pedidos";
             btnPedidos.TextAlign = ContentAlignment.MiddleLeft;
@@ -254,12 +284,12 @@
             btnDashboard.IconChar = FontAwesome.Sharp.IconChar.BarChart;
             btnDashboard.IconColor = Color.Gainsboro;
             btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnDashboard.IconSize = 68;
+            btnDashboard.IconSize = 58;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.Location = new Point(0, 140);
+            btnDashboard.Location = new Point(0, 111);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Padding = new Padding(10, 0, 21, 0);
-            btnDashboard.Size = new Size(250, 77);
+            btnDashboard.Size = new Size(250, 66);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
@@ -274,7 +304,7 @@
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
             panelLogo.Padding = new Padding(10, 0, 0, 0);
-            panelLogo.Size = new Size(250, 140);
+            panelLogo.Size = new Size(250, 111);
             panelLogo.TabIndex = 0;
             // 
             // btnHome
@@ -282,7 +312,7 @@
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.Location = new Point(66, 17);
             btnHome.Name = "btnHome";
-            btnHome.Size = new Size(101, 103);
+            btnHome.Size = new Size(85, 69);
             btnHome.SizeMode = PictureBoxSizeMode.Zoom;
             btnHome.TabIndex = 0;
             btnHome.TabStop = false;
@@ -307,7 +337,6 @@
             // panelTitle
             // 
             panelTitle.BackColor = Color.FromArgb(37, 36, 81);
-            panelTitle.Controls.Add(iconBtbCerrarSesion);
             panelTitle.Controls.Add(iconMaxim);
             panelTitle.Controls.Add(lblMinimizeApp);
             panelTitle.Controls.Add(lblCerrarApp);
@@ -319,23 +348,6 @@
             panelTitle.Size = new Size(1347, 77);
             panelTitle.TabIndex = 1;
             panelTitle.MouseDown += panelTitle_MouseDown;
-            // 
-            // iconBtbCerrarSesion
-            // 
-            iconBtbCerrarSesion.BackColor = Color.FromArgb(37, 36, 81);
-            iconBtbCerrarSesion.Cursor = Cursors.Hand;
-            iconBtbCerrarSesion.FlatStyle = FlatStyle.Flat;
-            iconBtbCerrarSesion.ForeColor = SystemColors.Desktop;
-            iconBtbCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            iconBtbCerrarSesion.IconColor = Color.IndianRed;
-            iconBtbCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconBtbCerrarSesion.IconSize = 28;
-            iconBtbCerrarSesion.Location = new Point(1296, 41);
-            iconBtbCerrarSesion.Name = "iconBtbCerrarSesion";
-            iconBtbCerrarSesion.Size = new Size(47, 36);
-            iconBtbCerrarSesion.TabIndex = 5;
-            iconBtbCerrarSesion.UseVisualStyleBackColor = false;
-            iconBtbCerrarSesion.Click += iconBtbCerrarSesion_Click;
             // 
             // iconMaxim
             // 
@@ -426,7 +438,6 @@
             panelDesktop.Controls.Add(lblFechaActual);
             panelDesktop.Controls.Add(lblHoraActual);
             panelDesktop.Controls.Add(label2);
-            panelDesktop.Controls.Add(label1);
             panelDesktop.Controls.Add(pictureBox1);
             panelDesktop.Controls.Add(lblTitleDashboard);
             panelDesktop.Dock = DockStyle.Fill;
@@ -503,17 +514,6 @@
             label2.TabIndex = 2;
             label2.Text = "Perfil:";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Gray;
-            label1.Location = new Point(10, 666);
-            label1.Name = "label1";
-            label1.Size = new Size(156, 25);
-            label1.TabIndex = 2;
-            label1.Text = "Ültima conexión:";
-            // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
@@ -557,6 +557,7 @@
             Text = "MainPage";
             Load += MainPage_Load;
             panelMenu.ResumeLayout(false);
+            panelMenu.PerformLayout();
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnHome).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconCurrentChild).EndInit();
