@@ -48,7 +48,7 @@ namespace ControlInventario_Presentacion.Screens
                 UltimaConexion = DateTime.Parse(dt.Rows[0][4].ToString());
                 objn.UltimaACT(obje);
 
-                MessageBox.Show("Bienvenido " + obje.NombreUsuario);
+                MessageBox.Show("Bienvenido/a " + obje.NombreUsuario);
 
                 Form mainPage = new MainPage();
                 this.Hide();
@@ -62,13 +62,18 @@ namespace ControlInventario_Presentacion.Screens
         private void btnMostrarcontra_Click(object sender, EventArgs e)
         {
             btnAcultarcontraseña.BringToFront();
-            txtPassword.PasswordChar= '\0';
+            txtPassword.PasswordChar = '\0';
         }
 
         private void btnAcultarcontraseña_Click(object sender, EventArgs e)
         {
             btnMostrarcontra.BringToFront();
             txtPassword.PasswordChar = '*';
+        }
+
+        private void lblOlvideContrasena_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Favor comunicarse con el administrador/a del sistema...");
         }
     }
 
