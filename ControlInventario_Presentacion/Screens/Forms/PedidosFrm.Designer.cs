@@ -41,6 +41,10 @@
             btnEditarPedido = new Button();
             btnGuardarPedido = new Button();
             btnLimpiarCamposPedido = new Label();
+            label4 = new Label();
+            cbProdPedidos = new ComboBox();
+            label5 = new Label();
+            cbEstatusPedido = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvPedidosProveedores).BeginInit();
             SuspendLayout();
             // 
@@ -60,22 +64,22 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Black;
             label3.ForeColor = Color.White;
-            label3.Location = new Point(56, 256);
+            label3.Location = new Point(56, 308);
             label3.Name = "label3";
-            label3.Size = new Size(112, 15);
+            label3.Size = new Size(135, 15);
             label3.TabIndex = 7;
-            label3.Text = "Cantidad Productos";
+            label3.Text = "CANTIDAD PRODUCTOS";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Black;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(56, 201);
+            label2.Location = new Point(56, 265);
             label2.Name = "label2";
-            label2.Size = new Size(78, 15);
+            label2.Size = new Size(88, 15);
             label2.TabIndex = 8;
-            label2.Text = "Fecha Pedido";
+            label2.Text = "FECHA PEDIDO";
             // 
             // label1
             // 
@@ -84,29 +88,30 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(56, 143);
             label1.Name = "label1";
-            label1.Size = new Size(61, 15);
+            label1.Size = new Size(73, 15);
             label1.TabIndex = 9;
-            label1.Text = "Proveedor";
+            label1.Text = "PROVEEDOR";
             // 
             // cbProveedoresPedidos
             // 
             cbProveedoresPedidos.FormattingEnabled = true;
-            cbProveedoresPedidos.Location = new Point(183, 143);
+            cbProveedoresPedidos.Location = new Point(201, 143);
             cbProveedoresPedidos.Margin = new Padding(3, 2, 3, 2);
             cbProveedoresPedidos.Name = "cbProveedoresPedidos";
             cbProveedoresPedidos.Size = new Size(234, 23);
             cbProveedoresPedidos.TabIndex = 17;
+            cbProveedoresPedidos.SelectedIndexChanged += cbProveedoresPedidos_SelectedIndexChanged;
             // 
             // dtpFechaPedido
             // 
-            dtpFechaPedido.Location = new Point(183, 201);
+            dtpFechaPedido.Location = new Point(201, 265);
             dtpFechaPedido.Name = "dtpFechaPedido";
             dtpFechaPedido.Size = new Size(200, 23);
             dtpFechaPedido.TabIndex = 18;
             // 
             // txtCantidadProductos
             // 
-            txtCantidadProductos.Location = new Point(183, 256);
+            txtCantidadProductos.Location = new Point(201, 308);
             txtCantidadProductos.Name = "txtCantidadProductos";
             txtCantidadProductos.Size = new Size(93, 23);
             txtCantidadProductos.TabIndex = 19;
@@ -135,7 +140,7 @@
             btnEliminarPedido.Cursor = Cursors.Hand;
             btnEliminarPedido.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnEliminarPedido.ForeColor = Color.Red;
-            btnEliminarPedido.Location = new Point(245, 408);
+            btnEliminarPedido.Location = new Point(263, 418);
             btnEliminarPedido.Name = "btnEliminarPedido";
             btnEliminarPedido.Size = new Size(74, 21);
             btnEliminarPedido.TabIndex = 28;
@@ -147,7 +152,7 @@
             btnEditarPedido.BackColor = Color.DarkOrange;
             btnEditarPedido.Cursor = Cursors.Hand;
             btnEditarPedido.ForeColor = Color.White;
-            btnEditarPedido.Location = new Point(299, 345);
+            btnEditarPedido.Location = new Point(317, 355);
             btnEditarPedido.Margin = new Padding(3, 2, 3, 2);
             btnEditarPedido.Name = "btnEditarPedido";
             btnEditarPedido.Size = new Size(118, 33);
@@ -161,7 +166,7 @@
             btnGuardarPedido.BackColor = Color.ForestGreen;
             btnGuardarPedido.Cursor = Cursors.Hand;
             btnGuardarPedido.ForeColor = Color.White;
-            btnGuardarPedido.Location = new Point(145, 345);
+            btnGuardarPedido.Location = new Point(163, 355);
             btnGuardarPedido.Margin = new Padding(3, 2, 3, 2);
             btnGuardarPedido.Name = "btnGuardarPedido";
             btnGuardarPedido.Size = new Size(118, 33);
@@ -183,6 +188,46 @@
             btnLimpiarCamposPedido.Text = "Limpiar";
             btnLimpiarCamposPedido.Click += btnLimpiarCamposPedido_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Black;
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(56, 184);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 15);
+            label4.TabIndex = 9;
+            label4.Text = "PRODUCTO";
+            // 
+            // cbProdPedidos
+            // 
+            cbProdPedidos.FormattingEnabled = true;
+            cbProdPedidos.Location = new Point(201, 184);
+            cbProdPedidos.Margin = new Padding(3, 2, 3, 2);
+            cbProdPedidos.Name = "cbProdPedidos";
+            cbProdPedidos.Size = new Size(234, 23);
+            cbProdPedidos.TabIndex = 17;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Black;
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(56, 225);
+            label5.Name = "label5";
+            label5.Size = new Size(51, 15);
+            label5.TabIndex = 9;
+            label5.Text = "ESTATUS";
+            // 
+            // cbEstatusPedido
+            // 
+            cbEstatusPedido.FormattingEnabled = true;
+            cbEstatusPedido.Location = new Point(201, 225);
+            cbEstatusPedido.Margin = new Padding(3, 2, 3, 2);
+            cbEstatusPedido.Name = "cbEstatusPedido";
+            cbEstatusPedido.Size = new Size(234, 23);
+            cbEstatusPedido.TabIndex = 17;
+            // 
             // PedidosFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -196,8 +241,12 @@
             Controls.Add(dgvPedidosProveedores);
             Controls.Add(txtCantidadProductos);
             Controls.Add(dtpFechaPedido);
+            Controls.Add(cbEstatusPedido);
+            Controls.Add(cbProdPedidos);
             Controls.Add(cbProveedoresPedidos);
+            Controls.Add(label5);
             Controls.Add(label3);
+            Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lblTitlePedidos);
@@ -228,5 +277,9 @@
         private Button btnEditarPedido;
         private Button btnGuardarPedido;
         private Label btnLimpiarCamposPedido;
+        private Label label4;
+        private ComboBox cbProdPedidos;
+        private Label label5;
+        private ComboBox cbEstatusPedido;
     }
 }
