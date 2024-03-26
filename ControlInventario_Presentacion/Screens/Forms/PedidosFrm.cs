@@ -7,6 +7,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
     {
         CN_Pedidos pedidosCN = new CN_Pedidos();
         CN_Productos cNProductos = new CN_Productos();
+        CN_Stocks _StocksCN = new CN_Stocks();
 
         private string? idPedido_ = null;
         private bool EsEditar = false;
@@ -90,11 +91,15 @@ namespace ControlInventario_Presentacion.Screens.Forms
                     try
                     {
                         pedidosCN.AgregarPedido(_pedido);
+                        // Actualizando cantidad de productos
+                        if (_pedido.IdEstatusPedido == 3)
+                        {
+                            ActualizarCantidadStockProducto(_pedido.Idproducto, (int)_pedido.CantidadProductos);
+                        }
                         MessageBox.Show("SE INSERTÓ CORRECTAMENTE!");
                         LimpiarControles();
                         cbProdPedidos.Enabled = true;
                         CargarPedidos();
-
                     }
                     catch (Exception ex)
                     {
@@ -108,7 +113,11 @@ namespace ControlInventario_Presentacion.Screens.Forms
                     {
                         int idPedido = Convert.ToInt32(idPedido_);
                         pedidosCN.EditarPedido(idPedido, _pedido);
-
+                        // Actualizando cantidad de productos
+                        if (_pedido.IdEstatusPedido == 3)
+                        {
+                            ActualizarCantidadStockProducto(_pedido.Idproducto, (int)_pedido.CantidadProductos);
+                        }
                         MessageBox.Show("Se editó correctamente!");
                         LimpiarControles();
                         cbProdPedidos.Enabled = true;
@@ -118,10 +127,21 @@ namespace ControlInventario_Presentacion.Screens.Forms
                     {
                         MessageBox.Show("No se pudo realizar la operación: " + ex);
                     }
-
                 }
-
             }
+        }
+
+        private void ActualizarCantidadStockProducto(int idProducto, int Cantproductos)
+        {
+            Productos producto = cNProductos.GetProductoById(idProducto);
+            Stocks stocks = new Stocks
+            {
+                CodigoProducto = producto.CodigoProducto,
+                NombreProducto = producto.NombreProducto,
+                CantidadStock = (int)(producto.CantidadStock + Cantproductos)
+            };
+            _StocksCN.EditarCantidadRegStock(stocks);
+            cNProductos.EditarCantidadProducto(stocks);
         }
 
         private void btnEditarPedido_Click(object sender, EventArgs e)
