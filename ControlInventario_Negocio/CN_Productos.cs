@@ -166,5 +166,41 @@ namespace ControlInventario_Negocio
             return productoFromDB;
 
         }
+
+        public Productos GetProductosByProveedor(int idproveedor)
+        {
+            CD_Conexion conexion1 = new CD_Conexion();
+            var producto = new Productos();
+
+            using (var _conexion = conexion1.Conexion)
+            using (var comando = new SqlCommand())
+            {
+                comando.Connection = _conexion;
+                comando.CommandText = "prc_GetProductosByProveedor";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@idProveedor", idproveedor);
+
+                try
+                {
+                    conexion1.AbrirConexion();
+                    using (var leer = comando.ExecuteReader())
+                    {
+                        if (leer.Read())
+                        {
+                            producto.IdProducto = Convert.ToInt32(leer["IdProducto"]);
+                            producto.NombreProducto = leer["Producto"].ToString();                            
+                        }
+                    }
+                    comando.Parameters.Clear();
+                    conexion1.CerrarConexion();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al obtener el producto: " + ex.Message);
+                }
+            }
+            return producto;
+
+        }
     }
 }

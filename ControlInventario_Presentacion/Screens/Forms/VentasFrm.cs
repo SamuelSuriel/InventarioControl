@@ -9,7 +9,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
     public partial class VentasFrm : Form
     {
         CD_Conexion conexion = new CD_Conexion();
-        CN_Proveedores proveedoresCN = new CN_Proveedores();
+        //CN_Proveedores proveedoresCN = new CN_Proveedores();
         CN_Ventas _Ventas = new CN_Ventas();
         CN_Stocks _StocksCN = new CN_Stocks();
         CN_Productos _cNProductos = new CN_Productos();
@@ -163,7 +163,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
             {
 
 
-                Ticket1.TextoCentro("Empresa xxxxx "); //imprime una linea de descripcion
+                Ticket1.TextoCentro("Empresa Ferretería S.R.S. "); //imprime una linea de descripcion
                 Ticket1.TextoCentro("**********************************");
 
                 Ticket1.TextoIzquierda("");

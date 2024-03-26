@@ -1,5 +1,6 @@
 ﻿using ControlInventario_Datos;
 using ControlInventario_Negocio;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
     public partial class PedidosFrm : Form
     {
         CN_Pedidos pedidosCN = new CN_Pedidos();
+        CN_Productos cNProductos = new CN_Productos();
 
         private string? idPedido_ = null;
         private bool EsEditar = false;
@@ -26,10 +28,10 @@ namespace ControlInventario_Presentacion.Screens.Forms
         private void PedidosFrm_Load(object sender, EventArgs e)
         {
             CargarPedidos();
-            LimpiarControles();
             LlenarCbProveedores();
-            cbProveedoresPedidos.SelectedValue = 0;
-            cbProveedoresPedidos.Text = "Seleccione el proveedor...";
+            LlenarCbProductos();
+            LimpiarControles();
+
         }
 
         private void LlenarCbProveedores()
@@ -40,6 +42,13 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
         }
 
+        private void LlenarCbProductos()
+        {
+            cbProdPedidos.DataSource = cNProductos.ObtenerProductos();
+            cbProdPedidos.DisplayMember = "NombreProducto";
+            cbProdPedidos.ValueMember = "IdProducto";
+        }
+
         private void LimpiarControles()
         {
             cbProveedoresPedidos.SelectedValue = 0;
@@ -47,7 +56,8 @@ namespace ControlInventario_Presentacion.Screens.Forms
             txtCantidadProductos.Clear();
             dtpFechaPedido.Text = string.Empty;
             dtpFechaPedido.Text = "";
-
+            cbProdPedidos.SelectedValue = 0;
+            cbProdPedidos.Text = "Seleccione un producto...";
         }
 
         private void CargarPedidos()
@@ -55,6 +65,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
             dgvPedidosProveedores.DataSource = pedidosCN.MostrarPedidos();
             this.dgvPedidosProveedores.Columns["PedidoID"].Visible = false;
             this.dgvPedidosProveedores.Columns["IdProveedor"].Visible = false;
+            this.dgvPedidosProveedores.Columns["IdProducto"].Visible = false;
             this.dgvPedidosProveedores.Columns["Activo"].Visible = false;
         }
 
@@ -66,6 +77,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
                 PedidosProveedores _pedido = new()
                 {
                     IdProveedor = (int)cbProveedoresPedidos.SelectedValue,
+                    Idproducto = (int)cbProdPedidos.SelectedValue,
                     FechaPedido = Convert.ToDateTime(dtpFechaPedido.Text),
                     CantidadProductos = Convert.ToInt32(txtCantidadProductos.Text)
                 };
@@ -77,6 +89,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
                         pedidosCN.AgregarPedido(_pedido);
                         MessageBox.Show("SE INSERTÓ CORRECTAMENTE!");
                         LimpiarControles();
+                        cbProdPedidos.Enabled = true;
                         CargarPedidos();
 
                     }
@@ -95,6 +108,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
                         MessageBox.Show("Se editó correctamente!");
                         LimpiarControles();
+                        cbProdPedidos.Enabled = true;
                         CargarPedidos();
                     }
                     catch (Exception ex)
@@ -115,6 +129,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
                 txtCantidadProductos.Text = dgvPedidosProveedores.CurrentRow.Cells["Cantidad Productos"].Value.ToString();
                 dtpFechaPedido.Text = dgvPedidosProveedores.CurrentRow.Cells["Fecha Pedido"].Value.ToString();
                 cbProveedoresPedidos.Text = dgvPedidosProveedores.CurrentRow.Cells["Proveedor"].Value.ToString();
+                cbProdPedidos.Text = dgvPedidosProveedores.CurrentRow.Cells["Producto"].Value.ToString();
 
                 idPedido_ = dgvPedidosProveedores.CurrentRow.Cells["PedidoID"].Value.ToString();
 
@@ -146,6 +161,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
         private void btnLimpiarCamposPedido_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+            cbProdPedidos.Enabled = true;
         }
 
         private bool EsValido()
@@ -153,11 +169,25 @@ namespace ControlInventario_Presentacion.Screens.Forms
             bool Cantidad = txtCantidadProductos.Text != "";
             bool Fecha = dtpFechaPedido.Text != "";
             bool Proveedor = cbProveedoresPedidos.Text != "";
+            bool producto = cbProdPedidos.Text != "";
 
-            if (Cantidad && Fecha && Proveedor)
+            if (Cantidad && Fecha && Proveedor && producto)
                 return true;
             else
                 return false;
+        }
+
+        private void cbProveedoresPedidos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbProveedoresPedidos.SelectedValue is int idProveedor && idProveedor > 0)
+            {
+                Productos productoCN = cNProductos.GetProductosByProveedor(idProveedor);
+
+                cbProdPedidos.SelectedValue = productoCN.IdProducto;
+                cbProdPedidos.Text = productoCN.NombreProducto;
+
+                cbProdPedidos.Enabled = false;
+            }
         }
     }
 }

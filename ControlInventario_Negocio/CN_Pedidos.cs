@@ -40,6 +40,7 @@ namespace ControlInventario_Negocio
             comando.CommandText = "prc_InsertarPedido";
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@IdProveedor", pedidos.IdProveedor);
+            comando.Parameters.AddWithValue("@IdProducto", pedidos.Idproducto);
             comando.Parameters.AddWithValue("@FechaPedido", pedidos.FechaPedido);
             comando.Parameters.AddWithValue("@CantidadProductos", pedidos.CantidadProductos);
 
@@ -56,6 +57,7 @@ namespace ControlInventario_Negocio
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@pedidoId", idPedido);
             comando.Parameters.AddWithValue("@IdProveedor", pedidos.IdProveedor);
+            comando.Parameters.AddWithValue("@IdProducto", pedidos.Idproducto);
             comando.Parameters.AddWithValue("@FechaPedido", pedidos.FechaPedido);
             comando.Parameters.AddWithValue("@CantidadProductos", pedidos.CantidadProductos);
 
