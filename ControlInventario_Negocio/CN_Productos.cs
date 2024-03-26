@@ -127,8 +127,8 @@ namespace ControlInventario_Negocio
         public Productos GetProductoById(int id)
         {
             var productoFromDB = new Productos();
-
-            using (var _conexion = conexion.Conexion)
+            CD_Conexion conexion2 = new CD_Conexion();
+            using (var _conexion = conexion2.Conexion)
             using (var comando = new SqlCommand())
             {
                 comando.Connection = _conexion;
@@ -138,7 +138,7 @@ namespace ControlInventario_Negocio
 
                 try
                 {
-                    conexion.AbrirConexion();
+                    conexion2.AbrirConexion();
                     using (var leer = comando.ExecuteReader())
                     {
                         if (leer.Read())
@@ -155,7 +155,7 @@ namespace ControlInventario_Negocio
                         }
                     }
                     comando.Parameters.Clear();
-                    conexion.CerrarConexion();
+                    conexion2.CerrarConexion();
                 }
                 catch (Exception ex)
                 {

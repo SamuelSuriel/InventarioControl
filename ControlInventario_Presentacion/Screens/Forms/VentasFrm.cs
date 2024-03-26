@@ -246,18 +246,33 @@ namespace ControlInventario_Presentacion.Screens.Forms
 
                         _StocksCN.EditarCantidadRegStock(stocks);
                         _cNProductos.EditarCantidadProducto(stocks);
-                        MessageBox.Show("Se registró correctamente!");
+                        
                     }
                     else
                     {
                         MessageBox.Show("No se pudo ejecutar la venta. Verifica el stock o el producto.");
                     }
                 }
+                MessageBox.Show("La venta se ejecutó correctamente!");
+                limpiarVenta();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar la venta: " + ex.Message);
             }
+        }
+
+        private void limpiarVenta()
+        {
+            dgvVentas.Rows.Clear();
+            txtClienteVenta.Text = "";
+            txtEfectivo.Text = "";
+            lblSubTotal.Text = "$ 0.00";
+            lblItbis.Text = "$ 0.00";
+            lblDescuento.Text = "$ 0.00";
+            lblTotalaPagar.Text = "$ 0.00";
+            lblDevolucion.Text = "$ 0.00";
         }
     }
 }
