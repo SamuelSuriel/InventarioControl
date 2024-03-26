@@ -1,15 +1,5 @@
 ﻿using ControlInventario_Datos;
 using ControlInventario_Negocio;
-using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ControlInventario_Presentacion.Screens.Forms
 {
@@ -30,6 +20,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
             CargarPedidos();
             LlenarCbProveedores();
             LlenarCbProductos();
+            LlenarEstatus();
             LimpiarControles();
 
         }
@@ -49,6 +40,13 @@ namespace ControlInventario_Presentacion.Screens.Forms
             cbProdPedidos.ValueMember = "IdProducto";
         }
 
+        private void LlenarEstatus()
+        {
+            cbEstatusPedido.DataSource = pedidosCN.GetListaEstatusPedidos();
+            cbEstatusPedido.DisplayMember = "Estatus";
+            cbEstatusPedido.ValueMember = "IdEstatusPedido";
+        }
+
         private void LimpiarControles()
         {
             cbProveedoresPedidos.SelectedValue = 0;
@@ -58,6 +56,9 @@ namespace ControlInventario_Presentacion.Screens.Forms
             dtpFechaPedido.Text = "";
             cbProdPedidos.SelectedValue = 0;
             cbProdPedidos.Text = "Seleccione un producto...";
+            cbEstatusPedido.SelectedValue = 0;
+            cbEstatusPedido.Text = "Seleccione un estatus...";
+
         }
 
         private void CargarPedidos()
@@ -66,6 +67,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
             this.dgvPedidosProveedores.Columns["PedidoID"].Visible = false;
             this.dgvPedidosProveedores.Columns["IdProveedor"].Visible = false;
             this.dgvPedidosProveedores.Columns["IdProducto"].Visible = false;
+            this.dgvPedidosProveedores.Columns["IdEstatus"].Visible = false;
             this.dgvPedidosProveedores.Columns["Activo"].Visible = false;
         }
 
@@ -78,6 +80,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
                 {
                     IdProveedor = (int)cbProveedoresPedidos.SelectedValue,
                     Idproducto = (int)cbProdPedidos.SelectedValue,
+                    IdEstatusPedido = (int)cbEstatusPedido.SelectedValue,
                     FechaPedido = Convert.ToDateTime(dtpFechaPedido.Text),
                     CantidadProductos = Convert.ToInt32(txtCantidadProductos.Text)
                 };
@@ -130,6 +133,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
                 dtpFechaPedido.Text = dgvPedidosProveedores.CurrentRow.Cells["Fecha Pedido"].Value.ToString();
                 cbProveedoresPedidos.Text = dgvPedidosProveedores.CurrentRow.Cells["Proveedor"].Value.ToString();
                 cbProdPedidos.Text = dgvPedidosProveedores.CurrentRow.Cells["Producto"].Value.ToString();
+                cbEstatusPedido.Text = dgvPedidosProveedores.CurrentRow.Cells["Estatus"].Value.ToString();
 
                 idPedido_ = dgvPedidosProveedores.CurrentRow.Cells["PedidoID"].Value.ToString();
 

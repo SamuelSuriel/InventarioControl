@@ -41,6 +41,7 @@ namespace ControlInventario_Negocio
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@IdProveedor", pedidos.IdProveedor);
             comando.Parameters.AddWithValue("@IdProducto", pedidos.Idproducto);
+            comando.Parameters.AddWithValue("@IdEstatus", pedidos.IdEstatusPedido);
             comando.Parameters.AddWithValue("@FechaPedido", pedidos.FechaPedido);
             comando.Parameters.AddWithValue("@CantidadProductos", pedidos.CantidadProductos);
 
@@ -58,6 +59,7 @@ namespace ControlInventario_Negocio
             comando.Parameters.AddWithValue("@pedidoId", idPedido);
             comando.Parameters.AddWithValue("@IdProveedor", pedidos.IdProveedor);
             comando.Parameters.AddWithValue("@IdProducto", pedidos.Idproducto);
+            comando.Parameters.AddWithValue("@IdEstatus", pedidos.IdEstatusPedido);
             comando.Parameters.AddWithValue("@FechaPedido", pedidos.FechaPedido);
             comando.Parameters.AddWithValue("@CantidadProductos", pedidos.CantidadProductos);
 
@@ -110,6 +112,34 @@ namespace ControlInventario_Negocio
             }
             return oListaProveedores;
 
+        }
+
+        public List<EstatusPedido> GetListaEstatusPedidos()
+        {
+            List<EstatusPedido> oLista = new List<EstatusPedido>();
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "prc_GetListaEstatus";
+                comando.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    leer = comando.ExecuteReader();
+                    while (leer.Read())
+                    {
+                        oLista.Add(new EstatusPedido
+                        {
+                            IdEstatusPedido = Convert.ToInt32(leer["IdEstatusPedido"]),
+                            Estatus = leer["Estatus"].ToString(),
+                        });
+                    }
+                    leer.Close();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al obtener los estatus: " + ex.Message, ex);
+                }
+            }
+            return oLista;
         }
     }
 }
