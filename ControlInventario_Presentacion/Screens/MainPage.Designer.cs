@@ -117,7 +117,7 @@
             btnStocks.Dock = DockStyle.Top;
             btnStocks.FlatAppearance.BorderSize = 0;
             btnStocks.FlatStyle = FlatStyle.Flat;
-            btnStocks.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnStocks.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnStocks.ForeColor = Color.Gainsboro;
             btnStocks.IconChar = FontAwesome.Sharp.IconChar.CubesStacked;
             btnStocks.IconColor = Color.Gainsboro;
@@ -141,7 +141,7 @@
             btnSettings.Dock = DockStyle.Top;
             btnSettings.FlatAppearance.BorderSize = 0;
             btnSettings.FlatStyle = FlatStyle.Flat;
-            btnSettings.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSettings.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSettings.ForeColor = Color.Gainsboro;
             btnSettings.IconChar = FontAwesome.Sharp.IconChar.Sliders;
             btnSettings.IconColor = Color.Gainsboro;
@@ -165,7 +165,7 @@
             btnInformes.Dock = DockStyle.Top;
             btnInformes.FlatAppearance.BorderSize = 0;
             btnInformes.FlatStyle = FlatStyle.Flat;
-            btnInformes.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnInformes.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnInformes.ForeColor = Color.Gainsboro;
             btnInformes.IconChar = FontAwesome.Sharp.IconChar.TabletAndroid;
             btnInformes.IconColor = Color.Gainsboro;
@@ -189,7 +189,7 @@
             btnVentas.Dock = DockStyle.Top;
             btnVentas.FlatAppearance.BorderSize = 0;
             btnVentas.FlatStyle = FlatStyle.Flat;
-            btnVentas.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVentas.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnVentas.ForeColor = Color.Gainsboro;
             btnVentas.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
             btnVentas.IconColor = Color.Gainsboro;
@@ -213,7 +213,7 @@
             btnProveedores.Dock = DockStyle.Top;
             btnProveedores.FlatAppearance.BorderSize = 0;
             btnProveedores.FlatStyle = FlatStyle.Flat;
-            btnProveedores.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnProveedores.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnProveedores.ForeColor = Color.Gainsboro;
             btnProveedores.IconChar = FontAwesome.Sharp.IconChar.TruckFront;
             btnProveedores.IconColor = Color.Gainsboro;
@@ -235,11 +235,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Gainsboro;
             label1.Location = new Point(70, 547);
             label1.Name = "label1";
-            label1.Size = new Size(68, 21);
+            label1.Size = new Size(70, 20);
             label1.TabIndex = 2;
             label1.Text = "Log out";
             // 
@@ -248,7 +248,7 @@
             btnProductos.Dock = DockStyle.Top;
             btnProductos.FlatAppearance.BorderSize = 0;
             btnProductos.FlatStyle = FlatStyle.Flat;
-            btnProductos.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnProductos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnProductos.ForeColor = Color.Gainsboro;
             btnProductos.IconChar = FontAwesome.Sharp.IconChar.ProductHunt;
             btnProductos.IconColor = Color.Gainsboro;
@@ -272,7 +272,7 @@
             btnPedidos.Dock = DockStyle.Top;
             btnPedidos.FlatAppearance.BorderSize = 0;
             btnPedidos.FlatStyle = FlatStyle.Flat;
-            btnPedidos.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPedidos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnPedidos.ForeColor = Color.Gainsboro;
             btnPedidos.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             btnPedidos.IconColor = Color.Gainsboro;
@@ -296,7 +296,7 @@
             btnDashboard.Dock = DockStyle.Top;
             btnDashboard.FlatAppearance.BorderSize = 0;
             btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDashboard.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnDashboard.ForeColor = Color.Gainsboro;
             btnDashboard.IconChar = FontAwesome.Sharp.IconChar.BarChart;
             btnDashboard.IconColor = Color.Gainsboro;
@@ -350,7 +350,7 @@
             iconCurrentChild.Location = new Point(219, 0);
             iconCurrentChild.Margin = new Padding(3, 2, 3, 2);
             iconCurrentChild.Name = "iconCurrentChild";
-            iconCurrentChild.Size = new Size(994, 590);
+            iconCurrentChild.Size = new Size(1178, 590);
             iconCurrentChild.SizeMode = PictureBoxSizeMode.Zoom;
             iconCurrentChild.TabIndex = 0;
             iconCurrentChild.TabStop = false;
@@ -367,7 +367,7 @@
             panelTitle.Location = new Point(219, 0);
             panelTitle.Margin = new Padding(3, 2, 3, 2);
             panelTitle.Name = "panelTitle";
-            panelTitle.Size = new Size(994, 58);
+            panelTitle.Size = new Size(1178, 58);
             panelTitle.TabIndex = 1;
             panelTitle.MouseDown += panelTitle_MouseDown;
             // 
@@ -381,7 +381,7 @@
             iconMaxim.IconColor = Color.Gainsboro;
             iconMaxim.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMaxim.IconSize = 15;
-            iconMaxim.Location = new Point(942, 7);
+            iconMaxim.Location = new Point(1126, 7);
             iconMaxim.Margin = new Padding(3, 2, 3, 2);
             iconMaxim.Name = "iconMaxim";
             iconMaxim.Size = new Size(18, 15);
@@ -396,7 +396,7 @@
             lblMinimizeApp.Cursor = Cursors.Hand;
             lblMinimizeApp.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblMinimizeApp.ForeColor = Color.Gainsboro;
-            lblMinimizeApp.Location = new Point(911, -1);
+            lblMinimizeApp.Location = new Point(1095, -1);
             lblMinimizeApp.Name = "lblMinimizeApp";
             lblMinimizeApp.Size = new Size(29, 20);
             lblMinimizeApp.TabIndex = 4;
@@ -410,7 +410,7 @@
             lblCerrarApp.Cursor = Cursors.Hand;
             lblCerrarApp.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCerrarApp.ForeColor = Color.Gainsboro;
-            lblCerrarApp.Location = new Point(967, 2);
+            lblCerrarApp.Location = new Point(1151, 2);
             lblCerrarApp.Name = "lblCerrarApp";
             lblCerrarApp.Size = new Size(21, 20);
             lblCerrarApp.TabIndex = 2;
@@ -450,7 +450,7 @@
             panelShadow.Location = new Point(219, 58);
             panelShadow.Margin = new Padding(3, 2, 3, 2);
             panelShadow.Name = "panelShadow";
-            panelShadow.Size = new Size(994, 7);
+            panelShadow.Size = new Size(1178, 7);
             panelShadow.TabIndex = 2;
             // 
             // panelDesktop
@@ -470,7 +470,7 @@
             panelDesktop.Location = new Point(219, 65);
             panelDesktop.Margin = new Padding(3, 2, 3, 2);
             panelDesktop.Name = "panelDesktop";
-            panelDesktop.Size = new Size(994, 525);
+            panelDesktop.Size = new Size(1178, 525);
             panelDesktop.TabIndex = 3;
             // 
             // lblTipoPerfil
@@ -544,7 +544,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = Properties.Resources.Logo_SRS;
-            pictureBox1.Location = new Point(273, 89);
+            pictureBox1.Location = new Point(365, 89);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(430, 328);
@@ -572,7 +572,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1213, 590);
+            ClientSize = new Size(1397, 590);
             Controls.Add(panelDesktop);
             Controls.Add(panelShadow);
             Controls.Add(panelTitle);
