@@ -75,6 +75,16 @@ namespace ControlInventario_Presentacion.Screens
         {
             MessageBox.Show("Favor comunicarse con el administrador/a del sistema...");
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }
