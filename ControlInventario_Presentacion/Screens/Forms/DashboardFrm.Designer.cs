@@ -202,10 +202,10 @@
             // lblTitleDashboard
             // 
             lblTitleDashboard.AutoSize = true;
-            lblTitleDashboard.Font = new Font("Segoe UI Variable Text", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitleDashboard.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitleDashboard.Location = new Point(15, 9);
             lblTitleDashboard.Name = "lblTitleDashboard";
-            lblTitleDashboard.Size = new Size(130, 26);
+            lblTitleDashboard.Size = new Size(137, 24);
             lblTitleDashboard.TabIndex = 0;
             lblTitleDashboard.Text = "DASHBOARD";
             // 
@@ -229,9 +229,9 @@
             flowLayoutPanel1.Controls.Add(panel15);
             flowLayoutPanel1.Controls.Add(panel17);
             flowLayoutPanel1.Controls.Add(panel18);
-            flowLayoutPanel1.Location = new Point(62, 38);
+            flowLayoutPanel1.Location = new Point(115, 50);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(938, 737);
+            flowLayoutPanel1.Size = new Size(938, 428);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -255,7 +255,7 @@
             button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.Location = new Point(19, 184);
             button1.Name = "button1";
@@ -336,7 +336,7 @@
             button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
             button2.Location = new Point(19, 184);
             button2.Name = "button2";
@@ -398,7 +398,7 @@
             button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
             button3.Location = new Point(19, 184);
             button3.Name = "button3";
@@ -481,7 +481,7 @@
             button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
             button4.Location = new Point(19, 184);
             button4.Name = "button4";
@@ -564,7 +564,7 @@
             button10.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button10.FlatStyle = FlatStyle.Flat;
-            button10.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button10.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button10.ForeColor = Color.White;
             button10.Location = new Point(19, 184);
             button10.Name = "button10";
@@ -645,7 +645,7 @@
             button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
             button5.Location = new Point(19, 184);
             button5.Name = "button5";
@@ -705,7 +705,7 @@
             button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
             button6.Location = new Point(19, 184);
             button6.Name = "button6";
@@ -767,7 +767,7 @@
             button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button7.ForeColor = Color.White;
             button7.Location = new Point(19, 184);
             button7.Name = "button7";
@@ -849,7 +849,7 @@
             button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button8.ForeColor = Color.White;
             button8.Location = new Point(19, 184);
             button8.Name = "button8";
@@ -932,7 +932,7 @@
             button9.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button9.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button9.ForeColor = Color.White;
             button9.Location = new Point(19, 184);
             button9.Name = "button9";
@@ -1030,7 +1030,7 @@
             button16.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button16.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button16.FlatStyle = FlatStyle.Flat;
-            button16.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button16.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button16.ForeColor = Color.White;
             button16.Location = new Point(19, 184);
             button16.Name = "button16";
@@ -1099,7 +1099,7 @@
             button11.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button11.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button11.FlatStyle = FlatStyle.Flat;
-            button11.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button11.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button11.ForeColor = Color.White;
             button11.Location = new Point(19, 184);
             button11.Name = "button11";
@@ -1182,7 +1182,7 @@
             button12.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button12.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button12.FlatStyle = FlatStyle.Flat;
-            button12.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button12.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button12.ForeColor = Color.White;
             button12.Location = new Point(19, 184);
             button12.Name = "button12";
@@ -1263,7 +1263,7 @@
             button13.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button13.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button13.FlatStyle = FlatStyle.Flat;
-            button13.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button13.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button13.ForeColor = Color.White;
             button13.Location = new Point(19, 184);
             button13.Name = "button13";
@@ -1323,7 +1323,7 @@
             button14.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button14.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button14.FlatStyle = FlatStyle.Flat;
-            button14.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button14.ForeColor = Color.White;
             button14.Location = new Point(19, 184);
             button14.Name = "button14";
@@ -1385,7 +1385,7 @@
             button15.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button15.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button15.FlatStyle = FlatStyle.Flat;
-            button15.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button15.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button15.ForeColor = Color.White;
             button15.Location = new Point(19, 184);
             button15.Name = "button15";
@@ -1468,7 +1468,7 @@
             button17.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button17.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button17.FlatStyle = FlatStyle.Flat;
-            button17.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button17.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button17.ForeColor = Color.White;
             button17.Location = new Point(19, 184);
             button17.Name = "button17";
@@ -1551,7 +1551,7 @@
             button18.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
             button18.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
             button18.FlatStyle = FlatStyle.Flat;
-            button18.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button18.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button18.ForeColor = Color.White;
             button18.Location = new Point(19, 184);
             button18.Name = "button18";
@@ -1615,13 +1615,13 @@
             // 
             // DashboardFrm
             // 
-            AutoScaleDimensions = new SizeF(7F, 16F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 27, 60);
-            ClientSize = new Size(1093, 749);
+            ClientSize = new Size(1163, 490);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(lblTitleDashboard);
-            Font = new Font("Segoe UI Variable Display", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.Gainsboro;
             Name = "DashboardFrm";
             Text = "DashboardFrm";

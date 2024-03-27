@@ -10,8 +10,9 @@
 
 namespace ControlInventario_Presentacion.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
     /// </summary>
@@ -23,7 +24,8 @@ namespace ControlInventario_Presentacion.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+        internal static Image _25_removebg_preview;
+        internal static Image sierra_removebg_preview;
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -63,16 +65,6 @@ namespace ControlInventario_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _25_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("25-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap invisible__1_ {
             get {
                 object obj = ResourceManager.GetObject("invisible (1)", resourceCulture);
@@ -106,16 +98,6 @@ namespace ControlInventario_Presentacion.Properties {
         internal static System.Drawing.Bitmap ojo__1_ {
             get {
                 object obj = ResourceManager.GetObject("ojo (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sierra_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("sierra-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
