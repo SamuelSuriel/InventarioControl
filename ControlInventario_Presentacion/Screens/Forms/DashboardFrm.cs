@@ -16,5 +16,10 @@ namespace ControlInventario_Presentacion.Screens.Forms
         {
             InitializeComponent();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

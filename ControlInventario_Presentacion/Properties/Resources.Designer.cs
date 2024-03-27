@@ -63,6 +63,16 @@ namespace ControlInventario_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _25_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("25-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap invisible__1_ {
             get {
                 object obj = ResourceManager.GetObject("invisible (1)", resourceCulture);
@@ -96,6 +106,16 @@ namespace ControlInventario_Presentacion.Properties {
         internal static System.Drawing.Bitmap ojo__1_ {
             get {
                 object obj = ResourceManager.GetObject("ojo (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sierra_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("sierra-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
