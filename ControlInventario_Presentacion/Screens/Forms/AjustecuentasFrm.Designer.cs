@@ -61,11 +61,11 @@
             // lblTitleSettings
             // 
             lblTitleSettings.AutoSize = true;
-            lblTitleSettings.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleSettings.Font = new Font("Segoe UI Variable Text", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitleSettings.ForeColor = Color.Gainsboro;
             lblTitleSettings.Location = new Point(12, 9);
             lblTitleSettings.Name = "lblTitleSettings";
-            lblTitleSettings.Size = new Size(213, 24);
+            lblTitleSettings.Size = new Size(204, 26);
             lblTitleSettings.TabIndex = 3;
             lblTitleSettings.Text = "AJUSTE DE CUENTAS ";
             // 
@@ -87,22 +87,24 @@
             // Label
             // 
             Label.AutoSize = true;
-            Label.BackColor = SystemColors.ActiveCaptionText;
+            Label.BackColor = Color.Transparent;
+            Label.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Label.ForeColor = Color.Gainsboro;
             Label.Location = new Point(22, 102);
             Label.Name = "Label";
-            Label.Size = new Size(51, 15);
+            Label.Size = new Size(65, 19);
             Label.TabIndex = 6;
             Label.Text = "Nombre";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = SystemColors.ActiveCaptionText;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Gainsboro;
             label1.Location = new Point(22, 140);
             label1.Name = "label1";
-            label1.Size = new Size(67, 15);
+            label1.Size = new Size(86, 19);
             label1.TabIndex = 8;
             label1.Text = "Contraseña";
             // 
@@ -117,23 +119,25 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ActiveCaptionText;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Gainsboro;
             label2.Location = new Point(22, 176);
             label2.Name = "label2";
-            label2.Size = new Size(34, 15);
+            label2.Size = new Size(45, 19);
             label2.TabIndex = 10;
             label2.Text = "Perfil";
             // 
             // btnEliminareliminarusu
             // 
             btnEliminareliminarusu.AutoSize = true;
+            btnEliminareliminarusu.BackColor = Color.Firebrick;
             btnEliminareliminarusu.Cursor = Cursors.Hand;
-            btnEliminareliminarusu.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            btnEliminareliminarusu.ForeColor = Color.Red;
-            btnEliminareliminarusu.Location = new Point(260, 60);
+            btnEliminareliminarusu.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEliminareliminarusu.ForeColor = Color.White;
+            btnEliminareliminarusu.Location = new Point(299, 60);
             btnEliminareliminarusu.Name = "btnEliminareliminarusu";
-            btnEliminareliminarusu.Size = new Size(74, 21);
+            btnEliminareliminarusu.Size = new Size(66, 20);
             btnEliminareliminarusu.TabIndex = 16;
             btnEliminareliminarusu.Text = "Eliminar";
             btnEliminareliminarusu.Click += btnEliminareliminarusu_Click;
@@ -142,8 +146,13 @@
             // 
             btnEditarusu.BackColor = Color.DarkOrange;
             btnEditarusu.Cursor = Cursors.Hand;
+            btnEditarusu.FlatAppearance.BorderColor = Color.DarkOrange;
+            btnEditarusu.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
+            btnEditarusu.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
+            btnEditarusu.FlatStyle = FlatStyle.Flat;
+            btnEditarusu.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnEditarusu.ForeColor = Color.White;
-            btnEditarusu.Location = new Point(136, 48);
+            btnEditarusu.Location = new Point(166, 48);
             btnEditarusu.Margin = new Padding(3, 2, 3, 2);
             btnEditarusu.Name = "btnEditarusu";
             btnEditarusu.Size = new Size(118, 33);
@@ -155,24 +164,29 @@
             // lblLimpiarCampousu
             // 
             lblLimpiarCampousu.AutoSize = true;
+            lblLimpiarCampousu.BackColor = Color.Gray;
             lblLimpiarCampousu.Cursor = Cursors.Hand;
-            lblLimpiarCampousu.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            lblLimpiarCampousu.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblLimpiarCampousu.ForeColor = Color.White;
-            lblLimpiarCampousu.Location = new Point(352, 66);
+            lblLimpiarCampousu.Location = new Point(380, 61);
             lblLimpiarCampousu.Name = "lblLimpiarCampousu";
-            lblLimpiarCampousu.Size = new Size(47, 15);
+            lblLimpiarCampousu.Size = new Size(62, 20);
             lblLimpiarCampousu.TabIndex = 17;
             lblLimpiarCampousu.Text = "Limpiar";
             lblLimpiarCampousu.Click += lblLimpiarCampousu_Click;
             // 
             // btnBuscarusu
             // 
-            btnBuscarusu.Location = new Point(22, 223);
+            btnBuscarusu.BackColor = Color.White;
+            btnBuscarusu.FlatAppearance.BorderColor = Color.White;
+            btnBuscarusu.FlatStyle = FlatStyle.Flat;
+            btnBuscarusu.Font = new Font("Segoe UI Variable Text", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBuscarusu.Location = new Point(22, 217);
             btnBuscarusu.Name = "btnBuscarusu";
-            btnBuscarusu.Size = new Size(75, 23);
+            btnBuscarusu.Size = new Size(75, 31);
             btnBuscarusu.TabIndex = 18;
             btnBuscarusu.Text = "Buscar";
-            btnBuscarusu.UseVisualStyleBackColor = true;
+            btnBuscarusu.UseVisualStyleBackColor = false;
             // 
             // txtBuscarusu
             // 
@@ -185,8 +199,13 @@
             // 
             btnAgregar.BackColor = Color.ForestGreen;
             btnAgregar.Cursor = Cursors.Hand;
+            btnAgregar.FlatAppearance.BorderColor = Color.ForestGreen;
+            btnAgregar.FlatAppearance.MouseDownBackColor = Color.MediumSeaGreen;
+            btnAgregar.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 64, 0);
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAgregar.ForeColor = Color.White;
-            btnAgregar.Location = new Point(12, 48);
+            btnAgregar.Location = new Point(22, 48);
             btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(118, 33);
@@ -225,7 +244,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
+            BackColor = Color.FromArgb(28, 27, 60);
             ClientSize = new Size(568, 443);
             Controls.Add(btnMostrarcontra);
             Controls.Add(btnAcultarcontraseña);

@@ -23,6 +23,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
         public ProveedoresFrm()
         {
             InitializeComponent();
+            dgvProveedores.DataBindingComplete += dgvProveedores_DataBindingComplete;
         }
 
         private void ProveedoresFrm_Load(object sender, EventArgs e)
@@ -169,5 +170,26 @@ namespace ControlInventario_Presentacion.Screens.Forms
         }
 
 
+        private void dgvProveedores_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+
+            dgvProveedores.DefaultCellStyle.BackColor = Color.Crimson;
+
+
+            dgvProveedores.DefaultCellStyle.ForeColor = Color.White;
+
+
+            dgvProveedores.DefaultCellStyle.Font = new Font("Arial", 10);
+
+
+            dgvProveedores.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
+
+            dgvProveedores.RowsDefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+
+
+            dgvProveedores.RowsDefaultCellStyle.SelectionForeColor = Color.White;
+        }
     }
-}
+} 

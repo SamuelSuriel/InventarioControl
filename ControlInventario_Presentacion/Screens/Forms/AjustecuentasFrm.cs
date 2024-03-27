@@ -20,6 +20,8 @@ namespace ControlInventario_Presentacion.Screens.Forms
         public AjustecuentasFrm()
         {
             InitializeComponent();
+            dgvusuario.DataBindingComplete += dgvusuario_DataBindingComplete;
+
         }
 
 
@@ -175,6 +177,27 @@ namespace ControlInventario_Presentacion.Screens.Forms
             btnMostrarcontra.BringToFront();
             txtContraUsu.PasswordChar = '*';
         }
-    }
 
+        private void dgvusuario_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+
+            dgvusuario.DefaultCellStyle.BackColor = Color.MidnightBlue;
+
+
+            dgvusuario.DefaultCellStyle.ForeColor = Color.White;
+
+
+            dgvusuario.DefaultCellStyle.Font = new Font("Arial", 10);
+
+
+            dgvusuario.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
+
+            dgvusuario.RowsDefaultCellStyle.SelectionBackColor = Color.Red;
+
+
+            dgvusuario.RowsDefaultCellStyle.SelectionForeColor = Color.White;
+        }
+    }
 }

@@ -58,11 +58,11 @@
             // lblTitleProducto
             // 
             lblTitleProducto.AutoSize = true;
-            lblTitleProducto.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleProducto.Font = new Font("Segoe UI Variable Text", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitleProducto.ForeColor = Color.Gainsboro;
-            lblTitleProducto.Location = new Point(98, 32);
+            lblTitleProducto.Location = new Point(54, 30);
             lblTitleProducto.Name = "lblTitleProducto";
-            lblTitleProducto.Size = new Size(120, 26);
+            lblTitleProducto.Size = new Size(138, 28);
             lblTitleProducto.TabIndex = 2;
             lblTitleProducto.Text = "PRODUCTOS";
             // 
@@ -116,11 +116,16 @@
             // 
             btnAgregarProducto.BackColor = Color.ForestGreen;
             btnAgregarProducto.Cursor = Cursors.Hand;
+            btnAgregarProducto.FlatAppearance.BorderColor = Color.ForestGreen;
+            btnAgregarProducto.FlatAppearance.MouseDownBackColor = Color.MediumSeaGreen;
+            btnAgregarProducto.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 64, 0);
+            btnAgregarProducto.FlatStyle = FlatStyle.Flat;
+            btnAgregarProducto.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAgregarProducto.ForeColor = Color.White;
-            btnAgregarProducto.Location = new Point(159, 377);
+            btnAgregarProducto.Location = new Point(112, 377);
             btnAgregarProducto.Margin = new Padding(3, 2, 3, 2);
             btnAgregarProducto.Name = "btnAgregarProducto";
-            btnAgregarProducto.Size = new Size(118, 33);
+            btnAgregarProducto.Size = new Size(132, 33);
             btnAgregarProducto.TabIndex = 4;
             btnAgregarProducto.Text = "Guardar";
             btnAgregarProducto.UseVisualStyleBackColor = false;
@@ -130,11 +135,16 @@
             // 
             btnEditarProducto.BackColor = Color.DarkOrange;
             btnEditarProducto.Cursor = Cursors.Hand;
+            btnEditarProducto.FlatAppearance.BorderColor = Color.DarkOrange;
+            btnEditarProducto.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 192, 128);
+            btnEditarProducto.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 64, 0);
+            btnEditarProducto.FlatStyle = FlatStyle.Flat;
+            btnEditarProducto.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnEditarProducto.ForeColor = Color.White;
-            btnEditarProducto.Location = new Point(288, 377);
+            btnEditarProducto.Location = new Point(274, 377);
             btnEditarProducto.Margin = new Padding(3, 2, 3, 2);
             btnEditarProducto.Name = "btnEditarProducto";
-            btnEditarProducto.Size = new Size(118, 33);
+            btnEditarProducto.Size = new Size(132, 33);
             btnEditarProducto.TabIndex = 4;
             btnEditarProducto.Text = "Editar";
             btnEditarProducto.UseVisualStyleBackColor = false;
@@ -143,12 +153,13 @@
             // lblLimpiarCamporProd
             // 
             lblLimpiarCamporProd.AutoSize = true;
+            lblLimpiarCamporProd.BackColor = Color.Gray;
             lblLimpiarCamporProd.Cursor = Cursors.Hand;
-            lblLimpiarCamporProd.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            lblLimpiarCamporProd.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblLimpiarCamporProd.ForeColor = Color.White;
-            lblLimpiarCamporProd.Location = new Point(342, 108);
+            lblLimpiarCamporProd.Location = new Point(344, 102);
             lblLimpiarCamporProd.Name = "lblLimpiarCamporProd";
-            lblLimpiarCamporProd.Size = new Size(47, 15);
+            lblLimpiarCamporProd.Size = new Size(62, 20);
             lblLimpiarCamporProd.TabIndex = 5;
             lblLimpiarCamporProd.Text = "Limpiar";
             lblLimpiarCamporProd.Click += lblLimpiarCamporProd_Click;
@@ -156,50 +167,55 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(54, 138);
+            label2.Location = new Point(27, 137);
             label2.Name = "label2";
-            label2.Size = new Size(51, 15);
+            label2.Size = new Size(65, 19);
             label2.TabIndex = 5;
             label2.Text = "Nombre";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(54, 167);
+            label3.Location = new Point(27, 171);
             label3.Name = "label3";
-            label3.Size = new Size(46, 15);
+            label3.Size = new Size(56, 19);
             label3.TabIndex = 5;
             label3.Text = "Código";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(54, 205);
+            label4.Location = new Point(27, 218);
             label4.Name = "label4";
-            label4.Size = new Size(69, 15);
+            label4.Size = new Size(88, 19);
             label4.TabIndex = 5;
             label4.Text = "Descripción";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(54, 274);
+            label5.Location = new Point(27, 271);
             label5.Name = "label5";
-            label5.Size = new Size(87, 15);
+            label5.Size = new Size(111, 19);
             label5.TabIndex = 5;
             label5.Text = "Cantidad Stock";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(54, 308);
+            label6.Location = new Point(27, 305);
             label6.Name = "label6";
-            label6.Size = new Size(86, 15);
+            label6.Size = new Size(109, 19);
             label6.TabIndex = 5;
             label6.Text = "Precio Compra";
             // 
@@ -227,22 +243,22 @@
             // 
             // btnEliminarProducto
             // 
-            btnEliminarProducto.AutoSize = true;
+            btnEliminarProducto.BackColor = Color.Firebrick;
             btnEliminarProducto.Cursor = Cursors.Hand;
-            btnEliminarProducto.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            btnEliminarProducto.ForeColor = Color.Red;
-            btnEliminarProducto.Location = new Point(245, 422);
+            btnEliminarProducto.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEliminarProducto.ForeColor = Color.White;
+            btnEliminarProducto.Location = new Point(212, 422);
             btnEliminarProducto.Name = "btnEliminarProducto";
-            btnEliminarProducto.Size = new Size(74, 21);
+            btnEliminarProducto.Size = new Size(91, 26);
             btnEliminarProducto.TabIndex = 7;
-            btnEliminarProducto.Text = "Eliminar";
+            btnEliminarProducto.Text = "  Eliminar";
             btnEliminarProducto.Click += btnEliminarProducto_Click;
             // 
             // lblLine
             // 
             lblLine.AutoSize = true;
             lblLine.ForeColor = SystemColors.ControlDarkDark;
-            lblLine.Location = new Point(98, 443);
+            lblLine.Location = new Point(54, 448);
             lblLine.Name = "lblLine";
             lblLine.Size = new Size(962, 15);
             lblLine.TabIndex = 8;
@@ -252,7 +268,7 @@
             // 
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ControlDarkDark;
-            label7.Location = new Point(98, 81);
+            label7.Location = new Point(54, 56);
             label7.Name = "label7";
             label7.Size = new Size(962, 15);
             label7.TabIndex = 9;
@@ -261,10 +277,11 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(54, 342);
+            label1.Location = new Point(27, 339);
             label1.Name = "label1";
-            label1.Size = new Size(72, 15);
+            label1.Size = new Size(95, 19);
             label1.TabIndex = 11;
             label1.Text = "Precio Venta";
             // 
@@ -281,7 +298,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
+            BackColor = Color.FromArgb(28, 27, 60);
             ClientSize = new Size(1163, 490);
             Controls.Add(label1);
             Controls.Add(txtPrecioVenta);

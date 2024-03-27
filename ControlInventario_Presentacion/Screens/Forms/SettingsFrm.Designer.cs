@@ -39,11 +39,11 @@
             // lblTitleSettings
             // 
             lblTitleSettings.AutoSize = true;
-            lblTitleSettings.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleSettings.Font = new Font("Segoe UI Variable Text", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitleSettings.ForeColor = Color.Gainsboro;
             lblTitleSettings.Location = new Point(12, 9);
             lblTitleSettings.Name = "lblTitleSettings";
-            lblTitleSettings.Size = new Size(103, 24);
+            lblTitleSettings.Size = new Size(110, 28);
             lblTitleSettings.TabIndex = 2;
             lblTitleSettings.Text = "SETTINGS";
             // 
@@ -61,11 +61,12 @@
             // btnRegistrarUsu
             // 
             btnRegistrarUsu.BackColor = Color.Transparent;
-            btnRegistrarUsu.FlatStyle = FlatStyle.Popup;
+            btnRegistrarUsu.FlatStyle = FlatStyle.Flat;
+            btnRegistrarUsu.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnRegistrarUsu.ForeColor = SystemColors.ButtonFace;
-            btnRegistrarUsu.Location = new Point(6, 60);
+            btnRegistrarUsu.Location = new Point(6, 77);
             btnRegistrarUsu.Name = "btnRegistrarUsu";
-            btnRegistrarUsu.Size = new Size(221, 23);
+            btnRegistrarUsu.Size = new Size(221, 33);
             btnRegistrarUsu.TabIndex = 1;
             btnRegistrarUsu.Text = "Registro de Cuentas";
             btnRegistrarUsu.UseVisualStyleBackColor = false;
@@ -74,11 +75,12 @@
             // btnAjcuentas
             // 
             btnAjcuentas.BackColor = Color.Transparent;
-            btnAjcuentas.FlatStyle = FlatStyle.Popup;
+            btnAjcuentas.FlatStyle = FlatStyle.Flat;
+            btnAjcuentas.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAjcuentas.ForeColor = SystemColors.ButtonFace;
             btnAjcuentas.Location = new Point(6, 22);
             btnAjcuentas.Name = "btnAjcuentas";
-            btnAjcuentas.Size = new Size(221, 23);
+            btnAjcuentas.Size = new Size(221, 33);
             btnAjcuentas.TabIndex = 0;
             btnAjcuentas.Text = "Ajuste de Cuentas";
             btnAjcuentas.UseVisualStyleBackColor = false;
@@ -95,8 +97,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
-            ClientSize = new Size(1381, 551);
+            BackColor = Color.FromArgb(28, 27, 60);
+            ClientSize = new Size(1370, 551);
             Controls.Add(paneldesktop);
             Controls.Add(groupBox1);
             Controls.Add(lblTitleSettings);

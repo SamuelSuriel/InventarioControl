@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             lblTitleVentas = new Label();
             txtCantidadProductos = new TextBox();
             label1 = new Label();
@@ -85,11 +85,11 @@
             // lblTitleVentas
             // 
             lblTitleVentas.AutoSize = true;
-            lblTitleVentas.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleVentas.Font = new Font("Segoe UI Variable Text", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitleVentas.ForeColor = Color.Gainsboro;
             lblTitleVentas.Location = new Point(4, 4);
             lblTitleVentas.Name = "lblTitleVentas";
-            lblTitleVentas.Size = new Size(79, 26);
+            lblTitleVentas.Size = new Size(84, 26);
             lblTitleVentas.TabIndex = 2;
             lblTitleVentas.Text = "VENTAS";
             // 
@@ -105,34 +105,42 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(12, 51);
             label1.Name = "label1";
-            label1.Size = new Size(71, 15);
+            label1.Size = new Size(93, 20);
             label1.TabIndex = 4;
             label1.Text = "PRODUCTO:";
             // 
             // lblCantidad
             // 
             lblCantidad.AutoSize = true;
+            lblCantidad.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblCantidad.ForeColor = Color.White;
-            lblCantidad.Location = new Point(542, 110);
+            lblCantidad.Location = new Point(542, 105);
             lblCantidad.Name = "lblCantidad";
-            lblCantidad.Size = new Size(68, 15);
+            lblCantidad.Size = new Size(92, 20);
             lblCantidad.TabIndex = 4;
             lblCantidad.Text = "CANTIDAD:";
             // 
             // btnAgregarReg
             // 
+            btnAgregarReg.BackColor = Color.MidnightBlue;
             btnAgregarReg.Cursor = Cursors.Hand;
-            btnAgregarReg.ForeColor = Color.RoyalBlue;
+            btnAgregarReg.FlatAppearance.BorderColor = Color.MidnightBlue;
+            btnAgregarReg.FlatAppearance.MouseDownBackColor = Color.RoyalBlue;
+            btnAgregarReg.FlatAppearance.MouseOverBackColor = Color.Navy;
+            btnAgregarReg.FlatStyle = FlatStyle.Flat;
+            btnAgregarReg.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAgregarReg.ForeColor = Color.White;
             btnAgregarReg.Location = new Point(684, 120);
             btnAgregarReg.Margin = new Padding(3, 2, 3, 2);
             btnAgregarReg.Name = "btnAgregarReg";
             btnAgregarReg.Size = new Size(128, 28);
             btnAgregarReg.TabIndex = 25;
             btnAgregarReg.Text = "AGREGAR";
-            btnAgregarReg.UseVisualStyleBackColor = true;
+            btnAgregarReg.UseVisualStyleBackColor = false;
             btnAgregarReg.Click += btnAgregarProveedor_Click;
             // 
             // dgvVentas
@@ -155,8 +163,8 @@
             // 
             // Column2
             // 
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Column2.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Column2.DefaultCellStyle = dataGridViewCellStyle6;
             Column2.HeaderText = "Código";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
@@ -164,8 +172,8 @@
             // 
             // Column1
             // 
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Column1.DefaultCellStyle = dataGridViewCellStyle7;
             Column1.HeaderText = "Producto";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
@@ -173,10 +181,10 @@
             // 
             // Precio
             // 
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            Precio.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = null;
+            Precio.DefaultCellStyle = dataGridViewCellStyle8;
             Precio.HeaderText = "Precio";
             Precio.MinimumWidth = 6;
             Precio.Name = "Precio";
@@ -184,10 +192,10 @@
             // 
             // Cantidad
             // 
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.Format = "N0";
-            dataGridViewCellStyle4.NullValue = null;
-            Cantidad.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle9.Format = "N0";
+            dataGridViewCellStyle9.NullValue = null;
+            Cantidad.DefaultCellStyle = dataGridViewCellStyle9;
             Cantidad.HeaderText = "Cantidad";
             Cantidad.MinimumWidth = 6;
             Cantidad.Name = "Cantidad";
@@ -195,10 +203,10 @@
             // 
             // Total
             // 
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            Total.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            Total.DefaultCellStyle = dataGridViewCellStyle10;
             Total.HeaderText = "Total";
             Total.MinimumWidth = 6;
             Total.Name = "Total";
@@ -252,20 +260,22 @@
             // lblDevolucion
             // 
             lblDevolucion.AutoSize = true;
+            lblDevolucion.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblDevolucion.ForeColor = Color.White;
-            lblDevolucion.Location = new Point(164, 322);
+            lblDevolucion.Location = new Point(165, 340);
             lblDevolucion.Name = "lblDevolucion";
-            lblDevolucion.Size = new Size(37, 15);
+            lblDevolucion.Size = new Size(53, 21);
             lblDevolucion.TabIndex = 32;
             lblDevolucion.Text = "$ 0.00";
             // 
             // label11
             // 
             label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(20, 322);
+            label11.Location = new Point(21, 340);
             label11.Name = "label11";
-            label11.Size = new Size(80, 15);
+            label11.Size = new Size(108, 21);
             label11.TabIndex = 31;
             label11.Text = "DEVOLUCIÓN";
             // 
@@ -282,16 +292,17 @@
             // label18
             // 
             label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI Variable Text Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label18.ForeColor = Color.White;
-            label18.Location = new Point(20, 220);
+            label18.Location = new Point(19, 221);
             label18.Name = "label18";
-            label18.Size = new Size(61, 15);
+            label18.Size = new Size(79, 20);
             label18.TabIndex = 29;
             label18.Text = "EFECTIVO:";
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(21, 170);
+            dateTimePicker1.Location = new Point(21, 171);
             dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(234, 23);
@@ -300,80 +311,88 @@
             // lblTotalaPagar
             // 
             lblTotalaPagar.AutoSize = true;
+            lblTotalaPagar.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTotalaPagar.ForeColor = Color.White;
-            lblTotalaPagar.Location = new Point(164, 308);
+            lblTotalaPagar.Location = new Point(165, 319);
             lblTotalaPagar.Name = "lblTotalaPagar";
-            lblTotalaPagar.Size = new Size(37, 15);
+            lblTotalaPagar.Size = new Size(53, 21);
             lblTotalaPagar.TabIndex = 5;
             lblTotalaPagar.Text = "$ 0.00";
             // 
             // lblDescuento
             // 
             lblDescuento.AutoSize = true;
+            lblDescuento.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblDescuento.ForeColor = Color.White;
-            lblDescuento.Location = new Point(164, 292);
+            lblDescuento.Location = new Point(164, 298);
             lblDescuento.Name = "lblDescuento";
-            lblDescuento.Size = new Size(37, 15);
+            lblDescuento.Size = new Size(53, 21);
             lblDescuento.TabIndex = 6;
             lblDescuento.Text = "$ 0.00";
             // 
             // lblItbis
             // 
             lblItbis.AutoSize = true;
+            lblItbis.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblItbis.ForeColor = Color.White;
             lblItbis.Location = new Point(164, 278);
             lblItbis.Name = "lblItbis";
-            lblItbis.Size = new Size(37, 15);
+            lblItbis.Size = new Size(53, 21);
             lblItbis.TabIndex = 7;
             lblItbis.Text = "$ 0.00";
             // 
             // lblSubTotal
             // 
             lblSubTotal.AutoSize = true;
+            lblSubTotal.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSubTotal.ForeColor = Color.White;
-            lblSubTotal.Location = new Point(164, 262);
+            lblSubTotal.Location = new Point(164, 257);
             lblSubTotal.Name = "lblSubTotal";
-            lblSubTotal.Size = new Size(37, 15);
+            lblSubTotal.Size = new Size(53, 21);
             lblSubTotal.TabIndex = 8;
             lblSubTotal.Text = "$ 0.00";
             // 
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(20, 308);
+            label9.Location = new Point(21, 319);
             label9.Name = "label9";
-            label9.Size = new Size(90, 15);
+            label9.Size = new Size(118, 21);
             label9.TabIndex = 4;
             label9.Text = "TOTAL A PAGAR";
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(20, 292);
+            label8.Location = new Point(20, 298);
             label8.Name = "label8";
-            label8.Size = new Size(72, 15);
+            label8.Size = new Size(99, 21);
             label8.TabIndex = 4;
             label8.Text = "DESCUENTO";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
             label7.Location = new Point(20, 278);
             label7.Name = "label7";
-            label7.Size = new Size(32, 15);
+            label7.Size = new Size(44, 21);
             label7.TabIndex = 4;
             label7.Text = "ITBIS";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Variable Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(20, 262);
+            label6.Location = new Point(20, 257);
             label6.Name = "label6";
-            label6.Size = new Size(59, 15);
+            label6.Size = new Size(80, 21);
             label6.TabIndex = 4;
             label6.Text = "SUBTOTAL";
             // 
@@ -390,20 +409,22 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Variable Text Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
             label5.Location = new Point(20, 152);
             label5.Name = "label5";
-            label5.Size = new Size(99, 15);
+            label5.Size = new Size(113, 17);
             label5.TabIndex = 4;
             label5.Text = "Fecha de emisión";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Variable Text Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(20, 102);
+            label4.Location = new Point(19, 101);
             label4.Name = "label4";
-            label4.Size = new Size(44, 15);
+            label4.Size = new Size(49, 17);
             label4.TabIndex = 4;
             label4.Text = "Cliente";
             // 
@@ -424,7 +445,7 @@
             label2.BackColor = Color.Gray;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(77, 16);
+            label2.Location = new Point(88, 16);
             label2.Name = "label2";
             label2.Size = new Size(96, 25);
             label2.TabIndex = 1;
@@ -443,30 +464,33 @@
             // label15
             // 
             label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label15.ForeColor = Color.White;
-            label15.Location = new Point(12, 110);
+            label15.Location = new Point(12, 105);
             label15.Name = "label15";
-            label15.Size = new Size(55, 15);
+            label15.Size = new Size(71, 20);
             label15.TabIndex = 29;
             label15.Text = "CÓDIGO:";
             // 
             // label16
             // 
             label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(179, 110);
+            label16.Location = new Point(179, 105);
             label16.Name = "label16";
-            label16.Size = new Size(59, 15);
+            label16.Size = new Size(78, 20);
             label16.TabIndex = 30;
             label16.Text = "NOMBRE:";
             // 
             // label17
             // 
             label17.AutoSize = true;
+            label17.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label17.ForeColor = Color.White;
-            label17.Location = new Point(382, 110);
+            label17.Location = new Point(382, 105);
             label17.Name = "label17";
-            label17.Size = new Size(50, 15);
+            label17.Size = new Size(65, 20);
             label17.TabIndex = 31;
             label17.Text = "PRECIO:";
             // 
@@ -502,21 +526,32 @@
             // 
             // btnEliminarProducto
             // 
+            btnEliminarProducto.BackColor = Color.Firebrick;
             btnEliminarProducto.Cursor = Cursors.Hand;
-            btnEliminarProducto.ForeColor = Color.Red;
+            btnEliminarProducto.FlatAppearance.BorderColor = Color.Firebrick;
+            btnEliminarProducto.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 128, 128);
+            btnEliminarProducto.FlatAppearance.MouseOverBackColor = Color.Maroon;
+            btnEliminarProducto.FlatStyle = FlatStyle.Flat;
+            btnEliminarProducto.Font = new Font("Segoe UI Variable Text", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEliminarProducto.ForeColor = Color.White;
             btnEliminarProducto.Location = new Point(684, 75);
             btnEliminarProducto.Margin = new Padding(3, 2, 3, 2);
             btnEliminarProducto.Name = "btnEliminarProducto";
             btnEliminarProducto.Size = new Size(128, 28);
             btnEliminarProducto.TabIndex = 35;
             btnEliminarProducto.Text = "ELIMINAR";
-            btnEliminarProducto.UseVisualStyleBackColor = true;
+            btnEliminarProducto.UseVisualStyleBackColor = false;
             btnEliminarProducto.Click += btnEliminarProducto_Click;
             // 
             // btnEjecutarVenta
             // 
             btnEjecutarVenta.BackColor = Color.Teal;
             btnEjecutarVenta.Cursor = Cursors.Hand;
+            btnEjecutarVenta.FlatAppearance.BorderColor = Color.Teal;
+            btnEjecutarVenta.FlatAppearance.MouseDownBackColor = Color.DarkTurquoise;
+            btnEjecutarVenta.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 64, 64);
+            btnEjecutarVenta.FlatStyle = FlatStyle.Flat;
+            btnEjecutarVenta.Font = new Font("Segoe UI Variable Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnEjecutarVenta.ForeColor = Color.White;
             btnEjecutarVenta.Location = new Point(877, 436);
             btnEjecutarVenta.Margin = new Padding(3, 2, 3, 2);
@@ -568,7 +603,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
+            BackColor = Color.FromArgb(28, 27, 60);
             ClientSize = new Size(1163, 490);
             Controls.Add(groupBox1);
             Controls.Add(btnEjecutarVenta);

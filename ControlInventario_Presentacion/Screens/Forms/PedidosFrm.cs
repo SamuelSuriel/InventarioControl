@@ -14,6 +14,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
         public PedidosFrm()
         {
             InitializeComponent();
+            dgvPedidosProveedores.DataBindingComplete += dgvPedidosProveedores_DataBindingComplete;
         }
 
         private void PedidosFrm_Load(object sender, EventArgs e)
@@ -213,5 +214,27 @@ namespace ControlInventario_Presentacion.Screens.Forms
                 cbProdPedidos.Enabled = false;
             }
         }
+            
+            private void dgvPedidosProveedores_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+            {
+
+            dgvPedidosProveedores.DefaultCellStyle.BackColor = Color.SkyBlue;
+
+
+            dgvPedidosProveedores.DefaultCellStyle.ForeColor = Color.Black;
+
+
+            dgvPedidosProveedores.DefaultCellStyle.Font = new Font("Arial", 10);
+
+
+            dgvPedidosProveedores.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
+
+            dgvPedidosProveedores.RowsDefaultCellStyle.SelectionBackColor = Color.Orange;
+
+
+            dgvPedidosProveedores.RowsDefaultCellStyle.SelectionForeColor = Color.White;
+            }
+        }
     }
-}
+

@@ -53,6 +53,7 @@
             label8 = new Label();
             cbProductoproveedor = new ComboBox();
             cbProveedoresInforme = new ComboBox();
+            label9 = new Label();
             groupBoxVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInformeVentas).BeginInit();
             groupBox1.SuspendLayout();
@@ -63,11 +64,11 @@
             // lblTitleInformes
             // 
             lblTitleInformes.AutoSize = true;
-            lblTitleInformes.Font = new Font("Segoe UI Variable Display", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitleInformes.Font = new Font("Segoe UI Variable Text", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitleInformes.ForeColor = Color.Gainsboro;
             lblTitleInformes.Location = new Point(39, 20);
             lblTitleInformes.Name = "lblTitleInformes";
-            lblTitleInformes.Size = new Size(102, 26);
+            lblTitleInformes.Size = new Size(108, 26);
             lblTitleInformes.TabIndex = 1;
             lblTitleInformes.Text = "INFORMES";
             // 
@@ -149,7 +150,11 @@
             // 
             btnBuscarInforme.BackColor = Color.FromArgb(37, 36, 81);
             btnBuscarInforme.Cursor = Cursors.Hand;
+            btnBuscarInforme.FlatAppearance.BorderColor = Color.FromArgb(37, 36, 81);
+            btnBuscarInforme.FlatAppearance.MouseDownBackColor = Color.SteelBlue;
+            btnBuscarInforme.FlatAppearance.MouseOverBackColor = Color.MidnightBlue;
             btnBuscarInforme.FlatStyle = FlatStyle.Flat;
+            btnBuscarInforme.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnBuscarInforme.ForeColor = Color.White;
             btnBuscarInforme.Location = new Point(807, 146);
             btnBuscarInforme.Margin = new Padding(3, 2, 3, 2);
@@ -188,14 +193,18 @@
             // 
             // btnGenerarInforme
             // 
-            btnGenerarInforme.BackColor = Color.FromArgb(0, 192, 0);
+            btnGenerarInforme.BackColor = Color.ForestGreen;
             btnGenerarInforme.Cursor = Cursors.Hand;
+            btnGenerarInforme.FlatAppearance.BorderColor = Color.ForestGreen;
+            btnGenerarInforme.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 255, 128);
+            btnGenerarInforme.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 64, 0);
             btnGenerarInforme.FlatStyle = FlatStyle.Flat;
+            btnGenerarInforme.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnGenerarInforme.ForeColor = Color.White;
-            btnGenerarInforme.Location = new Point(1043, 449);
+            btnGenerarInforme.Location = new Point(1044, 443);
             btnGenerarInforme.Margin = new Padding(3, 2, 3, 2);
             btnGenerarInforme.Name = "btnGenerarInforme";
-            btnGenerarInforme.Size = new Size(109, 23);
+            btnGenerarInforme.Size = new Size(109, 30);
             btnGenerarInforme.TabIndex = 46;
             btnGenerarInforme.Text = "Generar";
             btnGenerarInforme.UseVisualStyleBackColor = false;
@@ -205,6 +214,7 @@
             // 
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(cbTipoInforme);
+            groupBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(833, 20);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
@@ -218,10 +228,11 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
             label6.Location = new Point(29, 22);
             label6.Name = "label6";
-            label6.Size = new Size(75, 15);
+            label6.Size = new Size(89, 17);
             label6.TabIndex = 50;
             label6.Text = "Tipo Informe";
             // 
@@ -232,7 +243,7 @@
             cbTipoInforme.Location = new Point(29, 40);
             cbTipoInforme.Margin = new Padding(3, 2, 3, 2);
             cbTipoInforme.Name = "cbTipoInforme";
-            cbTipoInforme.Size = new Size(271, 23);
+            cbTipoInforme.Size = new Size(271, 25);
             cbTipoInforme.TabIndex = 49;
             cbTipoInforme.Text = "Seleccione el tipo de informe...";
             cbTipoInforme.SelectedIndexChanged += cbTipoInforme_SelectedIndexChanged;
@@ -297,6 +308,7 @@
             groupBoxProveedores.Controls.Add(label8);
             groupBoxProveedores.Controls.Add(cbProductoproveedor);
             groupBoxProveedores.Controls.Add(cbProveedoresInforme);
+            groupBoxProveedores.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             groupBoxProveedores.ForeColor = Color.White;
             groupBoxProveedores.Location = new Point(91, 103);
             groupBoxProveedores.Margin = new Padding(3, 2, 3, 2);
@@ -311,20 +323,22 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(240, 26);
+            label4.Location = new Point(240, 21);
             label4.Name = "label4";
-            label4.Size = new Size(115, 15);
+            label4.Size = new Size(152, 20);
             label4.TabIndex = 50;
             label4.Text = "Producto Suministra";
             // 
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Variable Text", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(14, 26);
+            label8.Location = new Point(14, 21);
             label8.Name = "label8";
-            label8.Size = new Size(61, 15);
+            label8.Size = new Size(81, 20);
             label8.TabIndex = 50;
             label8.Text = "Proveedor";
             // 
@@ -334,7 +348,7 @@
             cbProductoproveedor.Location = new Point(240, 43);
             cbProductoproveedor.Margin = new Padding(3, 2, 3, 2);
             cbProductoproveedor.Name = "cbProductoproveedor";
-            cbProductoproveedor.Size = new Size(204, 23);
+            cbProductoproveedor.Size = new Size(204, 28);
             cbProductoproveedor.TabIndex = 49;
             // 
             // cbProveedoresInforme
@@ -343,15 +357,26 @@
             cbProveedoresInforme.Location = new Point(14, 43);
             cbProveedoresInforme.Margin = new Padding(3, 2, 3, 2);
             cbProveedoresInforme.Name = "cbProveedoresInforme";
-            cbProveedoresInforme.Size = new Size(196, 23);
+            cbProveedoresInforme.Size = new Size(196, 28);
             cbProveedoresInforme.TabIndex = 49;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.ForeColor = SystemColors.ControlDarkDark;
+            label9.Location = new Point(35, 46);
+            label9.Name = "label9";
+            label9.Size = new Size(792, 15);
+            label9.TabIndex = 47;
+            label9.Text = "_____________________________________________________________________________________________________________________________________________________________";
             // 
             // InformesFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
+            BackColor = Color.FromArgb(28, 27, 60);
             ClientSize = new Size(1163, 490);
+            Controls.Add(label9);
             Controls.Add(dgvInformeVentas);
             Controls.Add(groupBox1);
             Controls.Add(groupBoxProveedores);
@@ -403,5 +428,6 @@
         private ComboBox cbProductoproveedor;
         private TextBox txtCriterioStockInforme;
         private Label label5;
+        private Label label9;
     }
 }

@@ -185,7 +185,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            BackColor = Color.Black;
+            BackColor = Color.FromArgb(28, 27, 60);
             ClientSize = new Size(825, 443);
             Controls.Add(btnMostrarcontra);
             Controls.Add(label3);

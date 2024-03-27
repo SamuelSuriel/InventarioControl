@@ -8,6 +8,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
         public StockFrm()
         {
             InitializeComponent();
+            dgvStocks.DataBindingComplete += dgvStocks_DataBindingComplete;
         }
 
         private void StockFrm_Load(object sender, EventArgs e)
@@ -28,5 +29,22 @@ namespace ControlInventario_Presentacion.Screens.Forms
             string crt = txtBuscarStock.Text;
             CargarDgvStocks(crt);
         }
+
+        private void dgvStocks_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+            dgvStocks.DefaultCellStyle.BackColor = Color.SkyBlue;
+
+            dgvStocks.DefaultCellStyle.ForeColor = Color.White;
+
+            dgvStocks.DefaultCellStyle.Font = new Font("Arial", 10);
+
+            dgvStocks.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
+            dgvStocks.RowsDefaultCellStyle.SelectionBackColor = Color.LightGreen;
+
+            dgvStocks.RowsDefaultCellStyle.SelectionForeColor = Color.White;
+        }
+
     }
 }

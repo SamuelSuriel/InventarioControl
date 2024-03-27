@@ -14,6 +14,7 @@ namespace ControlInventario_Presentacion.Screens.Forms
         public ProductosFrm()
         {
             InitializeComponent();
+            dgvProductos.DataBindingComplete += dgvProductos_DataBindingComplete;
         }
 
         private void ProductosFrm_Load(object sender, EventArgs e)
@@ -160,6 +161,27 @@ namespace ControlInventario_Presentacion.Screens.Forms
             }
             else
                 MessageBox.Show("Seleccione una celda para eliminar!");
+        }
+
+        private void dgvProductos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+            dgvProductos.DefaultCellStyle.BackColor = Color.Teal;
+
+
+            dgvProductos.DefaultCellStyle.ForeColor = Color.White;
+
+
+            dgvProductos.DefaultCellStyle.Font = new Font("Arial", 10);
+
+
+            dgvProductos.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
+
+            dgvProductos.RowsDefaultCellStyle.SelectionBackColor = Color.Purple;
+
+
+            dgvProductos.RowsDefaultCellStyle.SelectionForeColor = Color.White;
         }
     }
 }
